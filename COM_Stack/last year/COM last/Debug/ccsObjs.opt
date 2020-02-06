@@ -1,0 +1,1 @@
+"./Com.obj" "./Com_Asu_Cfg.obj" "./Com_Buffer.obj" "./Com_Cfg.obj" "./Com_helper.obj" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd" -llibc.a 
