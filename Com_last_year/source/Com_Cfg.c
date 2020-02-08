@@ -60,7 +60,7 @@ const ComSignal_type ComSignal[] =
 		.ComNotification=NULL,
 		.ComSignalDataPtr = ComSignalBuffer_3
     },
-	{	//signal2
+	{	//signal3
         .ComBitPosition= 11,
         .ComUpdateBitPosition= 19 ,
         .ComHandleId= 3 ,

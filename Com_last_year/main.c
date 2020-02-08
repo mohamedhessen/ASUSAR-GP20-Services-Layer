@@ -57,7 +57,7 @@ int flag = 0;
 
     int main(void){
     LCD_INIT();
-      LCD_command(0X80);
+    LCD_command(0X80);
     PORTF_Init();
     InitGPIO();
     Can_Init(&CanContainer);

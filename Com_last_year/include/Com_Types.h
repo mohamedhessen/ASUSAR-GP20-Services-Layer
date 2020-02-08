@@ -169,6 +169,9 @@ typedef struct {
 	/* notification function. */
 	void (*ComNotification) (void);
 
+	/**/
+	boolean isUpdateBitUsed;
+
 } ComSignal_type;
 
 

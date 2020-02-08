@@ -48,131 +48,33 @@ void Com_UnPackSignalsFromPdu(uint16 ComIPuId)
 
 void Com_WriteSignalDataToPduBuffer(const uint16 signalId, const void *signalData)
 {
-    /*awel mkan llsignal fe pdu buffer */
-	uint32 bitPosition;
+    /*awel bit llsignal fe pdu buffer */
+    uint32 bitPosition;
+    uint8 *pduBufferBytes = NULL;
+    uint8 *dataBytes = NULL;
+    const ComSignal_type * Signal =  GET_Signal(signalId);
+    // Get PDU
+    const ComIPdu_type *IPdu = GET_IPdu(Signal->ComIPduHandleId);
 
-	uint8 data;
-	uint8 mask;
-	uint8 pduMask;
-	uint8 signalMask;
-	uint8 *pduBufferBytes = NULL;
-	uint8 *pduBeforChange = NULL;
-	uint8 *dataBytes = NULL;
-	uint8 signalLength;
-	uint8 BitOffsetInByte;
-	uint8 pduStartByte;
-	uint8 i;
-	Com_Asu_IPdu_type *Asu_IPdu = NULL;
+    void * const pduBuffer = IPdu->ComIPduDataPtr;
 
+    bitPosition = Signal->ComBitPosition;
 
+    pduBufferBytes = (uint8 *)pduBuffer;
 
-	const ComSignal_type * Signal =  GET_Signal(signalId);
-	// Get PDU
-	const ComIPdu_type *IPdu = GET_IPdu(Signal->ComIPduHandleId);
-	void * const pduBuffer = IPdu->ComIPduDataPtr;
+    dataBytes = (uint8 *) signalData;
 
-	bitPosition = Signal->ComBitPosition;
+    if(NORMAL==IPdu->ComIPduType)
+    {
+    uint64 signal_mask = power(2,Signal->ComBitSize)-1;
+    signal_mask <<= bitPosition;
+    signal_mask  = ~ signal_mask;
 
-	BitOffsetInByte = bitPosition%8;
-
-	pduStartByte = bitPosition / 8;
-
-	pduBufferBytes = (uint8 *)pduBuffer;
-
-	dataBytes = (uint8 *) signalData;
-
-	signalLength = Signal->ComBitSize/8;
-
-	pduBeforChange = pduBufferBytes;
-
-
-	pduBufferBytes += pduStartByte;
-	uint8 x;
-
-	for(i = 0; i<=signalLength; i++)
-	{
-	    pduMask = 255;
-	    signalMask = 255;
-        if( i == 0)
-        {
-            pduMask = pduMask >> (8 - BitOffsetInByte);
-            signalMask = signalMask >> BitOffsetInByte;
-            *pduBufferBytes = (* pduBufferBytes) & pduMask;
-            data = (* dataBytes) & signalMask;
-            data = data << BitOffsetInByte;
-            *pduBufferBytes = (* pduBufferBytes) | data;
-            x= *pduBufferBytes;
-            pduBufferBytes ++;
-        }
-        else if(i==signalLength)
-        {
-            pduMask = pduMask << BitOffsetInByte;
-            signalMask = signalMask << (8 - BitOffsetInByte);
-            *pduBufferBytes = (* pduBufferBytes) & pduMask;
-            data = (* dataBytes) & signalMask;
-            data = data >> (8 - BitOffsetInByte);
-            *pduBufferBytes = (* pduBufferBytes) | data;
-            x= *pduBufferBytes;
-        }
-        else
-        {
-            pduMask = pduMask << BitOffsetInByte;
-            signalMask = signalMask << (8 - BitOffsetInByte);
-            *pduBufferBytes = (* pduBufferBytes) & pduMask;
-            data = (* dataBytes) & signalMask;
-            data = data >> (8 - BitOffsetInByte);
-            *pduBufferBytes = (* pduBufferBytes) | data;
-
-            dataBytes++;
-
-            pduMask = 255;
-            signalMask = 255;
-            pduMask = pduMask >> (8 - BitOffsetInByte);
-            signalMask = signalMask >> BitOffsetInByte;
-            *pduBufferBytes = (* pduBufferBytes) & pduMask;
-            data = (* dataBytes) & signalMask;
-            data = data << BitOffsetInByte;
-            *pduBufferBytes = (* pduBufferBytes) | data;
-            x= *pduBufferBytes;
-            pduBufferBytes ++;
-
-        }
-	}
-
-
-
-//	data = *(const uint64 *)signalData;
-//	mask = power(2,Signal->ComBitSize) - 1;
-//	data = data & mask ;
-//	data = data << BitOffsetInByte;
-
-	//wrong example we forget to edit it see the documentation
-	/* example
-	 * if i want to write uint8 from bitposition = 9
-	 * BitOffsetInByte will be 1
-	 * we make a mask = 0000000000000000011111111111111111111111111111111111111111111111
-	 * then shift it by 9 (bitposition) + 8 (length of data)
-	 * so it will be 1111111111111111111111111111111111111111111111100000000000000000
-	 * then or the mask with ones = 9 (bitposition)  --> 111111111
-	 * so the mask will be  1111111111111111111111111111111111111111111111100000000111111111
-	 */
-
-//	mask = power (2,64) - 1;
-//	mask = mask <<( BitOffsetInByte + Signal->ComBitSize );
-//	mask = mask | ( power(2,BitOffsetInByte) - 1);
-//	uint8 * ptr = (pduBufferBytes + pduStartByte);
-//	uint64 * ptr64 = (uint64 *) ptr;
-//	uint64 odata = *(uint64 *) ptr64;
-//	odata = odata & mask;
-//	* ptr64 = odata;
-//	//*(uint64 *)(pduBufferBytes + pduStartByte) = (*(uint64 *)(pduBufferBytes + pduStartByte))& mask;
-//	*(uint64 *)(pduBufferBytes + pduStartByte) = (*(uint64 *)(pduBufferBytes + pduStartByte))| data;
-//	if(*(uint64 *)(pduBufferBytes + pduStartByte) != *(uint64 *)(pduBeforChange + pduStartByte))
-//	{
-//		Asu_IPdu = GET_AsuIPdu(Signal->ComIPduHandleId);
-//		Asu_IPdu->Com_Asu_Pdu_changed = TRUE;
-//	}
-
+    uint64 signal_data_shifted = (uint64)dataBytes;
+    signal_data_shifted <<= bitPosition ;
+    signal_mask = signal_mask | signal_data_shifted ;
+    *pduBufferBytes= (*pduBufferBytes) & signal_mask ;
+    }
 }
 
 
@@ -268,7 +170,7 @@ void Com_WriteSignalDataToSignalBuffer (const uint16 signalId, const void * sign
 void Com_ReadSignalDataFromSignalBuffer (const uint16 signalId,  void * signalData)
 {
 	const ComSignal_type * Signal =  GET_Signal(signalId);
-	memcpy(signalData, Signal->ComSignalDataPtr, Signal->ComBitSize/8);
+	memcpy(signalData, Signal->ComSignalDataPtr, ceil( (float) Signal->ComBitSize/8));
 }
 
 
