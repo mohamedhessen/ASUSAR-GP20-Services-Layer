@@ -159,7 +159,7 @@ void Com_MainFunctionRx(void)
                 if (Asu_Signal->ComSignalUpdated||signal->isUpdateBitUsed== FALSE)
                 {
                     if (signal->ComNotification != NULL)
-                    {s
+                    {
                         signal->ComNotification();
                     }
                     Asu_Signal->ComSignalUpdated = FALSE;
