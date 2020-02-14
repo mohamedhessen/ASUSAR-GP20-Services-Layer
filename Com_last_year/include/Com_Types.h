@@ -169,7 +169,9 @@ typedef struct {
 	/* notification function. */
 	void (*ComNotification) (void);
 
-	/**/
+	/*
+	 * to solve the problem that Update bit in each signal is optional
+	*/
 	boolean isUpdateBitUsed;
 
 } ComSignal_type;

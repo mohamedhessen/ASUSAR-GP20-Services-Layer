@@ -3,24 +3,14 @@
 
 "C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
  
-Building file: "../source/Com.c"
+Building file: "../source/Com_Buffer.c"
 Invoking: ARM Compiler
-"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/Com.d_raw" --obj_directory="source"  "../source/Com.c"
-"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 15: warning #48-D: incompatible redefinition of macro "TRUE" (declared at line 38 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
-"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 16: warning #48-D: incompatible redefinition of macro "FALSE" (declared at line 35 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
-"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 29: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_POINTER" (declared at line 20)
-"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 111: warning #303-D: typedef name has already been declared (with same type)
-"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\Com_last_year\include\CanTp_Types.h", line 20: warning #303-D: typedef name has already been declared (with same type)
-"../source/Com.c", line 27: warning #69-D: integer conversion resulted in a change of sign
-"../source/Com.c", line 61: warning #225-D: function "memset" declared implicitly
-"../source/Com.c", line 177: warning #179-D: variable "mixedSent" was declared but never referenced
-"../source/Com.c", line 295: warning #552-D: variable "x" was set but never used
-"../source/Com.c", line 336: warning #145-D: a value of type "const ComIPdu_type *" cannot be used to initialize an entity of type "ComIPdu_type *"
-"../source/Com.c", line 358: warning #145-D: a value of type "const ComIPdu_type *" cannot be used to initialize an entity of type "ComIPdu_type *"
-"../source/Com.c", line 390: warning #552-D: variable "x" was set but never used
-"../source/Com.c", line 494: warning #145-D: a value of type "const ComIPdu_type *" cannot be used to initialize an entity of type "ComIPdu_type *"
-"../source/Com.c", line 503: warning #515-D: a value of type "const ComSignal_type *" cannot be assigned to an entity of type "ComSignal_type *"
-Finished building: "../source/Com.c"
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/Com_Buffer.d_raw" --obj_directory="source"  "../source/Com_Buffer.c"
+"../source/Com_Buffer.c", line 108: warning #225-D: function "memset" declared implicitly
+"../source/Com_Buffer.c", line 96: warning #179-D: variable "signalDataBytes" was declared but never referenced
+"../source/Com_Buffer.c", line 113: warning #552-D: variable "x" was set but never used
+"../source/Com_Buffer.c", line 14: warning #179-D: variable "Com_Asu_Config" was declared but never referenced
+Finished building: "../source/Com_Buffer.c"
  
 Building target: "Com_last_year.out"
 Invoking: ARM Linker

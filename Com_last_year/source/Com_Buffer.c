@@ -64,6 +64,8 @@ void Com_WriteSignalDataToPduBuffer(const uint16 signalId, const void *signalDat
 
     dataBytes = (uint8 *) signalData;
 
+    /*Corrected bug*/
+    /*writing a signal in pdu buffer with limited size*/
     if(NORMAL==IPdu->ComIPduType)
     {
     uint64 signal_mask = power(2,Signal->ComBitSize)-1;
@@ -72,6 +74,7 @@ void Com_WriteSignalDataToPduBuffer(const uint16 signalId, const void *signalDat
 
     uint64 signal_data_shifted = (uint64)dataBytes;
     signal_data_shifted <<= bitPosition ;
+
     signal_mask = signal_mask | signal_data_shifted ;
     *pduBufferBytes= (*pduBufferBytes) & signal_mask ;
     }
@@ -163,14 +166,14 @@ void Com_ReadSignalDataFromPduBuffer(const uint16 signalId, void *signalData)
 void Com_WriteSignalDataToSignalBuffer (const uint16 signalId, const void * signalData)
 {
 	const ComSignal_type * Signal =  GET_Signal(signalId);
-	memcpy(Signal->ComSignalDataPtr, signalData, ceil( (float) Signal->ComBitSize/8 ));
+	memcpy(Signal->ComSignalDataPtr, signalData, Asu_Ceil(Signal->ComBitSize));
 }
 
 
 void Com_ReadSignalDataFromSignalBuffer (const uint16 signalId,  void * signalData)
 {
 	const ComSignal_type * Signal =  GET_Signal(signalId);
-	memcpy(signalData, Signal->ComSignalDataPtr, ceil( (float) Signal->ComBitSize/8));
+	memcpy(signalData, Signal->ComSignalDataPtr, Asu_Ceil(Signal->ComBitSize));
 }
 
 

@@ -137,6 +137,9 @@ void Com_MainFunctionRx(void)
 
             if (Asu_Signal->ComSignalUpdated||signal->isUpdateBitUsed == FALSE)
             {
+                /*Check SWS in PDU update bit if no update bit used in signal
+                 * */
+
                 pduUpdated = TRUE;
             }
         }
@@ -157,6 +160,8 @@ void Com_MainFunctionRx(void)
 
                 /* if at least on signal is Updated, mark this Pdu as Updated */
                 if (Asu_Signal->ComSignalUpdated||signal->isUpdateBitUsed== FALSE)
+                    /*Check SWS in PDU update bit if no update bit used in signal
+                                     * */
                 {
                     if (signal->ComNotification != NULL)
                     {
@@ -179,6 +184,7 @@ void Com_MainFunctionTx(void)
 
     //Loop on IPDUs
     uint16 pduId;
+
     for ( pduId = 0; pduId<COM_NUM_OF_IPDU; pduId++)
     {
         IPdu = GET_IPdu(pduId);
@@ -214,6 +220,8 @@ void Com_MainFunctionTx(void)
                 if(!mixed_t)/* in case the Pdu is mixed don't break */
                     break;
                 /* if the transmission mode is direct */
+
+                /*check if sent before*/
             case DIRECT:
                 if(Asu_IPdu->Com_Asu_TxIPduTimers.ComTxIPduNumberOfRepetitionsLeft > 0)
                 {

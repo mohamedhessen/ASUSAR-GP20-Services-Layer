@@ -25,6 +25,17 @@ uint64 power(uint8 x,uint8 y)
 	return result;
 }
 
+uint8 Asu_Ceil(uint8 Input)
+{
+    uint8 Result = Input/8;
+
+    if(Input % 8 > 0)
+        Result = Result + 1;
+
+
+    return Result;
+}
+
 
 //boolean compare_float(uint64 f1, uint64 f2)
 //{

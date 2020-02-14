@@ -47,5 +47,7 @@ boolean validateSignalID (Com_SignalIdType SignalId);
 
 uint64 power(uint8 x,uint8 y);
 //boolean compare_float(uint64 f1, uint64 f2);
+uint8 Asu_Ceil(uint8 Input);
+
 
 #endif

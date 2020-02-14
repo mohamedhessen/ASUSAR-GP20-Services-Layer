@@ -2465,3 +2465,372 @@ Finished building target: "Com_last_year.out"
  
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project Com_last_year ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../source/PduR_helper.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/PduR_helper.d_raw" --obj_directory="source"  "../source/PduR_helper.c"
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 15: warning #48-D: incompatible redefinition of macro "TRUE" (declared at line 38 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 16: warning #48-D: incompatible redefinition of macro "FALSE" (declared at line 35 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 29: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_POINTER" (declared at line 20)
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 111: warning #303-D: typedef name has already been declared (with same type)
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\Com_last_year\include\CanTp_Types.h", line 20: warning #303-D: typedef name has already been declared (with same type)
+"../source/PduR_helper.c", line 73: warning #994-D: missing return statement at end of non-void function "get_ID"
+"../source/PduR_helper.c", line 84: warning #190-D: enumerated type mixed with another type
+"../source/PduR_helper.c", line 88: warning #994-D: missing return statement at end of non-void function "get_type"
+Finished building: "../source/PduR_helper.c"
+ 
+Building file: "../Rte/Rte.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="Rte/Rte.d_raw" --obj_directory="Rte"  "../Rte/Rte.c"
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 15: warning #48-D: incompatible redefinition of macro "TRUE" (declared at line 38 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 16: warning #48-D: incompatible redefinition of macro "FALSE" (declared at line 35 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 29: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_POINTER" (declared at line 20)
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 111: warning #303-D: typedef name has already been declared (with same type)
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\Com_last_year\include\CanTp_Types.h", line 20: warning #303-D: typedef name has already been declared (with same type)
+"../Rte/Rte.c", line 12: warning #190-D: enumerated type mixed with another type
+"../Rte/Rte.c", line 18: warning #190-D: enumerated type mixed with another type
+"../Rte/Rte.c", line 24: warning #190-D: enumerated type mixed with another type
+"../Rte/Rte.c", line 30: warning #190-D: enumerated type mixed with another type
+"../Rte/Rte.c", line 35: warning #225-D: function "PORTF_SSL" declared implicitly
+"../Rte/Rte.c", line 41: warning #225-D: function "PORTF_SSR" declared implicitly
+Finished building: "../Rte/Rte.c"
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 15: warning #48-D: incompatible redefinition of macro "TRUE" (declared at line 38 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 16: warning #48-D: incompatible redefinition of macro "FALSE" (declared at line 35 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 29: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_POINTER" (declared at line 20)
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 111: warning #303-D: typedef name has already been declared (with same type)
+"..\include\CanTp_Types.h", line 20: warning #303-D: typedef name has already been declared (with same type)
+"..\include/Can.h", line 72: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_POINTER" (declared at line 29 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h")
+"..\include/Can.h", line 73: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_HANDLE" (declared at line 21 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h")
+"..\include/Can.h", line 75: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_CONTROLLER" (declared at line 23 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h")
+"..\include/Can.h", line 77: warning #48-D: incompatible redefinition of macro "CAN_E_UNINIT" (declared at line 24 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h")
+"..\include/Can.h", line 79: warning #48-D: incompatible redefinition of macro "CAN_E_TRANSITION" (declared at line 25 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h")
+"../main.c", line 59: warning #225-D: function "LCD_INIT" declared implicitly
+"../main.c", line 60: warning #225-D: function "LCD_command" declared implicitly
+"../main.c", line 63: warning #169-D: argument of type "const Can_ConfigType *" is incompatible with parameter of type "Can_ConfigType *"
+"../main.c", line 71: warning #112-D: statement is unreachable
+"../main.c", line 106: warning #225-D: function "SeatHeaterRunnable" declared implicitly
+"../main.c", line 110: warning #225-D: function "SeatSensorRunnableLeft" declared implicitly
+"../main.c", line 114: warning #225-D: function "SeatSensorRunnableRight" declared implicitly
+"../main.c", line 129: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building file: "../source/Can.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/Can.d_raw" --obj_directory="source"  "../source/Can.c"
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\Com_last_year\include\Can_GeneralTypes.h", line 15: warning #48-D: incompatible redefinition of macro "TRUE" (declared at line 38 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\Com_last_year\include\Can_GeneralTypes.h", line 16: warning #48-D: incompatible redefinition of macro "FALSE" (declared at line 35 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\Com_last_year\include\Can_GeneralTypes.h", line 29: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_POINTER" (declared at line 20)
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\Com_last_year\include\Can_GeneralTypes.h", line 111: warning #303-D: typedef name has already been declared (with same type)
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can.h", line 72: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_POINTER" (declared at line 29 of "C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\Com_last_year\include\Can_GeneralTypes.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can.h", line 73: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_HANDLE" (declared at line 21 of "C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\Com_last_year\include\Can_GeneralTypes.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can.h", line 75: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_CONTROLLER" (declared at line 23 of "C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\Com_last_year\include\Can_GeneralTypes.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can.h", line 77: warning #48-D: incompatible redefinition of macro "CAN_E_UNINIT" (declared at line 24 of "C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\Com_last_year\include\Can_GeneralTypes.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can.h", line 79: warning #48-D: incompatible redefinition of macro "CAN_E_TRANSITION" (declared at line 25 of "C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\Com_last_year\include\Can_GeneralTypes.h")
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\Com_last_year\include\CanTp_Types.h", line 20: warning #303-D: typedef name has already been declared (with same type)
+"../source/Can.c", line 55: warning #145-D: a value of type "const CanController *" cannot be used to initialize an entity of type "CanController *"
+"../source/Can.c", line 55: warning #145-D: a value of type "const CanController *" cannot be used to initialize an entity of type "CanController *"
+"../source/Can.c", line 55: warning #145-D: a value of type "const CanController *" cannot be used to initialize an entity of type "CanController *"
+"../source/Can.c", line 56: warning #145-D: a value of type "const Mcu_PerClockConfigType (*)[2]" cannot be used to initialize an entity of type "Mcu_PerClockConfigType *"
+"../source/Can.c", line 56: warning #145-D: a value of type "const CanControllerBaudrateConfig *" cannot be used to initialize an entity of type "CanControllerBaudrateConfig *"
+"../source/Can.c", line 56: warning #145-D: a value of type "const Mcu_PerClockConfigType (*)[2]" cannot be used to initialize an entity of type "Mcu_PerClockConfigType *"
+"../source/Can.c", line 56: warning #145-D: a value of type "const CanControllerBaudrateConfig *" cannot be used to initialize an entity of type "CanControllerBaudrateConfig *"
+"../source/Can.c", line 663: warning #994-D: missing return statement at end of non-void function "Can_GetControllerErrorState"
+"../source/Can.c", line 748: warning #190-D: enumerated type mixed with another type
+"../source/Can.c", line 788: warning #188-D: pointless comparison of unsigned integer with zero
+"../source/Can.c", line 983: warning #190-D: enumerated type mixed with another type
+"../source/Can.c", line 1052: warning #190-D: enumerated type mixed with another type
+"../source/Can.c", line 1064: warning #994-D: missing return statement at end of non-void function "Can_Write"
+"../source/Can.c", line 674: warning #179-D: variable "return_value0" was declared but never referenced
+"../source/Can.c", line 1608: warning #994-D: missing return statement at end of non-void function "Can_GetControllerMode"
+"../source/Can.c", line 40: warning #552-D: variable "CanDevolpmentErrorType" was set but never used
+Finished building: "../source/Can.c"
+ 
+Building file: "../source/CanIf_Cfg.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/CanIf_Cfg.d_raw" --obj_directory="source"  "../source/CanIf_Cfg.c"
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 29: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_POINTER" (declared at line 20)
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 111: warning #303-D: typedef name has already been declared (with same type)
+Finished building: "../source/CanIf_Cfg.c"
+ 
+Building file: "../source/CanIf_Sec_cfg.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/CanIf_Sec_cfg.d_raw" --obj_directory="source"  "../source/CanIf_Sec_cfg.c"
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 29: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_POINTER" (declared at line 20)
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 111: warning #303-D: typedef name has already been declared (with same type)
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can.h", line 72: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_POINTER" (declared at line 29 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can.h", line 73: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_HANDLE" (declared at line 21 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can.h", line 75: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_CONTROLLER" (declared at line 23 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can.h", line 77: warning #48-D: incompatible redefinition of macro "CAN_E_UNINIT" (declared at line 24 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can.h", line 79: warning #48-D: incompatible redefinition of macro "CAN_E_TRANSITION" (declared at line 25 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h")
+"../source/CanIf_Sec_cfg.c", line 66: warning #145-D: a value of type "const CanHardwareObject *" cannot be used to initialize an entity of type "CanHardwareObject *"
+"../source/CanIf_Sec_cfg.c", line 70: warning #145-D: a value of type "const CanHardwareObject *" cannot be used to initialize an entity of type "CanHardwareObject *"
+"../source/CanIf_Sec_cfg.c", line 78: warning #145-D: a value of type "CanIfRxPduCanIdRange (*)[1]" cannot be used to initialize an entity of type "CanIfHrhRangeCfg *"
+"../source/CanIf_Sec_cfg.c", line 312: warning #145-D: a value of type "const CanController *" cannot be used to initialize an entity of type "CanController *"
+"../source/CanIf_Sec_cfg.c", line 317: warning #145-D: a value of type "const CanController *" cannot be used to initialize an entity of type "CanController *"
+"../source/CanIf_Sec_cfg.c", line 322: warning #145-D: a value of type "const CanController *" cannot be used to initialize an entity of type "CanController *"
+"../source/CanIf_Sec_cfg.c", line 331: warning #145-D: a value of type "CanIfInitCfg (*)[1]" cannot be used to initialize an entity of type "CanIfInitCfg *"
+Finished building: "../source/CanIf_Sec_cfg.c"
+ 
+Building file: "../source/CanTpRuntime.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/CanTpRuntime.d_raw" --obj_directory="source"  "../source/CanTpRuntime.c"
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\Com_last_year\include\CanTp_Types.h", line 20: warning #303-D: typedef name has already been declared (with same type)
+Finished building: "../source/CanTpRuntime.c"
+ 
+Building file: "../source/CanIf.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/CanIf.d_raw" --obj_directory="source"  "../source/CanIf.c"
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 29: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_POINTER" (declared at line 20)
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 111: warning #303-D: typedef name has already been declared (with same type)
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\Com_last_year\include\CanTp_Types.h", line 20: warning #303-D: typedef name has already been declared (with same type)
+"../source/CanIf.c", line 30: warning #1238-D: excess initializers are ignored
+"../source/CanIf.c", line 64: warning #515-D: a value of type "const CanIf_ConfigType *" cannot be assigned to an entity of type "CanIf_ConfigType *"
+"../source/CanIf.c", line 70: warning #190-D: enumerated type mixed with another type
+"../source/CanIf.c", line 102: warning #190-D: enumerated type mixed with another type
+"../source/CanIf.c", line 105: warning #190-D: enumerated type mixed with another type
+"../source/CanIf.c", line 109: warning #190-D: enumerated type mixed with another type
+"../source/CanIf.c", line 128: warning #190-D: enumerated type mixed with another type
+"../source/CanIf.c", line 147: warning #225-D: function "Can_SetControllerMode" declared implicitly
+"../source/CanIf.c", line 147: warning #190-D: enumerated type mixed with another type
+"../source/CanIf.c", line 151: warning #190-D: enumerated type mixed with another type
+"../source/CanIf.c", line 233: warning #225-D: function "Can_Write" declared implicitly
+"../source/CanIf.c", line 233: warning #190-D: enumerated type mixed with another type
+"../source/CanIf.c", line 253: warning #190-D: enumerated type mixed with another type
+"../source/CanIf.c", line 322: warning #190-D: enumerated type mixed with another type
+"../source/CanIf.c", line 326: warning #145-D: a value of type "CanIfPrivateCfg **" cannot be used to initialize an entity of type "CanIfPrivateCfg *"
+"../source/CanIf.c", line 393: warning #225-D: function "CanTp_RxIndication" declared implicitly
+"../source/CanIf.c", line 405: warning #522-D: initialization with "{...}" expected for aggregate object
+"../source/CanIf.c", line 405: warning #145-D: a value of type "uint8 *" cannot be used to initialize an entity of type "uint8"
+"../source/CanIf.c", line 405: warning #179-D: variable "arr" was declared but never referenced
+"../source/CanIf.c", line 321: warning #179-D: variable "CanIfRxPduCfg_index" was declared but never referenced
+"../source/CanIf.c", line 326: warning #179-D: variable "CanIfPrivateCfgArr" was declared but never referenced
+Finished building: "../source/CanIf.c"
+ 
+Building file: "../source/CanTp_Cfg.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/CanTp_Cfg.d_raw" --obj_directory="source"  "../source/CanTp_Cfg.c"
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/CanTp_Types.h", line 20: warning #303-D: typedef name has already been declared (with same type)
+Finished building: "../source/CanTp_Cfg.c"
+ 
+Building file: "../source/Com_Asu_Cfg.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/Com_Asu_Cfg.d_raw" --obj_directory="source"  "../source/Com_Asu_Cfg.c"
+Finished building: "../source/Com_Asu_Cfg.c"
+ 
+Building file: "../source/Com_Buffer.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/Com_Buffer.d_raw" --obj_directory="source"  "../source/Com_Buffer.c"
+"../source/Com_Buffer.c", line 108: warning #225-D: function "memset" declared implicitly
+"../source/Com_Buffer.c", line 96: warning #179-D: variable "signalDataBytes" was declared but never referenced
+"../source/Com_Buffer.c", line 113: warning #552-D: variable "x" was set but never used
+"../source/Com_Buffer.c", line 169: warning #225-D: function "Asu_Ceil" declared implicitly
+"../source/Com_Buffer.c", line 176: warning #225-D: function "ceil" declared implicitly
+"../source/Com_Buffer.c", line 14: warning #179-D: variable "Com_Asu_Config" was declared but never referenced
+Finished building: "../source/Com_Buffer.c"
+ 
+Building file: "../source/Com.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/Com.d_raw" --obj_directory="source"  "../source/Com.c"
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 15: warning #48-D: incompatible redefinition of macro "TRUE" (declared at line 38 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 16: warning #48-D: incompatible redefinition of macro "FALSE" (declared at line 35 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 29: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_POINTER" (declared at line 20)
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 111: warning #303-D: typedef name has already been declared (with same type)
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\Com_last_year\include\CanTp_Types.h", line 20: warning #303-D: typedef name has already been declared (with same type)
+"../source/Com.c", line 27: warning #69-D: integer conversion resulted in a change of sign
+"../source/Com.c", line 61: warning #225-D: function "memset" declared implicitly
+"../source/Com.c", line 182: warning #179-D: variable "mixedSent" was declared but never referenced
+"../source/Com.c", line 303: warning #552-D: variable "x" was set but never used
+"../source/Com.c", line 344: warning #145-D: a value of type "const ComIPdu_type *" cannot be used to initialize an entity of type "ComIPdu_type *"
+"../source/Com.c", line 366: warning #145-D: a value of type "const ComIPdu_type *" cannot be used to initialize an entity of type "ComIPdu_type *"
+"../source/Com.c", line 398: warning #552-D: variable "x" was set but never used
+"../source/Com.c", line 502: warning #145-D: a value of type "const ComIPdu_type *" cannot be used to initialize an entity of type "ComIPdu_type *"
+"../source/Com.c", line 511: warning #515-D: a value of type "const ComSignal_type *" cannot be assigned to an entity of type "ComSignal_type *"
+Finished building: "../source/Com.c"
+ 
+Building file: "../source/Com_Cfg.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/Com_Cfg.d_raw" --obj_directory="source"  "../source/Com_Cfg.c"
+Finished building: "../source/Com_Cfg.c"
+ 
+Building file: "../source/Com_helper.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/Com_helper.d_raw" --obj_directory="source"  "../source/Com_helper.c"
+Finished building: "../source/Com_helper.c"
+ 
+Building file: "../source/PduR.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/PduR.d_raw" --obj_directory="source"  "../source/PduR.c"
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 15: warning #48-D: incompatible redefinition of macro "TRUE" (declared at line 38 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 16: warning #48-D: incompatible redefinition of macro "FALSE" (declared at line 35 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 29: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_POINTER" (declared at line 20)
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 111: warning #303-D: typedef name has already been declared (with same type)
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\Com_last_year\include\CanTp_Types.h", line 20: warning #303-D: typedef name has already been declared (with same type)
+"../source/PduR.c", line 30: warning #994-D: missing return statement at end of non-void function "PduR_ComTransmit"
+"../source/PduR.c", line 15: warning #552-D: variable "info" was set but never used
+Finished building: "../source/PduR.c"
+ 
+Building file: "../source/cantp.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/cantp.d_raw" --obj_directory="source"  "../source/cantp.c"
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\Com_last_year\include\CanTp_Types.h", line 20: warning #303-D: typedef name has already been declared (with same type)
+"../source/cantp.c", line 263: warning #190-D: enumerated type mixed with another type
+"../source/cantp.c", line 450: warning #190-D: enumerated type mixed with another type
+"../source/cantp.c", line 513: warning #169-D: argument of type "uint8 *" is incompatible with parameter of type "PduInfoType *"
+Finished building: "../source/cantp.c"
+ 
+Building file: "../source/Helper_Functions.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/Helper_Functions.d_raw" --obj_directory="source"  "../source/Helper_Functions.c"
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\Com_last_year\include\CanTp_Types.h", line 20: warning #303-D: typedef name has already been declared (with same type)
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/CanTp_CanIf.h", line 9: warning #1557-D: white space between backslash and newline in line splice ignored
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/CanTp_CanIf.h", line 13: warning #1557-D: white space between backslash and newline in line splice ignored
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/PduR_CanTp.h", line 8: warning #1557-D: white space between backslash and newline in line splice ignored
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/PduR_CanTp.h", line 13: warning #1557-D: white space between backslash and newline in line splice ignored
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 15: warning #48-D: incompatible redefinition of macro "TRUE" (declared at line 38 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 16: warning #48-D: incompatible redefinition of macro "FALSE" (declared at line 35 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 29: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_POINTER" (declared at line 20)
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 111: warning #303-D: typedef name has already been declared (with same type)
+"../source/Helper_Functions.c", line 364: warning #190-D: enumerated type mixed with another type
+"../source/Helper_Functions.c", line 390: warning #190-D: enumerated type mixed with another type
+"../source/Helper_Functions.c", line 413: warning #190-D: enumerated type mixed with another type
+"../source/Helper_Functions.c", line 424: warning #145-D: a value of type "const PduInfoType *" cannot be used to initialize an entity of type "PduInfoType *"
+"../source/Helper_Functions.c", line 429: warning #190-D: enumerated type mixed with another type
+"../source/Helper_Functions.c", line 523: warning #190-D: enumerated type mixed with another type
+"../source/Helper_Functions.c", line 574: warning #145-D: a value of type "const PduInfoType *" cannot be used to initialize an entity of type "PduInfoType *"
+"../source/Helper_Functions.c", line 590: warning #190-D: enumerated type mixed with another type
+"../source/Helper_Functions.c", line 607: warning #190-D: enumerated type mixed with another type
+"../source/Helper_Functions.c", line 670: warning #190-D: enumerated type mixed with another type
+"../source/Helper_Functions.c", line 699: warning #225-D: function "PduR_CanTpTxConfirmation" declared implicitly
+"../source/Helper_Functions.c", line 716: warning #190-D: enumerated type mixed with another type
+"../source/Helper_Functions.c", line 728: warning #225-D: function "PduR_CanTpTxConfirmation" declared implicitly
+"../source/Helper_Functions.c", line 854: warning #169-D: argument of type "uint8" is incompatible with parameter of type "const RetryInfoType *"
+"../source/Helper_Functions.c", line 864: warning #169-D: argument of type "uint8" is incompatible with parameter of type "const RetryInfoType *"
+"../source/Helper_Functions.c", line 874: warning #169-D: argument of type "uint8" is incompatible with parameter of type "const RetryInfoType *"
+"../source/Helper_Functions.c", line 889: warning #169-D: argument of type "uint8" is incompatible with parameter of type "const RetryInfoType *"
+"../source/Helper_Functions.c", line 895: warning #169-D: argument of type "uint8" is incompatible with parameter of type "const RetryInfoType *"
+Finished building: "../source/Helper_Functions.c"
+ 
+Building target: "Com_last_year.out"
+Invoking: ARM Linker
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Com_last_year.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/lib" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Com_last_year_linkInfo.xml" --rom_model -o "Com_last_year.out" "./Delay.obj" "./Dio.obj" "./LCDInit.obj" "./PORTF.obj" "./RX_main.obj" "./Timer0A.obj" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./OS/InitConsole.obj" "./OS/Lcfg.obj" "./OS/alarm.obj" "./OS/event.obj" "./OS/interrupt.obj" "./OS/resource.obj" "./OS/task.obj" "./Rte/Rte.obj" "./Rte/Rte_SeatHeater.obj" "./Rte/Rte_SeatSensorLeft.obj" "./Rte/Rte_SeatSensorRight.obj" "./driverlib/adc.obj" "./driverlib/aes.obj" "./driverlib/can.obj" "./driverlib/comp.obj" "./driverlib/cpu.obj" "./driverlib/crc.obj" "./driverlib/des.obj" "./driverlib/eeprom.obj" "./driverlib/emac.obj" "./driverlib/epi.obj" "./driverlib/flash.obj" "./driverlib/fpu.obj" "./driverlib/gpio.obj" "./driverlib/hibernate.obj" "./driverlib/i2c.obj" "./driverlib/interrupt.obj" "./driverlib/lcd.obj" "./driverlib/mpu.obj" "./driverlib/onewire.obj" "./driverlib/pwm.obj" "./driverlib/qei.obj" "./driverlib/shamd5.obj" "./driverlib/ssi.obj" "./driverlib/sw_crc.obj" "./driverlib/sysctl.obj" "./driverlib/sysexc.obj" "./driverlib/systick.obj" "./driverlib/timer.obj" "./driverlib/uart.obj" "./driverlib/udma.obj" "./driverlib/usb.obj" "./driverlib/watchdog.obj" "./freertos/list.obj" "./portable/port.obj" "./portable/portasm.obj" "./source/Can.obj" "./source/CanIf.obj" "./source/CanIf_Cfg.obj" "./source/CanIf_Sec_cfg.obj" "./source/CanTpRuntime.obj" "./source/CanTp_Cfg.obj" "./source/Com.obj" "./source/Com_Asu_Cfg.obj" "./source/Com_Buffer.obj" "./source/Com_Cfg.obj" "./source/Com_helper.obj" "./source/Helper_Functions.obj" "./source/PDURmy.obj" "./source/PduR.obj" "./source/PduR_helper.obj" "./source/cantp.obj" "./utils/uartstdio.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Com_last_year.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Com_last_year ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../Rte/Rte.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="Rte/Rte.d_raw" --obj_directory="Rte"  "../Rte/Rte.c"
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 15: warning #48-D: incompatible redefinition of macro "TRUE" (declared at line 38 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 16: warning #48-D: incompatible redefinition of macro "FALSE" (declared at line 35 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 29: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_POINTER" (declared at line 20)
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 111: warning #303-D: typedef name has already been declared (with same type)
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\Com_last_year\include\CanTp_Types.h", line 20: warning #303-D: typedef name has already been declared (with same type)
+"../Rte/Rte.c", line 12: warning #190-D: enumerated type mixed with another type
+"../Rte/Rte.c", line 18: warning #190-D: enumerated type mixed with another type
+"../Rte/Rte.c", line 24: warning #190-D: enumerated type mixed with another type
+"../Rte/Rte.c", line 30: warning #190-D: enumerated type mixed with another type
+"../Rte/Rte.c", line 35: warning #225-D: function "PORTF_SSL" declared implicitly
+"../Rte/Rte.c", line 41: warning #225-D: function "PORTF_SSR" declared implicitly
+Finished building: "../Rte/Rte.c"
+ 
+Building file: "../main.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 15: warning #48-D: incompatible redefinition of macro "TRUE" (declared at line 38 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 16: warning #48-D: incompatible redefinition of macro "FALSE" (declared at line 35 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 29: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_POINTER" (declared at line 20)
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 111: warning #303-D: typedef name has already been declared (with same type)
+"..\include\CanTp_Types.h", line 20: warning #303-D: typedef name has already been declared (with same type)
+"..\include/Can.h", line 72: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_POINTER" (declared at line 29 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h")
+"..\include/Can.h", line 73: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_HANDLE" (declared at line 21 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h")
+"..\include/Can.h", line 75: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_CONTROLLER" (declared at line 23 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h")
+"..\include/Can.h", line 77: warning #48-D: incompatible redefinition of macro "CAN_E_UNINIT" (declared at line 24 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h")
+"..\include/Can.h", line 79: warning #48-D: incompatible redefinition of macro "CAN_E_TRANSITION" (declared at line 25 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h")
+"../main.c", line 59: warning #225-D: function "LCD_INIT" declared implicitly
+"../main.c", line 60: warning #225-D: function "LCD_command" declared implicitly
+"../main.c", line 63: warning #169-D: argument of type "const Can_ConfigType *" is incompatible with parameter of type "Can_ConfigType *"
+"../main.c", line 71: warning #112-D: statement is unreachable
+"../main.c", line 106: warning #225-D: function "SeatHeaterRunnable" declared implicitly
+"../main.c", line 110: warning #225-D: function "SeatSensorRunnableLeft" declared implicitly
+"../main.c", line 114: warning #225-D: function "SeatSensorRunnableRight" declared implicitly
+"../main.c", line 129: warning #112-D: statement is unreachable
+Finished building: "../main.c"
+ 
+Building file: "../source/Com_Buffer.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/Com_Buffer.d_raw" --obj_directory="source"  "../source/Com_Buffer.c"
+"../source/Com_Buffer.c", line 108: warning #225-D: function "memset" declared implicitly
+"../source/Com_Buffer.c", line 96: warning #179-D: variable "signalDataBytes" was declared but never referenced
+"../source/Com_Buffer.c", line 113: warning #552-D: variable "x" was set but never used
+"../source/Com_Buffer.c", line 176: warning #225-D: function "ceil" declared implicitly
+"../source/Com_Buffer.c", line 14: warning #179-D: variable "Com_Asu_Config" was declared but never referenced
+Finished building: "../source/Com_Buffer.c"
+ 
+Building file: "../source/Com.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/Com.d_raw" --obj_directory="source"  "../source/Com.c"
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 15: warning #48-D: incompatible redefinition of macro "TRUE" (declared at line 38 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 16: warning #48-D: incompatible redefinition of macro "FALSE" (declared at line 35 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Platform_Types.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 29: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_POINTER" (declared at line 20)
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year/include/Can_GeneralTypes.h", line 111: warning #303-D: typedef name has already been declared (with same type)
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\Com_last_year\include\CanTp_Types.h", line 20: warning #303-D: typedef name has already been declared (with same type)
+"../source/Com.c", line 27: warning #69-D: integer conversion resulted in a change of sign
+"../source/Com.c", line 61: warning #225-D: function "memset" declared implicitly
+"../source/Com.c", line 182: warning #179-D: variable "mixedSent" was declared but never referenced
+"../source/Com.c", line 303: warning #552-D: variable "x" was set but never used
+"../source/Com.c", line 344: warning #145-D: a value of type "const ComIPdu_type *" cannot be used to initialize an entity of type "ComIPdu_type *"
+"../source/Com.c", line 366: warning #145-D: a value of type "const ComIPdu_type *" cannot be used to initialize an entity of type "ComIPdu_type *"
+"../source/Com.c", line 398: warning #552-D: variable "x" was set but never used
+"../source/Com.c", line 502: warning #145-D: a value of type "const ComIPdu_type *" cannot be used to initialize an entity of type "ComIPdu_type *"
+"../source/Com.c", line 511: warning #515-D: a value of type "const ComSignal_type *" cannot be assigned to an entity of type "ComSignal_type *"
+Finished building: "../source/Com.c"
+ 
+Building file: "../source/Com_helper.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/Com_helper.d_raw" --obj_directory="source"  "../source/Com_helper.c"
+Finished building: "../source/Com_helper.c"
+ 
+Building target: "Com_last_year.out"
+Invoking: ARM Linker
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Com_last_year.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/lib" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Com_last_year_linkInfo.xml" --rom_model -o "Com_last_year.out" "./Delay.obj" "./Dio.obj" "./LCDInit.obj" "./PORTF.obj" "./RX_main.obj" "./Timer0A.obj" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./OS/InitConsole.obj" "./OS/Lcfg.obj" "./OS/alarm.obj" "./OS/event.obj" "./OS/interrupt.obj" "./OS/resource.obj" "./OS/task.obj" "./Rte/Rte.obj" "./Rte/Rte_SeatHeater.obj" "./Rte/Rte_SeatSensorLeft.obj" "./Rte/Rte_SeatSensorRight.obj" "./driverlib/adc.obj" "./driverlib/aes.obj" "./driverlib/can.obj" "./driverlib/comp.obj" "./driverlib/cpu.obj" "./driverlib/crc.obj" "./driverlib/des.obj" "./driverlib/eeprom.obj" "./driverlib/emac.obj" "./driverlib/epi.obj" "./driverlib/flash.obj" "./driverlib/fpu.obj" "./driverlib/gpio.obj" "./driverlib/hibernate.obj" "./driverlib/i2c.obj" "./driverlib/interrupt.obj" "./driverlib/lcd.obj" "./driverlib/mpu.obj" "./driverlib/onewire.obj" "./driverlib/pwm.obj" "./driverlib/qei.obj" "./driverlib/shamd5.obj" "./driverlib/ssi.obj" "./driverlib/sw_crc.obj" "./driverlib/sysctl.obj" "./driverlib/sysexc.obj" "./driverlib/systick.obj" "./driverlib/timer.obj" "./driverlib/uart.obj" "./driverlib/udma.obj" "./driverlib/usb.obj" "./driverlib/watchdog.obj" "./freertos/list.obj" "./portable/port.obj" "./portable/portasm.obj" "./source/Can.obj" "./source/CanIf.obj" "./source/CanIf_Cfg.obj" "./source/CanIf_Sec_cfg.obj" "./source/CanTpRuntime.obj" "./source/CanTp_Cfg.obj" "./source/Com.obj" "./source/Com_Asu_Cfg.obj" "./source/Com_Buffer.obj" "./source/Com_Cfg.obj" "./source/Com_helper.obj" "./source/Helper_Functions.obj" "./source/PDURmy.obj" "./source/PduR.obj" "./source/PduR_helper.obj" "./source/cantp.obj" "./utils/uartstdio.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Com_last_year.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project Com_last_year ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../source/Com_Buffer.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/Com_last_year" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/Com_Buffer.d_raw" --obj_directory="source"  "../source/Com_Buffer.c"
+"../source/Com_Buffer.c", line 108: warning #225-D: function "memset" declared implicitly
+"../source/Com_Buffer.c", line 96: warning #179-D: variable "signalDataBytes" was declared but never referenced
+"../source/Com_Buffer.c", line 113: warning #552-D: variable "x" was set but never used
+"../source/Com_Buffer.c", line 14: warning #179-D: variable "Com_Asu_Config" was declared but never referenced
+Finished building: "../source/Com_Buffer.c"
+ 
+Building target: "Com_last_year.out"
+Invoking: ARM Linker
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"Com_last_year.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/lib" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="Com_last_year_linkInfo.xml" --rom_model -o "Com_last_year.out" "./Delay.obj" "./Dio.obj" "./LCDInit.obj" "./PORTF.obj" "./RX_main.obj" "./Timer0A.obj" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./OS/InitConsole.obj" "./OS/Lcfg.obj" "./OS/alarm.obj" "./OS/event.obj" "./OS/interrupt.obj" "./OS/resource.obj" "./OS/task.obj" "./Rte/Rte.obj" "./Rte/Rte_SeatHeater.obj" "./Rte/Rte_SeatSensorLeft.obj" "./Rte/Rte_SeatSensorRight.obj" "./driverlib/adc.obj" "./driverlib/aes.obj" "./driverlib/can.obj" "./driverlib/comp.obj" "./driverlib/cpu.obj" "./driverlib/crc.obj" "./driverlib/des.obj" "./driverlib/eeprom.obj" "./driverlib/emac.obj" "./driverlib/epi.obj" "./driverlib/flash.obj" "./driverlib/fpu.obj" "./driverlib/gpio.obj" "./driverlib/hibernate.obj" "./driverlib/i2c.obj" "./driverlib/interrupt.obj" "./driverlib/lcd.obj" "./driverlib/mpu.obj" "./driverlib/onewire.obj" "./driverlib/pwm.obj" "./driverlib/qei.obj" "./driverlib/shamd5.obj" "./driverlib/ssi.obj" "./driverlib/sw_crc.obj" "./driverlib/sysctl.obj" "./driverlib/sysexc.obj" "./driverlib/systick.obj" "./driverlib/timer.obj" "./driverlib/uart.obj" "./driverlib/udma.obj" "./driverlib/usb.obj" "./driverlib/watchdog.obj" "./freertos/list.obj" "./portable/port.obj" "./portable/portasm.obj" "./source/Can.obj" "./source/CanIf.obj" "./source/CanIf_Cfg.obj" "./source/CanIf_Sec_cfg.obj" "./source/CanTpRuntime.obj" "./source/CanTp_Cfg.obj" "./source/Com.obj" "./source/Com_Asu_Cfg.obj" "./source/Com_Buffer.obj" "./source/Com_Cfg.obj" "./source/Com_helper.obj" "./source/Helper_Functions.obj" "./source/PDURmy.obj" "./source/PduR.obj" "./source/PduR_helper.obj" "./source/cantp.obj" "./utils/uartstdio.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "Com_last_year.out"
+ 
+
+**** Build Finished ****
