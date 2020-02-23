@@ -2834,3 +2834,32 @@ Finished building target: "Com_last_year.out"
  
 
 **** Build Finished ****
+22:25:26 **** Clean-only build of configuration Debug for project ECU2_Integration ****
+make clean 
+make: *** No rule to make target 'clean'.  Stop.
+22:25:33 **** Build of configuration Debug for project ECU2_Integration ****
+make all 
+Building target: ECU2_Integration.out
+Invoking: ARM Linker
+ECU2_Integration.map 512 0 ECU2_Integration.out ECU2_Integration_linkInfo.xml /lib /include  "ECU2_Integration.out"
+/usr/bin/sh: ECU2_Integration.map: command not found
+make: *** [makefile:26: ECU2_Integration.out] Error 127
+22:26:07 **** Incremental Build of configuration Debug for project ECU2_Integration ****
+make all 
+Building target: ECU2_Integration.out
+Invoking: ARM Linker
+ECU2_Integration.map 512 0 ECU2_Integration.out ECU2_Integration_linkInfo.xml /lib /include  "ECU2_Integration.out"
+/usr/bin/sh: ECU2_Integration.map: command not found
+make: *** [makefile:26: ECU2_Integration.out] Error 127
+22:26:52 **** Build of configuration Debug for project ECU2_Integration ****
+make all 
+make: Nothing to be done for 'all'.
+22:26:57 **** Incremental Build of configuration Debug for project ECU2_Integration ****
+make all 
+make: Nothing to be done for 'all'.
+22:27:08 **** Incremental Build of configuration Debug for project ECU2_Integration ****
+make all 
+make: Nothing to be done for 'all'.
+22:27:34 **** Incremental Build of configuration Debug for project ECU2_Integration ****
+make all 
+make: Nothing to be done for 'all'.
