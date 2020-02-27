@@ -34,7 +34,7 @@ const ComSignal_type ComSignal[] =
         .ComBitSize= 8,
         .ComSignalType = BOOLEAN,
         .ComTransferProperty = TRIGGERED_ON_CHANGE,
-        .ComIPduHandleId=1,
+        .ComIPduHandleId=0,
         .ComNotification=NULL,
 		.ComSignalDataPtr = ComSignalBuffer_1
     },
@@ -45,7 +45,7 @@ const ComSignal_type ComSignal[] =
         .ComBitSize= 8,
         .ComSignalType = BOOLEAN,
         .ComTransferProperty = TRIGGERED_ON_CHANGE,
-        .ComIPduHandleId=1,
+        .ComIPduHandleId=0,
 		.ComNotification=NULL,
 		.ComSignalDataPtr = ComSignalBuffer_2
     },
@@ -56,7 +56,7 @@ const ComSignal_type ComSignal[] =
         .ComBitSize= 8,
         .ComSignalType = UINT8,
         .ComTransferProperty = TRIGGERED_ON_CHANGE,
-        .ComIPduHandleId=0,
+        .ComIPduHandleId=1,
 		.ComNotification=NULL,
 		.ComSignalDataPtr = ComSignalBuffer_3
     },
@@ -67,7 +67,7 @@ const ComSignal_type ComSignal[] =
         .ComBitSize= 8,
         .ComSignalType = UINT8,
         .ComTransferProperty = TRIGGERED_ON_CHANGE,
-        .ComIPduHandleId=0,
+        .ComIPduHandleId=1,
         .ComNotification=NULL,
         .ComSignalDataPtr = ComSignalBuffer_4
         },
@@ -149,8 +149,8 @@ const ComSignal_type * const ComIPduSignalRefs_Can_Message_1[] = {
 };
 
 const ComSignal_type * const ComIPduSignalRefs_Can_Message_2[] = {
-    &ComSignal[ passengeronleft ],
-    &ComSignal[ passengeronright ],
+    &ComSignal[ passengeronleft ], //
+    &ComSignal[ passengeronright ],//
    // &ComSignal[ CanDB_Signal_29_12_BE_Tester],
    // &ComSignal[ CanDB_Signal_1_4_LE ],
 	NULL
@@ -170,7 +170,7 @@ uint8 ComIPduBuffer_2[3];
 const ComIPdu_type ComIPdu[] = 
 {
     { // CanDB_Message_1
-        .ComIPduDirection = SEND ,
+        .ComIPduDirection = RECEIVE ,
 		.ComIPduSize=3,
         .ComIPduHandleId = 0 ,
         .ComIPduSignalRef =ComIPduSignalRefs_Can_Message_1,
@@ -196,7 +196,7 @@ const ComIPdu_type ComIPdu[] =
         }
     },
     { // CanDB_Message_2
-        .ComIPduDirection = RECEIVE ,
+        .ComIPduDirection = SEND ,
 		.ComIPduSize=3,
 		.ComIPduSignalProcessing = IMMEDIATE,
         .ComIPduHandleId = 1 ,
