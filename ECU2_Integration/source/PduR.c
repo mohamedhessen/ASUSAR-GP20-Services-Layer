@@ -16,10 +16,10 @@ Std_ReturnType PduR_ComTransmit( PduIdType TxPduId, const PduInfoType* PduInfoPt
     info.SduLength = PduInfoPtr->SduLength;
     info.SduDataPtr = PduInfoPtr->SduDataPtr;
 
-    uint8 x [3];
+    uint8 x [8];
     uint8 i;
 
-    for(i =0; i<3; i++)
+    for(i =0; i<8; i++)
     {
         x[i] = PduInfoPtr->SduDataPtr[i];
     }

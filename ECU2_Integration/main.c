@@ -98,14 +98,15 @@ TASK(T1)
         {
             HeatingControllerRunnable();
         }
+        if(NewEvent & BSW_Event_Com_MainFunctionTx)
+               {
+                   Com_MainFunctionTx();
+               }
         if(NewEvent & BSW_Event_Com_MainFunctionRx)
         {
             Com_MainFunctionRx();
         }
-        if(NewEvent & BSW_Event_Com_MainFunctionTx)
-        {
-            Com_MainFunctionTx();
-        }
+
 //        if(NewEvent & BSW_Event_CanTp_MainFunction)
 //        {
 //            CanTp_MainFunction();

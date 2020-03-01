@@ -31,7 +31,7 @@ const ComSignal_type ComSignal[] =
     	.ComBitPosition= 0,
         .ComUpdateBitPosition= 8 ,
         .ComHandleId= 0 ,
-        .ComBitSize= 8,
+        .ComBitSize= 3,
         .ComSignalType = BOOLEAN,
         .ComTransferProperty = TRIGGERED_ON_CHANGE,
         .ComIPduHandleId=0,
@@ -51,9 +51,9 @@ const ComSignal_type ComSignal[] =
     },
     {	//signal2
         .ComBitPosition= 2,
-        .ComUpdateBitPosition= 10 ,
+        .ComUpdateBitPosition= 20 ,
         .ComHandleId= 2 ,
-        .ComBitSize= 8,
+        .ComBitSize= 18,
         .ComSignalType = UINT8,
         .ComTransferProperty = TRIGGERED_ON_CHANGE,
         .ComIPduHandleId=1,
@@ -61,10 +61,10 @@ const ComSignal_type ComSignal[] =
 		.ComSignalDataPtr = ComSignalBuffer_3
     },
     {   //signal3
-        .ComBitPosition= 11,
-        .ComUpdateBitPosition= 19 ,
+        .ComBitPosition= 21,
+        .ComUpdateBitPosition= 39 ,
         .ComHandleId= 3 ,
-        .ComBitSize= 8,
+        .ComBitSize= 18,
         .ComSignalType = UINT8,
         .ComTransferProperty = TRIGGERED_ON_CHANGE,
         .ComIPduHandleId=1,
@@ -142,15 +142,15 @@ const ComSignal_type ComSignal[] =
 
 /* IPdu signal lists. */
 const ComSignal_type * const ComIPduSignalRefs_Can_Message_1[] = {
-    &ComSignal[ heatleft ],
-    &ComSignal[ heatright ],
+    &ComSignal[ 0 ],
+    &ComSignal[ 1 ],
     //&ComSignal[ seatstatusright ],
 	NULL
 };
 
 const ComSignal_type * const ComIPduSignalRefs_Can_Message_2[] = {
-    &ComSignal[ passengeronleft ], //
-    &ComSignal[ passengeronright ],//
+    &ComSignal[ passengeronright ], //
+    &ComSignal[ passengeronleft ],//
    // &ComSignal[ CanDB_Signal_29_12_BE_Tester],
    // &ComSignal[ CanDB_Signal_1_4_LE ],
 	NULL
@@ -162,6 +162,8 @@ const ComSignal_type * const ComIPduSignalRefs_Can_Message_2[] = {
 /* IPdu buffers and signal */
 uint8 ComIPduBuffer_1[3];
 
+//uint8 ComIPduBuffer_11[3]={0x07,0x03,0xff};
+
 uint8 ComIPduBuffer_2[3];
 
 //uint8 ComIPduBuffer_3[8];
@@ -171,7 +173,7 @@ const ComIPdu_type ComIPdu[] =
 {
     { // CanDB_Message_1
         .ComIPduDirection = RECEIVE ,
-		.ComIPduSize=3,
+		.ComIPduSize=8,
         .ComIPduHandleId = 0 ,
         .ComIPduSignalRef =ComIPduSignalRefs_Can_Message_1,
 		.ComIPduDataPtr=ComIPduBuffer_1,
@@ -197,7 +199,7 @@ const ComIPdu_type ComIPdu[] =
     },
     { // CanDB_Message_2
         .ComIPduDirection = SEND ,
-		.ComIPduSize=3,
+		.ComIPduSize=8,
 		.ComIPduSignalProcessing = IMMEDIATE,
         .ComIPduHandleId = 1 ,
         .ComIPduSignalRef = ComIPduSignalRefs_Can_Message_2,

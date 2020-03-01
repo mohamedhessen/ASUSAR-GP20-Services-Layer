@@ -127,7 +127,9 @@ void Com_MainFunctionRx(void)
     {
         IPdu = GET_IPdu(pduId);
         Asu_IPdu = GET_AsuIPdu(pduId);
-
+        if(IPdu->ComIPduDirection == SEND)
+            continue ;
+        uint8_t y =*(uint8_t*)(IPdu->ComIPduDataPtr);
         for (signalID = 0; (IPdu->ComIPduSignalRef != NULL) && (IPdu->ComIPduSignalRef[signalID] != NULL); signalID++)
         {
             if (Asu_Signal->ComSignalUpdated)

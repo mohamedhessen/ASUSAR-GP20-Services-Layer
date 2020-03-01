@@ -5,7 +5,7 @@
 
 boolean seatsensorright =1;
 boolean seatsensorleft =1;
-uint32 Regulator =2;
+uint32 Regulator =0x3f3f;
 uint8 OFF = 1;
 void HeatingControllerRunnable(	)
 	{

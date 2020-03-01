@@ -4233,3 +4233,59 @@ gmake[1]: 'ECU2_Integration.out' is up to date.
 gmake[1]: 'ECU2_Integration.out' is up to date.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project ECU2_Integration ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../source/Com_Buffer.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/Com_Buffer.d_raw" --obj_directory="source"  "../source/Com_Buffer.c"
+"../source/Com_Buffer.c", line 87: warning #179-D: variable "mask" was declared but never referenced
+"../source/Com_Buffer.c", line 91: warning #552-D: variable "pduBeforChange" was set but never used
+"../source/Com_Buffer.c", line 97: warning #179-D: variable "Asu_IPdu" was declared but never referenced
+"../source/Com_Buffer.c", line 115: warning #552-D: variable "x" was set but never used
+"../source/Com_Buffer.c", line 192: warning #225-D: function "memset" declared implicitly
+"../source/Com_Buffer.c", line 180: warning #179-D: variable "signalDataBytes" was declared but never referenced
+"../source/Com_Buffer.c", line 197: warning #552-D: variable "x" was set but never used
+"../source/Com_Buffer.c", line 245: warning #179-D: variable "x" was declared but never referenced
+"../source/Com_Buffer.c", line 14: warning #179-D: variable "Com_Asu_Config" was declared but never referenced
+Finished building: "../source/Com_Buffer.c"
+ 
+Building target: "ECU2_Integration.out"
+Invoking: ARM Linker
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ECU2_Integration.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/lib" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ECU2_Integration_linkInfo.xml" --rom_model -o "ECU2_Integration.out" "./Delay.obj" "./Dio.obj" "./KeyPad.obj" "./PORTF.obj" "./Timer0A.obj" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./OS/InitConsole.obj" "./OS/Lcfg.obj" "./OS/alarm.obj" "./OS/event.obj" "./OS/interrupt.obj" "./OS/resource.obj" "./OS/task.obj" "./Rte/Rte.obj" "./Rte/Rte_HeatRegulator.obj" "./Rte/Rte_SeatHeatingController.obj" "./driverlib/adc.obj" "./driverlib/aes.obj" "./driverlib/can.obj" "./driverlib/comp.obj" "./driverlib/cpu.obj" "./driverlib/crc.obj" "./driverlib/des.obj" "./driverlib/eeprom.obj" "./driverlib/emac.obj" "./driverlib/epi.obj" "./driverlib/flash.obj" "./driverlib/fpu.obj" "./driverlib/gpio.obj" "./driverlib/hibernate.obj" "./driverlib/i2c.obj" "./driverlib/interrupt.obj" "./driverlib/lcd.obj" "./driverlib/mpu.obj" "./driverlib/onewire.obj" "./driverlib/pwm.obj" "./driverlib/qei.obj" "./driverlib/shamd5.obj" "./driverlib/ssi.obj" "./driverlib/sw_crc.obj" "./driverlib/sysctl.obj" "./driverlib/sysexc.obj" "./driverlib/systick.obj" "./driverlib/timer.obj" "./driverlib/uart.obj" "./driverlib/udma.obj" "./driverlib/usb.obj" "./driverlib/watchdog.obj" "./freertos/list.obj" "./portable/port.obj" "./portable/portasm.obj" "./source/Can.obj" "./source/CanIf.obj" "./source/CanIf_Cfg.obj" "./source/CanIf_Sec_cfg.obj" "./source/CanTpRuntime.obj" "./source/CanTp_Cfg.obj" "./source/Com.obj" "./source/Com_Asu_Cfg.obj" "./source/Com_Buffer.obj" "./source/Com_Cfg.obj" "./source/Com_helper.obj" "./source/Helper_Functions.obj" "./source/PDURmy.obj" "./source/PduR.obj" "./source/PduR_helper.obj" "./source/cantp.obj" "./utils/uartstdio.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "ECU2_Integration.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ECU2_Integration ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../source/Com_Buffer.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/Com_Buffer.d_raw" --obj_directory="source"  "../source/Com_Buffer.c"
+"../source/Com_Buffer.c", line 86: warning #179-D: variable "mask" was declared but never referenced
+"../source/Com_Buffer.c", line 90: warning #552-D: variable "pduBeforChange" was set but never used
+"../source/Com_Buffer.c", line 96: warning #179-D: variable "Asu_IPdu" was declared but never referenced
+"../source/Com_Buffer.c", line 125: warning #179-D: variable "xy" was declared but never referenced
+"../source/Com_Buffer.c", line 129: warning #552-D: variable "x" was set but never used
+"../source/Com_Buffer.c", line 227: warning #225-D: function "memset" declared implicitly
+"../source/Com_Buffer.c", line 215: warning #552-D: variable "xx" was set but never used
+"../source/Com_Buffer.c", line 217: warning #179-D: variable "signalDataBytes" was declared but never referenced
+"../source/Com_Buffer.c", line 232: warning #552-D: variable "x" was set but never used
+"../source/Com_Buffer.c", line 294: warning #179-D: variable "x" was declared but never referenced
+"../source/Com_Buffer.c", line 14: warning #179-D: variable "Com_Asu_Config" was declared but never referenced
+Finished building: "../source/Com_Buffer.c"
+ 
+Building target: "ECU2_Integration.out"
+Invoking: ARM Linker
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ECU2_Integration.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/lib" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ECU2_Integration_linkInfo.xml" --rom_model -o "ECU2_Integration.out" "./Delay.obj" "./Dio.obj" "./KeyPad.obj" "./PORTF.obj" "./Timer0A.obj" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./OS/InitConsole.obj" "./OS/Lcfg.obj" "./OS/alarm.obj" "./OS/event.obj" "./OS/interrupt.obj" "./OS/resource.obj" "./OS/task.obj" "./Rte/Rte.obj" "./Rte/Rte_HeatRegulator.obj" "./Rte/Rte_SeatHeatingController.obj" "./driverlib/adc.obj" "./driverlib/aes.obj" "./driverlib/can.obj" "./driverlib/comp.obj" "./driverlib/cpu.obj" "./driverlib/crc.obj" "./driverlib/des.obj" "./driverlib/eeprom.obj" "./driverlib/emac.obj" "./driverlib/epi.obj" "./driverlib/flash.obj" "./driverlib/fpu.obj" "./driverlib/gpio.obj" "./driverlib/hibernate.obj" "./driverlib/i2c.obj" "./driverlib/interrupt.obj" "./driverlib/lcd.obj" "./driverlib/mpu.obj" "./driverlib/onewire.obj" "./driverlib/pwm.obj" "./driverlib/qei.obj" "./driverlib/shamd5.obj" "./driverlib/ssi.obj" "./driverlib/sw_crc.obj" "./driverlib/sysctl.obj" "./driverlib/sysexc.obj" "./driverlib/systick.obj" "./driverlib/timer.obj" "./driverlib/uart.obj" "./driverlib/udma.obj" "./driverlib/usb.obj" "./driverlib/watchdog.obj" "./freertos/list.obj" "./portable/port.obj" "./portable/portasm.obj" "./source/Can.obj" "./source/CanIf.obj" "./source/CanIf_Cfg.obj" "./source/CanIf_Sec_cfg.obj" "./source/CanTpRuntime.obj" "./source/CanTp_Cfg.obj" "./source/Com.obj" "./source/Com_Asu_Cfg.obj" "./source/Com_Buffer.obj" "./source/Com_Cfg.obj" "./source/Com_helper.obj" "./source/Helper_Functions.obj" "./source/PDURmy.obj" "./source/PduR.obj" "./source/PduR_helper.obj" "./source/cantp.obj" "./utils/uartstdio.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "ECU2_Integration.out"
+ 
+
+**** Build Finished ****
