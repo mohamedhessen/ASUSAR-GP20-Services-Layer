@@ -34,6 +34,8 @@ CanIf_ConfigType *CanIf_ConfigPtr;
 
 CanIfPrivateCfg *CanIfPrivateCfgInst;
 
+//sint8 RxPdu_Index;
+
 /* typedef struct
 {
     Can_ControllerStateType  Controller_Mode;
@@ -236,7 +238,7 @@ CanIf_ChannelIdType CanIf_FindHrhChannel (Can_HRHType HRH)
 {
     CanIfHrhCfg* HRHCfg;
     sint8 HRHCfg_Counter = 0;
-    CanIf_ChannelIdType To_Return = (CanIf_ChannelIdType) 0;
+    CanIf_ChannelIdType To_Return;
     uint8 check = 0;
 
 
@@ -249,6 +251,8 @@ CanIf_ChannelIdType CanIf_FindHrhChannel (Can_HRHType HRH)
         {
             check = 1;
             To_Return = HRHCfg[HRHCfg_Counter].CanIfHrhCanCtrlIdRef->CanIfCtrlId;
+            //RxPdu_Index = HRHCfg_Counter;
+
         }
         HRHCfg_Counter++;
 
@@ -258,12 +262,12 @@ CanIf_ChannelIdType CanIf_FindHrhChannel (Can_HRHType HRH)
 }
 
 
-sint8 CanIf_FindRxPduEntry(const Can_HwType* hoh){
+sint8 CanIf_FindRxPduEntry(const Can_HwType* Mailbox){
      uint8 i ;
      sint8 to_return = -1;
-     for(i=0;i< CanIf_ConfigPtr->InitConfig->CanIfMaxTxPduCfg;i++)
+     for(i=0;i< CanIf_ConfigPtr->InitConfig->CanIfMaxRxPduCfg;i++)
      {
-         if (hoh->id == CanIf_ConfigPtr->InitConfig->CanIfRxPduConfigPtr[i].CanIfRxPduHrhIdRef->CanIfHrhIdSymRef->CanObjectId){
+         if (Mailbox->id == CanIf_ConfigPtr->InitConfig->CanIfRxPduConfigPtr[i].CanIfRxPduCanId){
              to_return = i;
              break;
          }
@@ -376,8 +380,9 @@ CanIf_RxIndication(const Can_HwType* Mailbox, const PduInfoType *PduInfoPtr)
             }
 
 
-                 CanIfRxPduUserRxConfirmationUL USER_NAME = Get_User_RxIndication_Name(RxPdu_Index);
+                CanIfRxPduUserRxConfirmationUL USER_NAME = Get_User_RxIndication_Name(RxPdu_Index);
                 //Get_User_RxIndication(CanIfRxPduCfg_Arr[RxPdu_Index].CanIfRxPduUserRxIndicationUL_i, RxPdu_Index);
+
 
                 switch(USER_NAME)
                 {
@@ -386,6 +391,14 @@ CanIf_RxIndication(const Can_HwType* Mailbox, const PduInfoType *PduInfoPtr)
                     PduInfoType CanTpRxPdu;
                     CanTpRxPdu.SduLength = PduInfoPtr->SduLength;
                     CanTpRxPdu.SduDataPtr = (uint8 *)PduInfoPtr->SduDataPtr;
+
+                    /*if(*(CanTpRxPdu.SduDataPtr)==2)
+                    {
+
+                    }*/
+
+                    // printf("WESLNAAAAAAAAAAAAAAA ,, DATA %c \n LENGTH %d",*(CanTpRxPdu.SduDataPtr),CanTpRxPdu.SduLength);
+
                     CanTp_RxIndication(canif_cantp_value[RxPdu_Index],&CanTpRxPdu);
 
                     check_t = 1;
@@ -407,6 +420,8 @@ CanIf_RxIndication(const Can_HwType* Mailbox, const PduInfoType *PduInfoPtr)
                 }
 
                 }
+
+
            }
         }
 

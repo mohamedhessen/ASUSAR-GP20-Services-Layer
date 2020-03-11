@@ -224,7 +224,7 @@ typedef struct Can_HwType
          /* This container contains bit timing related configuration parameters of the CAN /
           * controller(s).The Multiplicity is 1..many /
           */
-         CanControllerBaudrateConfig  CanControllerBaudrateConfig[2U]; /****This NUMber of baudrates should be generated*/
+         CanControllerBaudrateConfig  CanControllerBaudrateConfig[Max_num_of_baudrates ];
 
          /* Reference to baud rate configuration container configured for the Can Controller.
           * The Multiplicity is 1.

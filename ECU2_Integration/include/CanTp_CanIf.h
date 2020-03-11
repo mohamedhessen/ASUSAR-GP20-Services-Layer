@@ -7,7 +7,7 @@
 // it will not be accesed in the run time 
   
  #define cantp_canif_tx  \ 
-   11,\
+   0,\
    22
            
  #define CanTpTxFcNPdu_canif  \ 

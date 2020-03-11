@@ -58,7 +58,7 @@ int main(void){
     CanIf_Init(&CanIf_configTypeInstance);
     CanIf_SetControllerMode(CanContainer.CanConfigSet.CanController[0].CanControllerId,CAN_CS_STARTED);
     StartOS(OSDEFAULTAPPMODE);
-	return 0;
+    return 0;
 }
 
 
@@ -98,20 +98,33 @@ TASK(T1)
         {
             HeatingControllerRunnable();
         }
-        if(NewEvent & BSW_Event_Com_MainFunctionTx)
-               {
-                   Com_MainFunctionTx();
-               }
+
         if(NewEvent & BSW_Event_Com_MainFunctionRx)
         {
             Com_MainFunctionRx();
         }
 
-//        if(NewEvent & BSW_Event_CanTp_MainFunction)
-//        {
-//            CanTp_MainFunction();
-//        }
+        if(NewEvent & BSW_Event_Com_MainFunctionTx)
+        {
+            Com_MainFunctionTx();
+        }
+
+
+        //        if(NewEvent & BSW_Event_CanTp_MainFunction)
+            //        {
+        //            CanTp_MainFunction();
+        //        }
     }
     TerminateTask();
+    /*
+    const ComIPdu_type *IPdu;
+    IPdu = GET_IPdu(0);
+    uint8 x [8];
+       uint8 i;
+       for(i =0; i<8; i++)
+       {
+           x[i] = IPdu->SduDataPtr[i];
+       }
+*/
 }
 

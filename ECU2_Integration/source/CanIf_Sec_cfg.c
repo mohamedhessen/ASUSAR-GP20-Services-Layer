@@ -31,15 +31,15 @@ extern CanIfRxPduCanIdRange CanIf_hrhRangeConfigTypeInstance[] = {1,900};
 
 //Can_ConfigType CanHohContiner = hohMap;
 
-extern CanIfBufferCfg CanIfBufferCfgInstance[];
-extern CanIfRxPduCfg CanIf_rxPduConfigTypeInstance[];
-extern CanIfTxPduCfg  CanIf_txPduConfigTypeInstance[];
-extern CanIfHrhCfg CanIfHrhCfgInstance[];
-extern CanIfHthCfg CanIfHthCfgInstance[];
-extern CanIfInitHohCfg CanIfInitHohCfgInstance[2];
-extern CanIfInitCfg CanIf_initConfigTypeInstance[];
-extern CanIf_ConfigType CanIf_configTypeInstance[];
-extern CanIfCtrlCfg CanIfCtrlCfgInstance[];
+extern CanIfBufferCfg  CanIfBufferCfgInstance[3];
+extern CanIfRxPduCfg   CanIf_rxPduConfigTypeInstance[5];
+extern CanIfTxPduCfg   CanIf_txPduConfigTypeInstance[5];
+// CanIfHrhCfg CanIfHrhCfgInstance[];
+// CanIfHthCfg CanIfHthCfgInstance[];
+extern CanIfInitHohCfg     CanIfInitHohCfgInstance[2];
+extern CanIfInitCfg        CanIf_initConfigTypeInstance[1];
+extern CanIf_ConfigType    CanIf_configTypeInstance[1];
+extern CanIfCtrlCfg CanIfCtrlCfgInstance[3];
 
 
 
@@ -60,7 +60,26 @@ extern const CanIfPrivateCfg CanIfPrivateCfgInstance[2]=
  }
 };
 
-CanIfBufferCfg CanIfBufferCfgInstance[] ={
+CanIfHthCfg CanIfHthCfgInstance[2] = {
+    {
+      .CanIfHthCanCtrlIdRef = &(CanIfCtrlCfgInstance[0]) ,
+      .CanIfHthIdSymRef = &(CanContainer.CanConfigSet.CanHardwareObject[0])
+    },
+    {
+      .CanIfHthCanCtrlIdRef = &(CanIfCtrlCfgInstance[0]) ,
+      .CanIfHthIdSymRef = &(CanContainer.CanConfigSet.CanHardwareObject[1])
+    }
+};
+CanIfHrhCfg CanIfHrhCfgInstance[1] = {
+     {
+      .CanIfHrhIdSymRef = &(CanContainer.CanConfigSet.CanHardwareObject[2]),
+      .CanIfHrhSoftwareFilter = TRUE ,
+      .CanIfHrhCanCtrlIdRef = &(CanIfCtrlCfgInstance[0]) ,
+      .CanIfHrhRangeConfig = &CanIf_hrhRangeConfigTypeInstance
+     }
+};
+
+CanIfBufferCfg CanIfBufferCfgInstance[3] ={
        {
         .CanIfBufferHthRef = &CanIfHthCfgInstance[0],
         .CanIfBufferSize = 8
@@ -83,7 +102,7 @@ CanIfRxPduCfg CanIf_rxPduConfigTypeInstance[5] = {
     //   CanIfRxPduReadNotifyStatus,CanIfRxPduCanIdType,CanIfRxPduId,CanIfRxPduUserRxIndicationName,
     //   CanIfRxPduUserRxIndicationUL,CanIfRxPduHrhIdRef,CanIfRxPduRef,CanIfRxPduCanIdRangePtr}
         {
-         .CanIfRxPduCanId = 0,
+         .CanIfRxPduCanId = 1,
          .CanIfRxPduCanIdMask = 0xFFFF,
          .CanIfRxPduDataLength = 8,
          .CanIfRxPduReadData = FALSE,
@@ -91,7 +110,7 @@ CanIfRxPduCfg CanIf_rxPduConfigTypeInstance[5] = {
          .CanIfRxPduCanIdType = STANDARD_CAN,
          .CanIfRxPduId = 10,
          .CanIfRxPduUserRxIndicationName = 1,
-         .CanIfRxPduUserRxIndicationUL_i = PDUR,
+         .CanIfRxPduUserRxIndicationUL_i = CAN_TP,
          .CanIfRxPduHrhIdRef = &(CanIfHrhCfgInstance[0]),
          .CanIfRxPduRef = &try[0],
          .CanIfRxPduCanIdRangePtr = CanIf_hrhRangeConfigTypeInstance
@@ -105,7 +124,7 @@ CanIfRxPduCfg CanIf_rxPduConfigTypeInstance[5] = {
          .CanIfRxPduCanIdType = STANDARD_CAN,
          .CanIfRxPduId = 11,
          .CanIfRxPduUserRxIndicationName = 2,
-         .CanIfRxPduUserRxIndicationUL_i = PDUR,
+         .CanIfRxPduUserRxIndicationUL_i = CAN_TP,
          .CanIfRxPduHrhIdRef = &(CanIfHrhCfgInstance[1]),
          .CanIfRxPduRef = &try[1],
          .CanIfRxPduCanIdRangePtr = CanIf_hrhRangeConfigTypeInstance
@@ -119,7 +138,7 @@ CanIfRxPduCfg CanIf_rxPduConfigTypeInstance[5] = {
          .CanIfRxPduCanIdType = STANDARD_CAN,
          .CanIfRxPduId = 12,
          .CanIfRxPduUserRxIndicationName = 3,
-         .CanIfRxPduUserRxIndicationUL_i = PDUR,
+         .CanIfRxPduUserRxIndicationUL_i = CAN_TP,
          .CanIfRxPduHrhIdRef = &(CanIfHrhCfgInstance[2]),
          .CanIfRxPduRef = &try[2],
          .CanIfRxPduCanIdRangePtr = CanIf_hrhRangeConfigTypeInstance
@@ -133,7 +152,7 @@ CanIfRxPduCfg CanIf_rxPduConfigTypeInstance[5] = {
          .CanIfRxPduCanIdType = STANDARD_CAN,
          .CanIfRxPduId = 13,
          .CanIfRxPduUserRxIndicationName = 4,
-         .CanIfRxPduUserRxIndicationUL_i = PDUR,
+         .CanIfRxPduUserRxIndicationUL_i = CAN_TP,
          .CanIfRxPduHrhIdRef = &(CanIfHrhCfgInstance[3]),
          .CanIfRxPduRef = &try[3],
          .CanIfRxPduCanIdRangePtr = CanIf_hrhRangeConfigTypeInstance
@@ -147,26 +166,17 @@ CanIfRxPduCfg CanIf_rxPduConfigTypeInstance[5] = {
          .CanIfRxPduCanIdType = STANDARD_CAN,
          .CanIfRxPduId = 14,
          .CanIfRxPduUserRxIndicationName = 5,
-         .CanIfRxPduUserRxIndicationUL_i = PDUR,
+         .CanIfRxPduUserRxIndicationUL_i = CAN_TP,
          .CanIfRxPduHrhIdRef = &(CanIfHrhCfgInstance[4]),
          .CanIfRxPduRef = &try[4],
          .CanIfRxPduCanIdRangePtr = CanIf_hrhRangeConfigTypeInstance
         }
 };
 
-CanIfHthCfg CanIfHthCfgInstance[2] = {
-    {
-      .CanIfHthCanCtrlIdRef = &(CanIfCtrlCfgInstance[0]) ,
-      .CanIfHthIdSymRef = &(CanContainer.CanConfigSet.CanHardwareObject[0])
-    },
-    {
-      .CanIfHthCanCtrlIdRef = &(CanIfCtrlCfgInstance[0]) ,
-      .CanIfHthIdSymRef = &(CanContainer.CanConfigSet.CanHardwareObject[1])
-    }
-};
 
 
-CanIfTxPduCfg  CanIf_txPduConfigTypeInstance[] =
+
+CanIfTxPduCfg  CanIf_txPduConfigTypeInstance[5] =
 {
      /*
     uint32 CanIfTxPduCanId, uint32 CanIfTxPduCanIdMask,
@@ -177,7 +187,7 @@ CanIfTxPduCfg  CanIf_txPduConfigTypeInstance[] =
     uint16 CanIfTxPduUserTxConfirmationName,CanIfBufferCfg* CanIfTxPduBufferRef,
     PduInfoType* CanIfTxPduRef */
    {
-    .CanIfTxPduCanId = 1,
+    .CanIfTxPduCanId = 0,
     .CanIfTxPduCanIdMask = 0xF4, //////////////////// IMP
     .CanIfTxPduCanIdType_i = STANDARD_CAN,
     .CanIfTxPduId = 0,
@@ -186,7 +196,7 @@ CanIfTxPduCfg  CanIf_txPduConfigTypeInstance[] =
     .CanIfTxPduTriggerTransmit = FALSE,
     .CanIfTxPduTruncation = FALSE,
     .CanIfTxPduType_i = STATIC,
-    .CanIfTxPduUserTxConfirmationUL_i = PDUR  ,
+    .CanIfTxPduUserTxConfirmationUL_i = CAN_TP  ,
     .CanIfTxPduBufferRef=
         {
           &CanIfBufferCfgInstance[0]
@@ -254,7 +264,7 @@ CanIfTxPduCfg  CanIf_txPduConfigTypeInstance[] =
     .CanIfTxPduTriggerTransmit = FALSE,
     .CanIfTxPduTruncation = FALSE,
     .CanIfTxPduType_i = STATIC,
-    .CanIfTxPduUserTxConfirmationUL_i = PDUR,
+    .CanIfTxPduUserTxConfirmationUL_i = CAN_TP,
     .CanIfTxPduBufferRef=
     {
       &CanIfBufferCfgInstance[0]
@@ -264,25 +274,28 @@ CanIfTxPduCfg  CanIf_txPduConfigTypeInstance[] =
 };
 
 
-CanIfHrhCfg CanIfHrhCfgInstance[1] = {
-     {
-      .CanIfHrhIdSymRef = &(CanContainer.CanConfigSet.CanHardwareObject[2]),
-      .CanIfHrhSoftwareFilter = TRUE ,
-      .CanIfHrhCanCtrlIdRef = (&CanIfCtrlCfgInstance[0]) ,
-      .CanIfHrhRangeConfig = &CanIf_hrhRangeConfigTypeInstance
-     }
-};
+
+//CanIfHthCfg CanIfHthCfgInstance[2] = {
+//    {
+//      .CanIfHthCanCtrlIdRef = &(CanIfCtrlCfgInstance[0]) ,
+//      .CanIfHthIdSymRef = &(MailboxCfg_MAP.CanConfigSet.CanHardwareObject[0])
+//    },
+//    {
+//      .CanIfHthCanCtrlIdRef = &(CanIfCtrlCfgInstance[0]) ,
+//      .CanIfHthIdSymRef = &(MailboxCfg_MAP.CanConfigSet.CanHardwareObject[1])
+//    }
+//};
 
 
 CanIfInitHohCfg CanIfInitHohCfgInstance[2] = { CanIfHrhCfgInstance , CanIfHthCfgInstance};
 
-CanIfInitCfg CanIf_initConfigTypeInstance[] = {
+CanIfInitCfg CanIf_initConfigTypeInstance[1]= {
         {
         .CanIfInitCfgSet[0] =0,                           // uint8  CanIfInitCfgSet;
         .CanIfMaxBufferSize = 5,                                  // uint32 CanIfMaxRxPduCfg;
         .CanIfMaxRxPduCfg = 1,                                  // uint32 CanIfMaxTxPduCfg;
         .CanIfMaxTxPduCfg = 5,                                  // uint64 CanIfMaxBufferSiz;
-        .CanIfHohConfigPtr = &CanIfInitHohCfgInstance[2],            // const CanIfInitHohCfg* CanIfHohConfigPtr;
+        .CanIfHohConfigPtr = CanIfInitHohCfgInstance,            // const CanIfInitHohCfg* CanIfHohConfigPtr;
         .CanIfRxPduConfigPtr = &CanIf_rxPduConfigTypeInstance[0],      // const CanIfRxPduCfg*  CanIfRxPduConfigPtr;
         .CanIfTxPduConfigPtr = &CanIf_txPduConfigTypeInstance[0],  // const CanIfTxPduCfg* CanIfTxPduConfigPtr;
          }
@@ -312,7 +325,7 @@ CanIfCtrlCfg CanIfCtrlCfgInstance[3] = {
 
 // ******************  Nada ****************** /n
 
-CanIf_ConfigType CanIf_configTypeInstance[] = {
+CanIf_ConfigType CanIf_configTypeInstance[1] = {
        {
         .ControllerConfig = CanIfCtrlCfgInstance,
         .InitConfig = &CanIf_initConfigTypeInstance

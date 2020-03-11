@@ -59,6 +59,13 @@ typedef enum {
     TRIGGERTRANSMIT
 }ComTxIPduClearUpdateBit_type;
 
+/*ComDataInvalidAction */
+typedef enum
+{
+    NOTIFY,
+    REPLACE
+}ComDataInvalidAction_type;
+
 /* Configuration structure for Tx-mode for I-PDUs. */
 typedef struct
 {
@@ -164,10 +171,32 @@ typedef struct {
 	 */
 	const uint16 ComIPduHandleId; // Not in SWS
 
-	void * const ComSignalDataPtr;
+	void *  ComSignalDataPtr;
 
 	/* notification function. */
 	void (*ComNotification) (void);
+
+
+	/*used to indicate if update bit used in this signal*/
+    boolean isUpdateBitUsed ;
+
+    /*Action to be executed if the invalid value of a signal received */
+    ComDataInvalidAction_type ComDataInvalidAction ;
+
+    /*Pointer to the array containing the invalid value*/
+    uint8 *ComSignalDataInvalidValue;
+
+    /*Pointer to function the notification function */
+    void (*ComInvalidNotification) (void);
+
+    /*Pointer to array of uint8 to save the initial value of the signal*/
+    uint8 *ComSignalInitValue;
+
+    /*flag to indicate if we used invalid signal value or not*/
+    boolean isInvaildSignalUsed ;
+
+    /*flag to indicate that the invalid value is received */
+    boolean isInvaildSignalChecked ;
 
 } ComSignal_type;
 

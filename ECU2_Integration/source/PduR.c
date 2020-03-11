@@ -8,6 +8,7 @@
 #include  "include/PduR_cfg.h"
 #include  "include/PduR.h"
 #include  "include/PduR_helper.h"
+#include  "utils/uartstdio.h"
 
 
 Std_ReturnType PduR_ComTransmit( PduIdType TxPduId, const PduInfoType* PduInfoPtr )
@@ -19,13 +20,19 @@ Std_ReturnType PduR_ComTransmit( PduIdType TxPduId, const PduInfoType* PduInfoPt
     uint8 x [8];
     uint8 i;
 
+
+
     for(i =0; i<8; i++)
     {
         x[i] = PduInfoPtr->SduDataPtr[i];
     }
 
-    uint8_t id =  get_ID(TxPduId,Com);
-    type_t type =get_type(TxPduId,Com);
+   /* uint8_t id =  get_ID(TxPduId,Com);
+    type_t type =get_type(TxPduId,Com); */
+
+    uint8_t id =  1;
+    type_t type =0;
+
     if(type== CanIF)
     {
         return CanIf_Transmit(id, PduInfoPtr);

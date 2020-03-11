@@ -14,14 +14,14 @@
 #include "ComStack_Types.h"
 
  #define canIf_Cantp_rx  \
-   1,\
+   0,\
    0,\
    10,\
-   12
+   0
 
 #define canIf_Comfrimation_Value  \
-   3,\
-   5,\
+   0,\
+   1,\
    6,\
    12
 

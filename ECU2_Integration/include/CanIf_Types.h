@@ -88,7 +88,7 @@ typedef struct {
 
     /* The parameter refers to a particular HRH object in the CanDrv
      * configuration */
-    CanHardwareObject* CanIfHrhIdSymRef;
+    const CanHardwareObject* CanIfHrhIdSymRef;
 
     /** Selects the hardware receive objects by using the HRH range/list from
      *  CAN Driver configuration to define, for which HRH a software filtering has

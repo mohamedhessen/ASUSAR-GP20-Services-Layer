@@ -7,6 +7,7 @@
 
 #pragma RESET_MISRA("all")
 
+
 static void config_transmit_objects(void);
 static inline const CanHardwareObject* Can_FindTxHoh(Can_HwHandleType hth);
 static void Recieve_objects_config (void);
@@ -164,7 +165,6 @@ or other hardware specific features.*/
                                CANMessage.ui32MsgID= MailboxCfg_MAP.CanConfigSet.CanHardwareObject[index2].CanHwFilter.CanHwFilterCode;
                                CANMessage.ui32MsgLen=8U;
                                CANMessage.ui32MsgIDMask= MailboxCfg_MAP.CanConfigSet.CanHardwareObject[index2].CanHwFilter.CanHwFilterMask;
-                               CANMessage.ui32Flags= MSG_OBJ_RX_INT_ENABLE| MSG_OBJ_USE_ID_FILTER;
 
                                /* clearing EOB bit for message object to protect data being received from being
                                 written on before CPU reads it*/
@@ -196,8 +196,7 @@ or other hardware specific features.*/
 set to POLLING or mixed. In case of mixed processing only the hardware objects for which CanHardwareObjectUsesPolling is set
  to TRUE shall be polled (SRS_BSW_00432, SRS_BSW_00373, SRS_SPAL_00157)*/
 
-
-#if (CanTxProcessing0==POLLING || CanTxProcessing0==mixed ) ||   (CanTxProcessing1==POLLING || CanTxProcessing1==mixed )
+#if (CanTxProcessing0==POLLING) || (CanTxProcessing1==POLLING)
 
 void  Can_Main_Function_Write(void)
 {
@@ -207,8 +206,8 @@ void  Can_Main_Function_Write(void)
 
        while(1)
        {
-          CAN0_IF1CMSK_R&=((uint32_t)(~(uint32_t)0x8U));
-          CAN1_IF1CMSK_R&=((uint32_t)(~(uint32_t)0x8U));
+          CAN0_IF1CMSK_R&=((uint32_t)(~(uint32_t)0x80U));
+          CAN1_IF1CMSK_R&=((uint32_t)(~(uint32_t)0x80U));
           /*MISRA violation*/
          /*casting pointer to integral type unavoidable when addressing memory mapped registers
           or other hardware specific features.*/
@@ -218,14 +217,8 @@ void  Can_Main_Function_Write(void)
                {
                    if(MailboxCfg_MAP.CanConfigSet.CanHardwareObject[index4].CanControllerRef== &CanContainer.CanConfigSet
                            .CanController[0])
+
                    {
-#if (CanTxProcessing0==POLLING || CanTxProcessing0==mixed )
-
-#if  CanTxProcessing0==mixed
-                  if(MailboxCfg_MAP.CanConfigSet.CanHardwareObject[index4].CanHardwareObjectUsesPolling)
-                  {
-#endif
-
                      for(index5=0U;index5<MailboxCfg_MAP.CanConfigSet.CanHardwareObject[index4].CanHwObjectCount;index5++)
                                    {
                                       if(Message_Confirmation[index4][index5].Confirmation==un_confirmed)
@@ -264,19 +257,11 @@ void  Can_Main_Function_Write(void)
                                       } else{}
                                    }else{}
                                   }
-#if  CanTxProcessing0==mixed
-                                 }else{}
-#endif
                               }
-#endif
+
                             else
                                 {
-#if (CanTxProcessing1==POLLING || CanTxProcessing1==mixed )
 
-#if  CanTxProcessing1==mixed
-                  if(MailboxCfg_MAP.CanConfigSet.CanHardwareObject[index4].CanHardwareObjectUsesPolling)
-                  {
-#endif
                                    for(index5=0U;index5<MailboxCfg_MAP.CanConfigSet.CanHardwareObject[index4].CanHwObjectCount;index5++)
                                      {
                                           if(Message_Confirmation[index4][index5].Confirmation==un_confirmed)
@@ -312,12 +297,8 @@ void  Can_Main_Function_Write(void)
                                         else{}
                                    }else{}
                                  }
-#if  CanTxProcessing1==mixed
-                                 }else{}
-#endif
 
-#endif
-        }
+                              }
          /*[SWS_Can_00016]The Can module shall call CanIf_TxConfirmation to indicate a successful transmission.
          It shall either called by the TX-interrupt service routine of the corresponding HW resource or inside
          the Can_MainFunction_Write in case of polling mode.}*/
@@ -325,6 +306,7 @@ void  Can_Main_Function_Write(void)
   }else{}
  }
     }
+
 }
 
 #endif
@@ -334,7 +316,7 @@ void  Can_Main_Function_Write(void)
  is set to POLLING or mixed.In case of mixed processing only the hardware objects for which CanHardwareObjectUses
  Polling is set to TRUE shall be polled.(SRS_BSW_00432, SRS_SPAL_00157)*/
 
-#if (CanRxProcessing0==POLLING || CanRxProcessing0==mixed ) ||   (CanRxProcessing1==POLLING || CanRxProcessing1==mixed )
+#if (CanTxProcessing0==POLLING) || (CanTxProcessing1==POLLING)
 
 void  Can_Main_Function_Read(void)
 {
@@ -347,8 +329,9 @@ void  Can_Main_Function_Read(void)
     received_CANMessage.pui8MsgData=rx_MsgData0;
 /*    while(1)
         {*/
-    CAN0_IF1CMSK_R&=((uint32_t)(~(uint32_t)0x8U));
-    CAN1_IF1CMSK_R&=((uint32_t)(~(uint32_t)0x8U));
+
+    CAN0_IF1CMSK_R&=((uint32_t)(~(uint32_t)0x80U));
+    CAN1_IF1CMSK_R&=((uint32_t)(~(uint32_t)0x80U));
 
          for(index6=0U; index6< NUM_OF_HOH;index6++)
            {
@@ -359,14 +342,6 @@ void  Can_Main_Function_Read(void)
                      if(MailboxCfg_MAP.CanConfigSet.CanHardwareObject[index6].CanControllerRef==&CanContainer
                              .CanConfigSet.CanController[0])
                        {
-#if (CanRxProcessing0==POLLING || CanRxProcessing0==mixed )
-
-#if  CanRxProcessing0==mixed
-                  if(MailboxCfg_MAP.CanConfigSet.CanHardwareObject[index6].CanHardwareObjectUsesPolling)
-                  {
-#endif
-
-
                     for(index7=0U;index7<MailboxCfg_MAP.CanConfigSet.CanHardwareObject[index6].CanHwObjectCount;index7++)
                         {
 
@@ -400,21 +375,8 @@ void  Can_Main_Function_Read(void)
                                         }
                                         else{}
                                      }
-#if  CanRxProcessing0==mixed
-                                 }else{}
-#endif
-
-#endif
       }
                      else{
-
-  #if (CanRxProcessing1==POLLING || CanRxProcessing1==mixed )
-
-  #if  CanRxProcessing1==mixed
-                    if(MailboxCfg_MAP.CanConfigSet.CanHardwareObject[index6].CanHardwareObjectUsesPolling)
-                    {
-  #endif
-
                                  for(index7=0U;index7<MailboxCfg_MAP.CanConfigSet.CanHardwareObject[index6].CanHwObjectCount;index7++)
                                      {
 
@@ -446,17 +408,9 @@ void  Can_Main_Function_Read(void)
 
                                                          /*CanIf_RxIndication(&Rx_Mailbox,&received_PduInfo);*/
                                                      } else{}
-
                                                   }
-
-#if  CanRxProcessing0==mixed
-                                 }else{}
-#endif
-
-#endif
            }
       }else{}
-
  }
  /*  }*/
 }
@@ -509,6 +463,7 @@ void Can_MainFunction_Mode( void )
 
                 }else{}
         }
+
     if(state_transition_flag[1])
      {
         if(Can_ControllerMode[1U]!=previous_state_1)
@@ -763,44 +718,10 @@ Std_ReturnType Can_Write(Can_HwHandleType HTH , Can_PduType* PduInfo)
                     {
                       if(hohobj->CanHandleType==BASIC)
                       {
-#if CanMultiplexedTransmission
-                       /*sw flag is important here as when cancelling all pending temporary to do not disturb our logic
-                         so we can depend on hardware to check message is pending or not*/
-                      /*[SWS_Can_00402] ⌈The Can module shall support multiplexed transmission mechanisms*/
-                      /*[SWS_Can_00403] ⌈The Can module shall support multiplexed transmission for devices,
-                        which send L-PDUs in order of L-PDU priority.*/
-                      for(i=0U;i<hohobj->CanHwObjectCount;i++)/*here i cancel all my transmission requests for this HOH to
-                                                              protect my swapping logic from distotion*/
-                       {
-                          if(MailboxCfg_MAP.CanConfigSet.CanHardwareObject[i].CanControllerRef== &CanContainer.CanConfigSet
-                                                                                        .CanController[0])
-                         {
-                          CAN0_IF1MCTL_R&=((uint32_t)(~(uint32_t)0x100U));
-                          CAN0_IF1CMSK_R&=((uint32_t)(~(uint32_t)0x80U));
-                          CAN0_IF1CRQ_R=Message_Confirmation[HTH][i].mail_box;
-                         }else{
-                                   CAN1_IF1MCTL_R&=((uint32_t)(~(uint32_t)0x100U));
-                                   CAN1_IF1CMSK_R&=((uint32_t)(~(uint32_t)0x80U));
-                                   CAN1_IF1CRQ_R=Message_Confirmation[HTH][i].mail_box;
-                             }
-                       }
-#endif
-#if CanMultiplexedTransmission
-                            for(i=(hohobj->CanHwObjectCount-1U);i>=0U;i--)
-
-#endif
-#if !(CanMultiplexedTransmission)
                            for(i=0U;i<=(hohobj->CanHwObjectCount-1U);i++)
-#endif
                            {
                                 if(Message_Confirmation[HTH][i].Confirmation==confirmed)
                                 {
-
-#if CanMultiplexedTransmission
-                                  if(i==(hohobj->CanHwObjectCount-1U))
-                                {
-#endif
-
                                       Message_Confirmation[HTH][i].Confirmation=un_confirmed;
 
                                             Message_Confirmation[HTH][i].PduId=PduInfo->swPduHandle;
@@ -827,12 +748,7 @@ Std_ReturnType Can_Write(Can_HwHandleType HTH , Can_PduType* PduInfo)
                                              N.B:Our TIVA c doesn't support FD*/
 
 
-                                                uint8 i;
-                                                uint8 x[8]=0;
-                                                for ( i =0; i<8; i++)
-                                                {
-                                                    x[i] =  sCANMessage.pui8MsgData[i];
-                                                }
+                                             
                                             sCANMessage.ui32MsgIDMask = 0U;
                                             if(hohobj->CanIdType==EXTENDED)
                                             {
@@ -847,140 +763,6 @@ Std_ReturnType Can_Write(Can_HwHandleType HTH , Can_PduType* PduInfo)
                                                           Message_Confirmation[HTH][i].mail_box, &sCANMessage, MSG_OBJ_TYPE_TX);
                                             Message_Confirmation[HTH][i].PduId=PduInfo->swPduHandle;
                                             return  E_OK;/*add break here when u clear multi exit points of function*/
-
-#if CanMultiplexedTransmission
-                                  }
-
-                                  else
-                                  {
-
-                                      Message_Confirmation[HTH][i].PduId=PduInfo->swPduHandle;
-                                      Message_Confirmation[HTH][i].Confirmation=un_confirmed;
-                                     for(j=i;j<(hohobj->CanHwObjectCount-1U);j++)
-                                   {
-
-                                     if(MailboxCfg_MAP.CanConfigSet.CanHardwareObject[i].CanControllerRef== &CanContainer.CanConfigSet
-                                                               .CanController[0])
-                                         {
-                                             CAN0_IF1CMSK_R&=((uint32_t)(~(uint32_t)0x80U));
-                                             CAN0_IF1CRQ_R=Message_Confirmation[HTH][j+1].mail_box;
-                                             if(hohobj->CanIdType==STANDARD)
-                                             {
-                                               REGISTER_1=CAN0_IF1ARB2_R;
-                                               sCANMessage.ui32MsgID=REGISTER_1 &0xFFFU;
-                                               sCANMessage.ui32MsgID=sCANMessage.ui32MsgID>>2U;
-
-                                             }
-                                             else /*for mixed or extended */
-                                             {
-                                               REGISTER_1=CAN0_IF1ARB2_R;
-                                               REGISTER_1&=0xFFFU;
-                                               REGISTER_2=CAN0_IF1ARB1_R;
-                                               sCANMessage.ui32MsgID=sCANMessage.ui32MsgID=REGISTER_1+REGISTER_2;
-                                             }
-                                             sCANMessage.pui8MsgData[0U]=CAN0_IF1DA1_R;
-                                             sCANMessage.pui8MsgData[1U]=CAN0_IF1DA1_R>>8;
-                                             sCANMessage.pui8MsgData[2U]=CAN0_IF1DA2_R;
-                                             sCANMessage.pui8MsgData[3U]=CAN0_IF1DA2_R>>8;
-                                             sCANMessage.pui8MsgData[4U]=CAN0_IF1DB1_R;
-                                             sCANMessage.pui8MsgData[5U]=CAN0_IF1DB1_R>>8;
-                                             sCANMessage.pui8MsgData[6U]=CAN0_IF1DB2_R;
-                                             sCANMessage.pui8MsgData[7U]=CAN0_IF1DB2_R>>8;
-                                             REGISTER_1=CAN0_IF1MCTL_R;
-                                             sCANMessage.ui32MsgLen=REGISTER_1 & 0xFU;
-                                             sCANMessage.ui32Flags = MSG_OBJ_TX_INT_ENABLE;
-                                         }
-                                     else{
-                                              CAN1_IF1CMSK_R&=((uint32_t)(~(uint32_t)0x80U));
-                                              CAN1_IF1CRQ_R=Message_Confirmation[HTH][j+1].mail_box;
-                                              if(hohobj->CanIdType==STANDARD)
-                                              {
-                                                REGISTER_1=CAN1_IF1ARB2_R;
-                                                sCANMessage.ui32MsgID=REGISTER_1 &0xFFFU;
-                                              }
-                                              else
-                                              {
-                                                REGISTER_1=CAN1_IF1ARB2_R;
-                                                REGISTER_1&=0xFFFU;
-                                                REGISTER_2=CAN1_IF1ARB1_R;
-                                                sCANMessage.ui32MsgID=REGISTER_1+REGISTER_2;
-
-                                              }
-                                               sCANMessage.pui8MsgData[0U]=CAN1_IF1DA1_R;
-                                               sCANMessage.pui8MsgData[1U]=CAN1_IF1DA1_R>>8;
-                                               sCANMessage.pui8MsgData[2U]=CAN1_IF1DA2_R;
-                                               sCANMessage.pui8MsgData[3U]=CAN1_IF1DA2_R>>8;
-                                               sCANMessage.pui8MsgData[4U]=CAN1_IF1DB1_R;
-                                               sCANMessage.pui8MsgData[5U]=CAN1_IF1DB1_R>>8;
-                                               sCANMessage.pui8MsgData[6U]=CAN1_IF1DB2_R;
-                                               sCANMessage.pui8MsgData[7U]=CAN1_IF1DB2_R>>8;
-                                              sCANMessage.ui32MsgLen=CAN1_IF1MCTL_R & 0xFU;
-                                              sCANMessage.ui32Flags = MSG_OBJ_TX_INT_ENABLE;
-                                             }
-
-                                     if(PduInfo->id >= sCANMessage.ui32MsgID)
-                                            /*we swap between message objects of same HOH in case of requested id is higher priority
-                                             than ID stored in higher priotrity object by that we are preventing priority inversion*/
-                                            {
-
-                                                   if(hohobj->CanIdType==EXTENDED)
-                                                   {
-                                                       sCANMessage.ui32Flags = MSG_OBJ_TX_INT_ENABLE|MSG_OBJ_EXTENDED_ID;
-                                                   }else{
-
-                                                           sCANMessage.ui32Flags = MSG_OBJ_TX_INT_ENABLE;
-                                                        }
-
-                                                CANMessageSet(hohobj->CanControllerRef->CanControllerBaseAddress,
-                                                              Message_Confirmation[HTH][j].mail_box, &sCANMessage, MSG_OBJ_TYPE_TX);
-
-                                               temp.PduId=Message_Confirmation[HTH][j+1].PduId;
-
-                                               Message_Confirmation[HTH][j+1].PduId=Message_Confirmation[HTH][j].
-                                                                                                      PduId=PduInfo->swPduHandle;
-                                               Message_Confirmation[HTH][j].PduId=temp.PduId;
-
-                                           temp.Confirmation=Message_Confirmation[HTH][j+1].Confirmation;
-
-                                           Message_Confirmation[HTH][j+1].Confirmation=Message_Confirmation[HTH][j].Confirmation;
-                                           Message_Confirmation[HTH][j].Confirmation= temp.Confirmation;
-
-                                           }
-
-                                   else{
-
-                                           break;
-                                       }
-                                   }
-
-                                     Message_Confirmation[HTH][j].PduId=PduInfo->swPduHandle;
-                                     sCANMessage.ui32MsgID = PduInfo->id;
-                                     sCANMessage.ui32MsgLen = PduInfo->length;
-                                    if(PduInfo->length<1U)
-                                        {
-                                            sCANMessage.ui32MsgLen = 1U;
-                                        }
-                                    else
-                                        {
-                                          sCANMessage.ui32MsgLen=PduInfo->length;
-                                        }
-                                    sCANMessage.pui8MsgData =PduInfo->sdu;
-                                    sCANMessage.ui32MsgIDMask = 0U;
-
-                                    if(hohobj->CanIdType==EXTENDED)
-                                    {
-                                        sCANMessage.ui32Flags = MSG_OBJ_TX_INT_ENABLE|MSG_OBJ_EXTENDED_ID;
-                                    }else{
-
-                                            sCANMessage.ui32Flags = MSG_OBJ_TX_INT_ENABLE;
-                                         }
-
-                                    CANMessageSet(hohobj->CanControllerRef->CanControllerBaseAddress,
-                                    Message_Confirmation[HTH][j].mail_box , &sCANMessage, MSG_OBJ_TYPE_TX);
-                                    return  E_OK;
-                                  }
-
-#endif
                                 }
                                 else
                                  {
@@ -1022,10 +804,6 @@ Std_ReturnType Can_Write(Can_HwHandleType HTH , Can_PduType* PduInfo)
 
                                 }
                             sCANMessage.pui8MsgData =PduInfo->sdu;
-                            uint8 x[3];
-                            uint8 i;
-                            for(i=0;i<3;i++)
-                                x[i] = PduInfo->sdu[i];
 
                             /*[SWS_CAN_00502]  If PduInfo->SduLength does not match possible DLC values CanDrv
                             shall use the next higher valid DLC for transmission with initialisation of unused bytes
@@ -1046,7 +824,6 @@ Std_ReturnType Can_Write(Can_HwHandleType HTH , Can_PduType* PduInfo)
 
                                     sCANMessage.ui32Flags = MSG_OBJ_TX_INT_ENABLE;
                                  }
-
                             CANMessageSet(hohobj->CanControllerRef->CanControllerBaseAddress,
                                           Message_Confirmation[HTH][0U].mail_box, &sCANMessage, MSG_OBJ_TYPE_TX);
                             return  E_OK;
@@ -1675,7 +1452,7 @@ void Can0_InterruptHandler(void) {
                                         it un_confirmed except when another transmission was requested again*/
                                        /*test only*/
 
-//                                        CanIf_TxConfirmation(Message_Confirmation[i][j].PduId);
+//                                        CanIf_TxConfirmation(Message_Confirmation[index12][index].PduId);
                                     }else{}
                               }
                          }
@@ -1703,9 +1480,8 @@ void Can0_InterruptHandler(void) {
                                 /* [SWS_Can_00060] Data mapping by CAN to memory is defined in a way that the CAN data byte
                                   which is received first is array element 0 the CAN data byte which is received last is array element 7*/
                                                    received_PduInfo0.SduDataPtr = received_CANMessage1.pui8MsgData;
-                                                   GPIO_PORTF_DATA_R = GPIO_PORTF_DATA_R ^0x04U;
-                                                 CanIf_RxIndication(&Rx_Mailbox0,&received_PduInfo0);
-
+                                                  GPIO_PORTF_DATA_R = GPIO_PORTF_DATA_R ^0x04U;
+                                                   CanIf_RxIndication(&Rx_Mailbox0,&received_PduInfo0);
                                }else{/*MISRA*/}
                              }
                         }
@@ -1801,6 +1577,7 @@ void Can1_InterruptHandler(void) {
                                 /* [SWS_Can_00060] Data mapping by CAN to memory is defined in a way that the CAN data byte
                                   which is received first is array element 0 the CAN data byte which is received last is array element 7*/
                                                    received_PduInfo1.SduDataPtr = received_CANMessage2.pui8MsgData;
+                                                   GPIO_PORTF_DATA_R = GPIO_PORTF_DATA_R ^0x04U;
                                                  CanIf_RxIndication(&Rx_Mailbox1,&received_PduInfo1);
                                }else{/*MISRA*/}
                              }
@@ -1925,7 +1702,7 @@ void Can_DeInit(void)
                                      The function Can_DeInit shall raise the error CAN_E_TRANSITION if the
                                        driver is not in state CAN_READY.(SRS_BSW_00369) */
     {
-        /*[SWS_Can_91012] âŒˆIf development error detection for the Can module is enabled: The function Can_DeInit shall
+        /*[SWS_Can_91012] If development error detection for the Can module is enabled: The function Can_DeInit shall
         raise the error CAN_E_TRANSITION if any of the CAN controllers is in state STARTED.*/
       /*  Caveat: Caller of the Can_DeInit function has to be sure no CAN controller is in the state STARTED*/
 

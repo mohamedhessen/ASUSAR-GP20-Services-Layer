@@ -25,7 +25,13 @@ uint8 ComSignalBuffer_4 [1];
 //uint8 ComSignalBuffer_5 [1];
 //uint8 ComSignalBuffer_6 [4];
 
-const ComSignal_type ComSignal[] = 
+/*buffer to save invalid value*/
+uint8 InvalidValueBuffer[3] ={0x07};
+
+/*buffer to save initial value*/
+uint8 InitialValue[3] = {0};
+
+ const ComSignal_type ComSignal[] =
 {
     {	//signal0
     	.ComBitPosition= 0,
@@ -51,25 +57,31 @@ const ComSignal_type ComSignal[] =
     },
     {	//signal2
         .ComBitPosition= 2,
-        .ComUpdateBitPosition= 20 ,
+        .ComUpdateBitPosition= 10 ,
         .ComHandleId= 2 ,
-        .ComBitSize= 18,
+        .ComBitSize= 8,
         .ComSignalType = UINT8,
         .ComTransferProperty = TRIGGERED_ON_CHANGE,
         .ComIPduHandleId=1,
 		.ComNotification=NULL,
-		.ComSignalDataPtr = ComSignalBuffer_3
+		.ComSignalDataPtr = ComSignalBuffer_3,
+		.isUpdateBitUsed=TRUE
     },
     {   //signal3
-        .ComBitPosition= 21,
-        .ComUpdateBitPosition= 39 ,
+        .ComBitPosition= 11,
+        .ComUpdateBitPosition= 19 ,
         .ComHandleId= 3 ,
-        .ComBitSize= 18,
+        .ComBitSize= 8,
         .ComSignalType = UINT8,
         .ComTransferProperty = TRIGGERED_ON_CHANGE,
         .ComIPduHandleId=1,
         .ComNotification=NULL,
-        .ComSignalDataPtr = ComSignalBuffer_4
+        .ComSignalDataPtr = ComSignalBuffer_4,
+        .isUpdateBitUsed=TRUE,
+        .ComSignalDataInvalidValue=InvalidValueBuffer,
+        .isInvaildSignalUsed=TRUE,
+        .isInvaildSignalChecked = FALSE,
+        .ComSignalInitValue =InitialValue
         },
    /* {   //signal0
         .ComBitPosition= 0,
@@ -205,7 +217,7 @@ const ComIPdu_type ComIPdu[] =
         .ComIPduSignalRef = ComIPduSignalRefs_Can_Message_2,
 		.ComIPduDataPtr=ComIPduBuffer_2,
 		.ComIPduType = NORMAL,
-        /*.ComTxIPdu =
+        .ComTxIPdu =
         {
              .ComTxModeFalse =
              {
@@ -219,7 +231,7 @@ const ComIPdu_type ComIPdu[] =
              },
              .ComMinimumDelayTime = 0,
              .ComTxIPduUnusedAreasDefault = 0,
-        }*/
+        }
     },
    /* { // CanDB_Message_2
           .ComIPduDirection = SEND ,

@@ -24,6 +24,7 @@
 #include "Can_Cfg.h"
 /*#include "Os.h"*/
 extern const Can_ConfigType CanContainer;
+extern const Can_ConfigType MailboxCfg_MAP;
 
 void Can_Init(Can_ConfigType* Config);
 Std_ReturnType Can_SetBaudrate(uint8_t Controller,

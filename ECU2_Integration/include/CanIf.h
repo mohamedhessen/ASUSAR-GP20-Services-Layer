@@ -35,7 +35,6 @@ Std_ReturnType CanIf_SetControllerMode(uint8 ControllerId, Can_ControllerStateTy
 Std_ReturnType CanIf_GetControllerMode(uint8 ControllerId, Can_ControllerStateType* ControllerModePtr);
 Std_ReturnType CanIf_Transmit(PduIdType TxPduId, const PduInfoType* PduInfoPtr);
 void Get_User_RxIndication(CanIfRxPduUserRxConfirmationUL user,uint16 i);
-sint8 CanIf_FindRxPduEntry(const Can_HwType* hoh);
 void CanIf_TxConfirmation(PduIdType CanTxPduId);
 
 #endif /* CANIF_H_ */

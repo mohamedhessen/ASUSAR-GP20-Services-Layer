@@ -558,23 +558,24 @@ void CanTp_TxConfirmation(PduIdType CanTpTxPduId ,Std_ReturnType result )
 	const CanTp_RxNSduType *rxConfigParams = NULL;
 	const CanTp_TxNSduType *txConfigParams = NULL;
 
+    txConfigParams = &CanTp_Config.CanTpChannel.CanTpTxNSdu[CanTpTxPduId];
 
-//		if ( CanTp_Config.CanTpChannel.direction == ISO15765_TRANSMIT )			/* in case of TX */
-//		{
-			txConfigParams = &CanTp_Config.CanTpChannel.CanTpTxNSdu[CanTpTxPduId];
+
+		if ( CanTpTxPduId < CANTP_NSDU_CONFIG_LIST_SIZE_TX )			/* in case of TX */
+		{
 			CanTp_ChannelPrivateType *txRuntime = &CanTpRunTimeData.runtimeDataList[txConfigParams->CanTpTxChannel];
 			if(txRuntime->iso15765.state == TX_WAIT_TX_CONFIRMATION)
 			{
 				handleNextTxFrameSent(txConfigParams, txRuntime);
 			}
-//		}
+		}
 
 
-//		else						/* in case of RX */
-//		{
-//			rxConfigParams = &CanTp_Config.CanTpChannel.CanTpRxNSdu[CanTpTxPduId];
-//			CanTpRunTimeData.runtimeDataList[rxConfigParams->CanTpRxChannel].iso15765.NasNarPending = FALSE;
-//		}
+		else						/* in case of RX */
+		{
+			rxConfigParams = &CanTp_Config.CanTpChannel.CanTpRxNSdu[CanTpTxPduId];
+			CanTpRunTimeData.runtimeDataList[rxConfigParams->CanTpRxChannel].iso15765.NasNarPending = FALSE;
+		}
 
 }
 

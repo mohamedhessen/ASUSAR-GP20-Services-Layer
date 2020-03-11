@@ -5,13 +5,13 @@
 
 boolean seatsensorright =1;
 boolean seatsensorleft =1;
-uint32 Regulator =0x3f3f;
+uint32 Regulator =2;
 uint8 OFF = 1;
 void HeatingControllerRunnable(	)
 	{
       //  Rte_Read_RightSeatStatus_PassengerOnRightSeat(&seatsensorright);
       // Rte_Read_LeftSeatStatus_PassengerOnLeftSeat(&seatsensorleft);
-      // Rte_Read_RegulatorPosition_Position(&Regulator);
+       //Rte_Read_RegulatorPosition_Position(&Regulator);
 
         if(seatsensorright == TRUE)
         {

@@ -128,7 +128,7 @@
            .CanFdPaddingValue = 0U,\
            .CanControllerRef = &CanContainer.CanConfigSet.CanController[0],\
         },\
-        {\
+             {\
            .CanHandleType = FULL,\
            .CanObjectType = transmit,\
            .CanIdType = STANDARD,\
@@ -143,14 +143,14 @@
            .CanObjectType = receive,\
            .CanIdType = STANDARD,\
            .CanHwObjectCount=1,\
-           .CanObjectId= 2,\
+           .CanObjectId= 1,\
            .CanTriggerTransmitEnable = FALSE,\
            .CanFdPaddingValue = 0U,\
            .CanControllerRef = &CanContainer.CanConfigSet.CanController[0],\
            .CanHwFilter=\
            {\
              .CanHwFilterMask=0xFFFFFFFF,\
-             .CanHwFilterCode=0x0,\
+             .CanHwFilterCode=0x1,\
           }\
         }\
     }\
