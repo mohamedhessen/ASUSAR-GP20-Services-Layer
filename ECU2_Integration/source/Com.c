@@ -550,3 +550,35 @@ uint8 Com_InvalidateSignal(Com_SignalIdType SignalId)
         Com_SendSignal(  SignalId, Signal->ComSignalDataPtr);
 }
 
+
+
+
+uint8 Com_SendSignalGroup(Com_SignalGroupIdType SignalGroupId)
+{
+    /*loop over each groupsignal belonging to that signalgroupid*/
+    const ComSignalGroup_type * SignalGroup = GET_SignalGroup(SignalGroupId);
+    uint16 GroupSignals[10] = SignalGroup->GroupSignals;
+    uint8 number_SignalGroup = SignalGroup->number_GroupSignals;
+    void * const SignalGroupBuffer = SignalGroup->ComSignalGroupDataPtr;
+    uint8 * SignalGroupBufferBytes=(uint8 *)SignalGroupBuffer;
+    uint8 i = 0;
+    for (i = 0; i < number_SignalGroup; i++)
+    {
+        const ComGroupSignal_type * GroupSignal = GET_GroupSignal(
+                GroupSignal[i]);
+        uint8 SignalLength = GroupSignal->ComBitSize;
+        void * const Data = GroupSignal->ComSignalDataPtr;
+        uint8 * SignalData=(uint8 *)Data;
+        if (i == 0)
+        {
+          *SignalGroupBufferBytes=*SignalData;
+        }
+        else
+        {
+            *SignalGroupBufferBytes<<=SignalLength;
+            *SignalGroupBufferBytes|=*SignalData;
+        }
+    }
+    *SignalGroupBuffer=*SignalGroupBufferBytes;
+    return E_OK;
+}
