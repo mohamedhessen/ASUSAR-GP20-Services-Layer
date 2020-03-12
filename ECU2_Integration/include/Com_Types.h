@@ -237,6 +237,11 @@ typedef struct {
 	/* Signal definitions */
 	const ComSignal_type *ComSignal;
 
+        const ComSignalGroup_type * ComSignalGroup;
+
+	const ComGroupSignal_type * ComGroupSignal;
+
+
 } ComConfig_type;
 
 typedef struct {
