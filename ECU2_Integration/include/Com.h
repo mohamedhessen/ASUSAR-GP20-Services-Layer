@@ -61,5 +61,8 @@ Std_ReturnType Com_TriggerIPDUSend( PduIdType PduId );
 //process signals if the signal processing mode is IMMEDIATE -> notify the signal callback , else -> mark signal as updated
 static void Com_RxProcessSignals(PduIdType ComRxPduId);
 
+
+uint8 Com_SendSignalGroup(Com_SignalGroupIdType SignalGroupId);
+
 #endif
 
