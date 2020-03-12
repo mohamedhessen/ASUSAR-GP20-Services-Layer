@@ -552,7 +552,7 @@ uint8 Com_InvalidateSignal(Com_SignalIdType SignalId)
 
 
 
-
+/* This function copies group signal from the shadow buffer to signal group buffer*/
 uint8 Com_SendSignalGroup(Com_SignalGroupIdType SignalGroupId)
 {
     /*loop over each groupsignal belonging to that signalgroupid*/
