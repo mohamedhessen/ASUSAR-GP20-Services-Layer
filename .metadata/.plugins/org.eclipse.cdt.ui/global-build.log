@@ -4289,3 +4289,1007 @@ Finished building target: "ECU2_Integration.out"
  
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project ECU2_Integration ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'ECU2_Integration.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ECU2_Integration ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../source/Com.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --check_misra="1,2,3,4" --preproc_with_compile --preproc_dependency="source/Com.d_raw" --obj_directory="source"  "../source/Com.c"
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include/machine/_types.h", line 57: warning #1376-D: (MISRA-C:2004 1.1/R) Ensure strict ANSI C mode (-ps) is enabled
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 19: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 17: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 22: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 23: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 24: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 26: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 17: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 22: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 23: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 24: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 26: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 30: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 34: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 35: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 36: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 69: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 87: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 88: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 100: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 110: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 30: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 34: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 35: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 36: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 69: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 87: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 88: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 100: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 110: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com_Types.h", line 167: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com_Types.h", line 172: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 27: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 34: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 35: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 36: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 37: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 70: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Com_Cfg.h", line 23: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Com_Cfg.h", line 24: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Com_Cfg.h", line 25: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Com_helper.h", line 17: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Com_helper.h", line 20: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Com_helper.h", line 23: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Com_helper.h", line 53: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 19: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 27: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 34: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 35: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 36: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 37: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 70: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 17: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 22: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 23: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 24: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 26: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 30: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 34: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 35: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 36: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 69: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 87: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 88: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 100: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 110: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 19: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 27: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 34: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 35: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 36: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 37: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 70: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 17: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 22: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 23: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 24: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 26: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 30: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 34: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 35: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 36: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 69: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 87: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 88: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 100: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 110: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 15: warning #48-D: incompatible redefinition of macro "TRUE" (declared at line 38 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Platform_Types.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 16: warning #48-D: incompatible redefinition of macro "FALSE" (declared at line 35 of "C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Platform_Types.h")
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 29: warning #48-D: incompatible redefinition of macro "CAN_E_PARAM_POINTER" (declared at line 20)
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 19: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 22: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 25: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 44: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 45: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 48: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 49: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 50: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 52: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 53: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 54: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 57: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 58: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 61: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 62: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 65: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 66: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 67: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 68: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 70: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 71: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 72: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 75: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 76: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 77: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 78: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 80: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 81: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Mcu_Cfg.h", line 82: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/ComStack_Types.h", line 19: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/ComStack_Types.h", line 27: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/ComStack_Types.h", line 34: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/ComStack_Types.h", line 35: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/ComStack_Types.h", line 36: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/ComStack_Types.h", line 37: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/ComStack_Types.h", line 70: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 51: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 111: warning #303-D: typedef name has already been declared (with same type)
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 165: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 166: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 167: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 168: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 169: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 216: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 237: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 242: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 248: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 252: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 353: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 610: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 639: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 653: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 665: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 672: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Can_GeneralTypes.h", line 702: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 24: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 25: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 26: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 27: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 45: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 46: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 47: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 48: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 49: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 50: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 51: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 52: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 53: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 54: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 55: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 56: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 57: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 58: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 59: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 60: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 61: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 62: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 64: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 66: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 67: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 68: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 69: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 70: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 71: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 72: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 73: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 74: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 93: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 94: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 95: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 96: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 97: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 98: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 17: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 22: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 23: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 24: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 26: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 30: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 34: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 35: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 36: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 69: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 87: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 88: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 100: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 110: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 19: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 27: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 34: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 35: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 36: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 37: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 70: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 148: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 154: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 159: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 163: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 168: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 174: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 180: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 182: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 191: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 201: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 205: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 206: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 210: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 218: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 242: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 247: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 253: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 259: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 266: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 270: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 275: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 280: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 287: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 289: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 293: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 302: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 305: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 313: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 314: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 319: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 324: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 329: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 332: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 356: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 357: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 358: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 359: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 360: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 361: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 371: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 372: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 374: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 377: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 378: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 379: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 380: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 381: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 382: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 383: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 384: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 385: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 386: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 387: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 388: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 389: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 390: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 391: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 392: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 393: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 394: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 409: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 410: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 411: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 412: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 413: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 414: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 416: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 418: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 420: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 422: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 423: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 424: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 426: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 427: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 428: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 430: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 432: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 434: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 435: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 436: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 437: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 438: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 440: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 442: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 443: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 445: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 446: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 448: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 449: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 451: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 452: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 453: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 455: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 456: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 458: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 460: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 461: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 462: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 463: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 464: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 465: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 466: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 468: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 470: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 472: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 474: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 480: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 481: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 482: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 483: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 485: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 493: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 497: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 499: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 500: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 506: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 514: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 515: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 518: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 542: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 543: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 606: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 616: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 617: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 618: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 665: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 668: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 671: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 672: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Types.h", line 675: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 24: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 25: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 26: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 27: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 45: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 46: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 47: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 48: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 49: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 50: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 51: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 52: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 53: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 54: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 55: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 56: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 57: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 58: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 59: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 60: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 61: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 62: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 64: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 66: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 67: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 68: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 69: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 70: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 71: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 72: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 73: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 74: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 93: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 94: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 95: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 96: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 97: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanIf_Cfg.h", line 98: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_types.h", line 19: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_types.h", line 27: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_types.h", line 34: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_types.h", line 35: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_types.h", line 36: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_types.h", line 37: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_types.h", line 70: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 17: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 22: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 23: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 24: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 26: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 30: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 34: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 35: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 36: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 69: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 87: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 88: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 100: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 110: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Can_GeneralTypes.h", line 51: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Can_GeneralTypes.h", line 165: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Can_GeneralTypes.h", line 166: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Can_GeneralTypes.h", line 167: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Can_GeneralTypes.h", line 168: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Can_GeneralTypes.h", line 169: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Can_GeneralTypes.h", line 216: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Can_GeneralTypes.h", line 237: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Can_GeneralTypes.h", line 242: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Can_GeneralTypes.h", line 248: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Can_GeneralTypes.h", line 252: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Can_GeneralTypes.h", line 353: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Can_GeneralTypes.h", line 610: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Can_GeneralTypes.h", line 639: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Can_GeneralTypes.h", line 653: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Can_GeneralTypes.h", line 665: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Can_GeneralTypes.h", line 672: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Can_GeneralTypes.h", line 702: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 17: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 22: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 23: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 24: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 26: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 30: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 34: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 35: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 36: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 69: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 87: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 88: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 100: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 110: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 19: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 27: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 34: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 35: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 36: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 37: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 70: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 20: warning #303-D: typedef name has already been declared (with same type)
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 34: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 35: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 36: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 37: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 42: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 44: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 46: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 48: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 50: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 58: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 74: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 78: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 79: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 90: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 91: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 107: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 108: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 109: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 110: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 111: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 112: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 113: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 114: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 126: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 127: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 128: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 129: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 130: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 131: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 132: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 133: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 139: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 144: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 153: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 159: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 167: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 203: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 204: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 205: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 206: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 207: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 208: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 209: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 210: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 211: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 213: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 215: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 216: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 217: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 218: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 219: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 228: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 229: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 230: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 231: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 232: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 233: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 234: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 235: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 236: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 237: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 238: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 240: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 242: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 243: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 244: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 245: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 246: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 258: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 259: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 260: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 261: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 281: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 301: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 305: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 307: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 308: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 309: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 310: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 311: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 312: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 313: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 314: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 315: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 316: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 317: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 318: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 319: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 320: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 327: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 34: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 35: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 36: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 37: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 42: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 44: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 46: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 48: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 50: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 58: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 74: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 78: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 79: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 90: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 91: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 107: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 108: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 109: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 110: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 111: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 112: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 113: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 114: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 126: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 127: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 128: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 129: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 130: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 131: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 132: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 133: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 139: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 144: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 153: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 159: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 167: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 203: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 204: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 205: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 206: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 207: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 208: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 209: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 210: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 211: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 213: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 215: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 216: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 217: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 218: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 219: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 228: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 229: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 230: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 231: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 232: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 233: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 234: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 235: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 236: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 237: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 238: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 240: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 242: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 243: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 244: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 245: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 246: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 258: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 259: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 260: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 261: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 281: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 301: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 305: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 307: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 308: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 309: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 310: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 311: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 312: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 313: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 314: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 315: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 316: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 317: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 318: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 319: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 320: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 327: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTP_Cfg.h", line 5: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 34: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 35: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 36: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 37: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 42: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 44: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 46: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 48: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 50: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 58: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 74: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 78: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 79: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 90: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 91: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 107: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 108: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 109: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 110: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 111: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 112: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 113: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 114: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 126: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 127: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 128: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 129: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 130: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 131: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 132: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 133: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 139: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 144: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 153: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 159: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 167: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 203: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 204: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 205: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 206: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 207: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 208: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 209: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 210: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 211: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 213: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 215: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 216: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 217: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 218: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 219: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 228: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 229: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 230: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 231: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 232: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 233: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 234: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 235: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 236: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 237: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 238: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 240: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 242: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 243: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 244: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 245: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 246: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 258: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 259: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 260: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 261: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 281: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 301: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 305: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 307: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 308: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 309: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 310: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 311: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 312: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 313: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 314: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 315: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 316: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 317: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 318: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 319: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 320: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp_Types.h", line 327: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTP_Cfg.h", line 25: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 17: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 22: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 23: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 24: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 26: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 30: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 34: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 35: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 36: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 69: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 87: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 88: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 100: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\Std_Types.h", line 110: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 17: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 20: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 21: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 26: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 39: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 54: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 57: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 98: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 99: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 100: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 101: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 102: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 103: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 105: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 107: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 111: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 116: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 120: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 121: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 122: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 124: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 125: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTpRuntime.h", line 126: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp.h", line 9: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp.h", line 11: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp.h", line 13: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp.h", line 25: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp.h", line 31: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp.h", line 39: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp.h", line 41: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\CanTp.h", line 43: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\PduR.h", line 28: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com.h", line 25: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com.h", line 61: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com_Types.h", line 167: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com_Types.h", line 172: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com_helper.h", line 17: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com_helper.h", line 20: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com_helper.h", line 23: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com_helper.h", line 53: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com_Buffer.h", line 12: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com_Buffer.h", line 33: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com_Buffer.h", line 34: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com_Buffer.h", line 35: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com_Buffer.h", line 36: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com_Buffer.h", line 37: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com_Buffer.h", line 38: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com_Buffer.h", line 40: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com_Buffer.h", line 41: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com_Buffer.h", line 42: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com_Buffer.h", line 43: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com_Buffer.h", line 44: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 19: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 27: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 34: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 35: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 36: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 37: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:\Users\AShawqy\Documents\GitHub\ASUSAR-GP20-Services-Layer\ECU2_Integration\include\ComStack_Types.h", line 70: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration/include/Com_Asu_Types.h", line 63: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"../source/Com.c", line 27: warning #69-D: integer conversion resulted in a change of sign
+"../source/Com.c", line 40: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"../source/Com.c", line 44: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"../source/Com.c", line 59: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"../source/Com.c", line 61: warning #225-D: function "memset" declared implicitly
+"../source/Com.c", line 64: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"../source/Com.c", line 71: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"../source/Com.c", line 95: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"../source/Com.c", line 98: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"../source/Com.c", line 106: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"../source/Com.c", line 140: warning #515-D: a value of type "const ComSignal_type *" cannot be assigned to an entity of type "ComSignal_type *"
+"../source/Com.c", line 158: warning #515-D: a value of type "const ComSignal_type *" cannot be assigned to an entity of type "ComSignal_type *"
+"../source/Com.c", line 166: warning #176-D: expression has no effect
+"../source/Com.c", line 206: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"../source/Com.c", line 203: warning #179-D: variable "mixedSent" was declared but never referenced
+"../source/Com.c", line 204: warning #552-D: variable "periodicDirect" was set but never used
+"../source/Com.c", line 321: warning #552-D: variable "x" was set but never used
+"../source/Com.c", line 362: warning #145-D: a value of type "const ComIPdu_type *" cannot be used to initialize an entity of type "ComIPdu_type *"
+"../source/Com.c", line 384: warning #145-D: a value of type "const ComIPdu_type *" cannot be used to initialize an entity of type "ComIPdu_type *"
+"../source/Com.c", line 429: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"../source/Com.c", line 416: warning #552-D: variable "x" was set but never used
+"../source/Com.c", line 465: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"../source/Com.c", line 468: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"../source/Com.c", line 470: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"../source/Com.c", line 473: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"../source/Com.c", line 475: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"../source/Com.c", line 505: warning #1455-D: (MISRA-C:2004 2.2/R) Source code shall only use /* ... */ style comments
+"../source/Com.c", line 520: warning #145-D: a value of type "const ComIPdu_type *" cannot be used to initialize an entity of type "ComIPdu_type *"
+"../source/Com.c", line 529: warning #515-D: a value of type "const ComSignal_type *" cannot be assigned to an entity of type "ComSignal_type *"
+"../source/Com.c", line 547: warning #145-D: a value of type "const ComSignal_type *" cannot be used to initialize an entity of type "ComSignal_type *"
+"../source/Com.c", line 554: warning #994-D: missing return statement at end of non-void function "Com_InvalidateSignal"
+Finished building: "../source/Com.c"
+ 
+Building target: "ECU2_Integration.out"
+Invoking: ARM Linker
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ECU2_Integration.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/lib" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ECU2_Integration_linkInfo.xml" --rom_model -o "ECU2_Integration.out" "./Delay.obj" "./Dio.obj" "./KeyPad.obj" "./PORTF.obj" "./Timer0A.obj" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./OS/InitConsole.obj" "./OS/Lcfg.obj" "./OS/alarm.obj" "./OS/event.obj" "./OS/interrupt.obj" "./OS/resource.obj" "./OS/task.obj" "./Rte/Rte.obj" "./Rte/Rte_HeatRegulator.obj" "./Rte/Rte_SeatHeatingController.obj" "./driverlib/adc.obj" "./driverlib/aes.obj" "./driverlib/can.obj" "./driverlib/comp.obj" "./driverlib/cpu.obj" "./driverlib/crc.obj" "./driverlib/des.obj" "./driverlib/eeprom.obj" "./driverlib/emac.obj" "./driverlib/epi.obj" "./driverlib/flash.obj" "./driverlib/fpu.obj" "./driverlib/gpio.obj" "./driverlib/hibernate.obj" "./driverlib/i2c.obj" "./driverlib/interrupt.obj" "./driverlib/lcd.obj" "./driverlib/mpu.obj" "./driverlib/onewire.obj" "./driverlib/pwm.obj" "./driverlib/qei.obj" "./driverlib/shamd5.obj" "./driverlib/ssi.obj" "./driverlib/sw_crc.obj" "./driverlib/sysctl.obj" "./driverlib/sysexc.obj" "./driverlib/systick.obj" "./driverlib/timer.obj" "./driverlib/uart.obj" "./driverlib/udma.obj" "./driverlib/usb.obj" "./driverlib/watchdog.obj" "./freertos/list.obj" "./portable/port.obj" "./portable/portasm.obj" "./source/Can.obj" "./source/CanIf.obj" "./source/CanIf_Cfg.obj" "./source/CanIf_Sec_cfg.obj" "./source/CanTpRuntime.obj" "./source/CanTp_Cfg.obj" "./source/Com.obj" "./source/Com_Asu_Cfg.obj" "./source/Com_Buffer.obj" "./source/Com_Cfg.obj" "./source/Com_helper.obj" "./source/Helper_Functions.obj" "./source/PDURmy.obj" "./source/PduR.obj" "./source/PduR_helper.obj" "./source/cantp.obj" "./utils/uartstdio.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "ECU2_Integration.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ECU2_Integration ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../source/Com_Cfg.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/Com_Cfg.d_raw" --obj_directory="source"  "../source/Com_Cfg.c"
+Finished building: "../source/Com_Cfg.c"
+ 
+Building target: "ECU2_Integration.out"
+Invoking: ARM Linker
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ECU2_Integration.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/lib" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ECU2_Integration_linkInfo.xml" --rom_model -o "ECU2_Integration.out" "./Delay.obj" "./Dio.obj" "./KeyPad.obj" "./PORTF.obj" "./Timer0A.obj" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./OS/InitConsole.obj" "./OS/Lcfg.obj" "./OS/alarm.obj" "./OS/event.obj" "./OS/interrupt.obj" "./OS/resource.obj" "./OS/task.obj" "./Rte/Rte.obj" "./Rte/Rte_HeatRegulator.obj" "./Rte/Rte_SeatHeatingController.obj" "./driverlib/adc.obj" "./driverlib/aes.obj" "./driverlib/can.obj" "./driverlib/comp.obj" "./driverlib/cpu.obj" "./driverlib/crc.obj" "./driverlib/des.obj" "./driverlib/eeprom.obj" "./driverlib/emac.obj" "./driverlib/epi.obj" "./driverlib/flash.obj" "./driverlib/fpu.obj" "./driverlib/gpio.obj" "./driverlib/hibernate.obj" "./driverlib/i2c.obj" "./driverlib/interrupt.obj" "./driverlib/lcd.obj" "./driverlib/mpu.obj" "./driverlib/onewire.obj" "./driverlib/pwm.obj" "./driverlib/qei.obj" "./driverlib/shamd5.obj" "./driverlib/ssi.obj" "./driverlib/sw_crc.obj" "./driverlib/sysctl.obj" "./driverlib/sysexc.obj" "./driverlib/systick.obj" "./driverlib/timer.obj" "./driverlib/uart.obj" "./driverlib/udma.obj" "./driverlib/usb.obj" "./driverlib/watchdog.obj" "./freertos/list.obj" "./portable/port.obj" "./portable/portasm.obj" "./source/Can.obj" "./source/CanIf.obj" "./source/CanIf_Cfg.obj" "./source/CanIf_Sec_cfg.obj" "./source/CanTpRuntime.obj" "./source/CanTp_Cfg.obj" "./source/Com.obj" "./source/Com_Asu_Cfg.obj" "./source/Com_Buffer.obj" "./source/Com_Cfg.obj" "./source/Com_helper.obj" "./source/Helper_Functions.obj" "./source/PDURmy.obj" "./source/PduR.obj" "./source/PduR_helper.obj" "./source/cantp.obj" "./utils/uartstdio.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "ECU2_Integration.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ECU2_Integration ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'ECU2_Integration.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ECU2_Integration ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'ECU2_Integration.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ECU2_Integration ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../source/Com_Cfg.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/Com_Cfg.d_raw" --obj_directory="source"  "../source/Com_Cfg.c"
+Finished building: "../source/Com_Cfg.c"
+ 
+Building target: "ECU2_Integration.out"
+Invoking: ARM Linker
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ECU2_Integration.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/lib" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ECU2_Integration_linkInfo.xml" --rom_model -o "ECU2_Integration.out" "./Delay.obj" "./Dio.obj" "./KeyPad.obj" "./PORTF.obj" "./Timer0A.obj" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./OS/InitConsole.obj" "./OS/Lcfg.obj" "./OS/alarm.obj" "./OS/event.obj" "./OS/interrupt.obj" "./OS/resource.obj" "./OS/task.obj" "./Rte/Rte.obj" "./Rte/Rte_HeatRegulator.obj" "./Rte/Rte_SeatHeatingController.obj" "./driverlib/adc.obj" "./driverlib/aes.obj" "./driverlib/can.obj" "./driverlib/comp.obj" "./driverlib/cpu.obj" "./driverlib/crc.obj" "./driverlib/des.obj" "./driverlib/eeprom.obj" "./driverlib/emac.obj" "./driverlib/epi.obj" "./driverlib/flash.obj" "./driverlib/fpu.obj" "./driverlib/gpio.obj" "./driverlib/hibernate.obj" "./driverlib/i2c.obj" "./driverlib/interrupt.obj" "./driverlib/lcd.obj" "./driverlib/mpu.obj" "./driverlib/onewire.obj" "./driverlib/pwm.obj" "./driverlib/qei.obj" "./driverlib/shamd5.obj" "./driverlib/ssi.obj" "./driverlib/sw_crc.obj" "./driverlib/sysctl.obj" "./driverlib/sysexc.obj" "./driverlib/systick.obj" "./driverlib/timer.obj" "./driverlib/uart.obj" "./driverlib/udma.obj" "./driverlib/usb.obj" "./driverlib/watchdog.obj" "./freertos/list.obj" "./portable/port.obj" "./portable/portasm.obj" "./source/Can.obj" "./source/CanIf.obj" "./source/CanIf_Cfg.obj" "./source/CanIf_Sec_cfg.obj" "./source/CanTpRuntime.obj" "./source/CanTp_Cfg.obj" "./source/Com.obj" "./source/Com_Asu_Cfg.obj" "./source/Com_Buffer.obj" "./source/Com_Cfg.obj" "./source/Com_helper.obj" "./source/Helper_Functions.obj" "./source/PDURmy.obj" "./source/PduR.obj" "./source/PduR_helper.obj" "./source/cantp.obj" "./utils/uartstdio.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "ECU2_Integration.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ECU2_Integration ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../source/Com_Cfg.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/Com_Cfg.d_raw" --obj_directory="source"  "../source/Com_Cfg.c"
+ 
+>> Compilation failure
+source/subdir_rules.mk:9: recipe for target 'source/Com_Cfg.obj' failed
+"../source/Com_Cfg.c", line 56: error #156: expression must have struct or union type
+"../source/Com_Cfg.c", line 57: error #58: this operator is not allowed in a constant expression
+"../source/Com_Cfg.c", line 196: error #28: expression must have a constant value
+"../source/Com_Cfg.c", line 223: error #28: expression must have a constant value
+"../source/Com_Cfg.c", line 302: error #28: expression must have a constant value
+"../source/Com_Cfg.c", line 303: error #28: expression must have a constant value
+6 errors detected in the compilation of "../source/Com_Cfg.c".
+gmake: *** [source/Com_Cfg.obj] Error 1
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ECU2_Integration ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../source/Com_Cfg.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/Com_Cfg.d_raw" --obj_directory="source"  "../source/Com_Cfg.c"
+Finished building: "../source/Com_Cfg.c"
+ 
+Building target: "ECU2_Integration.out"
+Invoking: ARM Linker
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ECU2_Integration.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/lib" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ECU2_Integration_linkInfo.xml" --rom_model -o "ECU2_Integration.out" "./Delay.obj" "./Dio.obj" "./KeyPad.obj" "./PORTF.obj" "./Timer0A.obj" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./OS/InitConsole.obj" "./OS/Lcfg.obj" "./OS/alarm.obj" "./OS/event.obj" "./OS/interrupt.obj" "./OS/resource.obj" "./OS/task.obj" "./Rte/Rte.obj" "./Rte/Rte_HeatRegulator.obj" "./Rte/Rte_SeatHeatingController.obj" "./driverlib/adc.obj" "./driverlib/aes.obj" "./driverlib/can.obj" "./driverlib/comp.obj" "./driverlib/cpu.obj" "./driverlib/crc.obj" "./driverlib/des.obj" "./driverlib/eeprom.obj" "./driverlib/emac.obj" "./driverlib/epi.obj" "./driverlib/flash.obj" "./driverlib/fpu.obj" "./driverlib/gpio.obj" "./driverlib/hibernate.obj" "./driverlib/i2c.obj" "./driverlib/interrupt.obj" "./driverlib/lcd.obj" "./driverlib/mpu.obj" "./driverlib/onewire.obj" "./driverlib/pwm.obj" "./driverlib/qei.obj" "./driverlib/shamd5.obj" "./driverlib/ssi.obj" "./driverlib/sw_crc.obj" "./driverlib/sysctl.obj" "./driverlib/sysexc.obj" "./driverlib/systick.obj" "./driverlib/timer.obj" "./driverlib/uart.obj" "./driverlib/udma.obj" "./driverlib/usb.obj" "./driverlib/watchdog.obj" "./freertos/list.obj" "./portable/port.obj" "./portable/portasm.obj" "./source/Can.obj" "./source/CanIf.obj" "./source/CanIf_Cfg.obj" "./source/CanIf_Sec_cfg.obj" "./source/CanTpRuntime.obj" "./source/CanTp_Cfg.obj" "./source/Com.obj" "./source/Com_Asu_Cfg.obj" "./source/Com_Buffer.obj" "./source/Com_Cfg.obj" "./source/Com_helper.obj" "./source/Helper_Functions.obj" "./source/PDURmy.obj" "./source/PduR.obj" "./source/PduR_helper.obj" "./source/cantp.obj" "./utils/uartstdio.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "ECU2_Integration.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ECU2_Integration ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'ECU2_Integration.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ECU2_Integration ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../source/Com_Cfg.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/Com_Cfg.d_raw" --obj_directory="source"  "../source/Com_Cfg.c"
+Finished building: "../source/Com_Cfg.c"
+ 
+Building target: "ECU2_Integration.out"
+Invoking: ARM Linker
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ECU2_Integration.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/lib" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ECU2_Integration_linkInfo.xml" --rom_model -o "ECU2_Integration.out" "./Delay.obj" "./Dio.obj" "./KeyPad.obj" "./PORTF.obj" "./Timer0A.obj" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./OS/InitConsole.obj" "./OS/Lcfg.obj" "./OS/alarm.obj" "./OS/event.obj" "./OS/interrupt.obj" "./OS/resource.obj" "./OS/task.obj" "./Rte/Rte.obj" "./Rte/Rte_HeatRegulator.obj" "./Rte/Rte_SeatHeatingController.obj" "./driverlib/adc.obj" "./driverlib/aes.obj" "./driverlib/can.obj" "./driverlib/comp.obj" "./driverlib/cpu.obj" "./driverlib/crc.obj" "./driverlib/des.obj" "./driverlib/eeprom.obj" "./driverlib/emac.obj" "./driverlib/epi.obj" "./driverlib/flash.obj" "./driverlib/fpu.obj" "./driverlib/gpio.obj" "./driverlib/hibernate.obj" "./driverlib/i2c.obj" "./driverlib/interrupt.obj" "./driverlib/lcd.obj" "./driverlib/mpu.obj" "./driverlib/onewire.obj" "./driverlib/pwm.obj" "./driverlib/qei.obj" "./driverlib/shamd5.obj" "./driverlib/ssi.obj" "./driverlib/sw_crc.obj" "./driverlib/sysctl.obj" "./driverlib/sysexc.obj" "./driverlib/systick.obj" "./driverlib/timer.obj" "./driverlib/uart.obj" "./driverlib/udma.obj" "./driverlib/usb.obj" "./driverlib/watchdog.obj" "./freertos/list.obj" "./portable/port.obj" "./portable/portasm.obj" "./source/Can.obj" "./source/CanIf.obj" "./source/CanIf_Cfg.obj" "./source/CanIf_Sec_cfg.obj" "./source/CanTpRuntime.obj" "./source/CanTp_Cfg.obj" "./source/Com.obj" "./source/Com_Asu_Cfg.obj" "./source/Com_Buffer.obj" "./source/Com_Cfg.obj" "./source/Com_helper.obj" "./source/Helper_Functions.obj" "./source/PDURmy.obj" "./source/PduR.obj" "./source/PduR_helper.obj" "./source/cantp.obj" "./utils/uartstdio.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "ECU2_Integration.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ECU2_Integration ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'ECU2_Integration.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ECU2_Integration ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'ECU2_Integration.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ECU2_Integration ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../source/Com_Cfg.c"
+Invoking: ARM Compiler
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --include_path="C:/Users/AShawqy/Documents/GitHub/ASUSAR-GP20-Services-Layer/ECU2_Integration" --include_path="C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi --preproc_with_compile --preproc_dependency="source/Com_Cfg.d_raw" --obj_directory="source"  "../source/Com_Cfg.c"
+Finished building: "../source/Com_Cfg.c"
+ 
+Building target: "ECU2_Integration.out"
+Invoking: ARM Linker
+"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --define=ccs="ccs" --define=PART_TM4C123GH6PM -g --gcc --diag_warning=225 --diag_wrap=off --display_error_number --abi=eabi -z -m"ECU2_Integration.map" --heap_size=0 --stack_size=512 -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/lib" -i"C:/ti/ccs930/ccs/tools/compiler/ti-cgt-arm_18.12.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="ECU2_Integration_linkInfo.xml" --rom_model -o "ECU2_Integration.out" "./Delay.obj" "./Dio.obj" "./KeyPad.obj" "./PORTF.obj" "./Timer0A.obj" "./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "./OS/InitConsole.obj" "./OS/Lcfg.obj" "./OS/alarm.obj" "./OS/event.obj" "./OS/interrupt.obj" "./OS/resource.obj" "./OS/task.obj" "./Rte/Rte.obj" "./Rte/Rte_HeatRegulator.obj" "./Rte/Rte_SeatHeatingController.obj" "./driverlib/adc.obj" "./driverlib/aes.obj" "./driverlib/can.obj" "./driverlib/comp.obj" "./driverlib/cpu.obj" "./driverlib/crc.obj" "./driverlib/des.obj" "./driverlib/eeprom.obj" "./driverlib/emac.obj" "./driverlib/epi.obj" "./driverlib/flash.obj" "./driverlib/fpu.obj" "./driverlib/gpio.obj" "./driverlib/hibernate.obj" "./driverlib/i2c.obj" "./driverlib/interrupt.obj" "./driverlib/lcd.obj" "./driverlib/mpu.obj" "./driverlib/onewire.obj" "./driverlib/pwm.obj" "./driverlib/qei.obj" "./driverlib/shamd5.obj" "./driverlib/ssi.obj" "./driverlib/sw_crc.obj" "./driverlib/sysctl.obj" "./driverlib/sysexc.obj" "./driverlib/systick.obj" "./driverlib/timer.obj" "./driverlib/uart.obj" "./driverlib/udma.obj" "./driverlib/usb.obj" "./driverlib/watchdog.obj" "./freertos/list.obj" "./portable/port.obj" "./portable/portasm.obj" "./source/Can.obj" "./source/CanIf.obj" "./source/CanIf_Cfg.obj" "./source/CanIf_Sec_cfg.obj" "./source/CanTpRuntime.obj" "./source/CanTp_Cfg.obj" "./source/Com.obj" "./source/Com_Asu_Cfg.obj" "./source/Com_Buffer.obj" "./source/Com_Cfg.obj" "./source/Com_helper.obj" "./source/Helper_Functions.obj" "./source/PDURmy.obj" "./source/PduR.obj" "./source/PduR_helper.obj" "./source/cantp.obj" "./utils/uartstdio.obj" "../tm4c123gh6pm.cmd"  -llibc.a 
+<Linking>
+Finished building target: "ECU2_Integration.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ECU2_Integration ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'ECU2_Integration.out' is up to date.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project ECU2_Integration ****
+
+"C:\\ti\\ccs930\\ccs\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'ECU2_Integration.out' is up to date.
+
+**** Build Finished ****

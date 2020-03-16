@@ -167,6 +167,9 @@ void Com_MainFunctionRx(void)
                         break;
 
                     case REPLACE:
+                        /*this local array to copy the data of initial value
+                         * value of the signal to the data signal pointer
+                         * */
                         for(jj = 0 ; jj<3; jj++)
                         {
                             local_arr[jj] = signal->ComSignalInitValue[jj];
