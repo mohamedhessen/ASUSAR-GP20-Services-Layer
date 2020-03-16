@@ -18,7 +18,7 @@
 
 /* Signal object identifier */
 typedef uint16 Com_SignalIdType;
-
+typedef uint16 Com_SignalGroupIdType;
 /* Available Transmission modes for I-PDU */
 typedef enum {
 	DIRECT,
@@ -227,15 +227,20 @@ typedef struct {
 
 
 /* contains the configuration parameters and sub containers of the AUTOSAR COM module */
-typedef struct {
+typedef struct
+{
 
-	const ComTimeBase_type ComTimeBase ;
+    const ComTimeBase_type ComTimeBase;
 
-	/* IPDU definitions */
-	const ComIPdu_type * ComIPdu;
+    /* IPDU definitions */
+    const ComIPdu_type * ComIPdu;
 
-	/* Signal definitions */
-	const ComSignal_type *ComSignal;
+    /* Signal definitions */
+    const ComSignal_type *ComSignal;
+    /*Signal Group definitions*/
+    const ComSignalGroup_type * ComSignalGroup;
+    /*Group Signal definitions*/
+    const ComGroupSignal_type * ComGroupSignal;
 
 } ComConfig_type;
 
@@ -244,4 +249,47 @@ typedef struct {
 } ComGeneral_type;
 
 
+typedef struct
+{
+    /* The numerical value used as the ID.
+     This ID identifies signals and signal groups in the COM APIs using Com_SignalIdType or Com_SignalGroupIdType parameter respectively. */
+    uint16 ComHandleId;
+    /*  Bit position of update-bit inside I-PDU.
+     If this attribute is omitted then there is no update-bit. This setting must be consistently on sender and on receiver side.
+     Range: 0..63 for CAN and LIN, 0..511 for CAN FD, 0..2031 for FlexRay, 0..4294967295 for TP.*/
+    uint32 ComUpdateBitPosition;
+
+    /* notification function. */
+    void (*ComNotification)(void);
+    /*  Defines if a write access to this signal can trigger the transmission of the correspon-ding I-PDU.
+     *  If the I-PDU is triggered, depends also on the transmission mode of the corresponding I-PDU.*/
+    const ComTransferProperty_type ComTransferProperty;
+
+    void * const ComSignalGroupDataPtr;
+
+    uint16 GroupSignals[10];
+
+    uint8 number_GroupSignals;
+} ComSignalGroup_type;
+
+typedef struct
+{
+    /*  This parameter refers to the position in the I-PDU and not in the shadow buffer.*/
+    uint32 ComBitPosition;
+    /* The numerical value used as the ID.
+     This ID identifies signals and signal groups in the COM APIs using Com_SignalIdType or Com_SignalGroupIdType parameter respectively. */
+    uint16 ComHandleId;
+    /* Size in bits, for integer signal types. For ComSignalType UINT8_N and UINT8_DYN
+     the size shall be configured by ComSignalLength. For ComSignalTypes FLOAT32 and FLOAT64 the size is already defined by the signal type
+     and therefore may be omitted. */
+    uint8 ComBitSize;
+    /*  The AUTOSAR type of the signal. Whether or not the signal is signed or unsigned can be found by examining the value of this attribute.
+     This type could also be used to reserved appropriate storage in AUTOSAR COM.*/
+    const ComSignalType_type ComSignalType;
+    /*  Defines if a write access to this signal can trigger the transmission of the correspon-ding I-PDU.
+     *  If the I-PDU is triggered, depends also on the transmission mode of the corresponding I-PDU.*/
+    const ComTransferProperty_type ComTransferProperty;
+    void * const ComSignalDataPtr;
+
+} ComGroupSignal_type;
 #endif

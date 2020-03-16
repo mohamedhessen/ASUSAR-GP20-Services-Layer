@@ -38,6 +38,12 @@
 #define GET_AsuSignal(SignalId)\
 	(&(Com_Asu_Config->ComSignal[SignalId]))
 
+#define  GET_SignalGroup(SignalGroupId)\
+    (&(ComConfig->ComSignalGroup[SignalGroupId]))
+
+#define  GET_GroupSignal(GroupSignalId)\
+    (&(ComConfig->ComGroupSignal[GroupSignalId]))
+
 boolean validateSignalID (Com_SignalIdType SignalId);
 
 #define timerDec(timer) \
