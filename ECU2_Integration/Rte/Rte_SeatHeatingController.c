@@ -3,6 +3,23 @@
 #include "Rte_SeatHeatingController.h"
 
 
+/*this function is called when notification action is notify
+ * when signal invalidate is applied in receiver side for signal0*/
+void com_notification(void)
+{
+    uint8 x = 30;
+    x = x+30;
+}
+
+
+/*this function is called when notification action is notify
+ * when signal invalidate is applied in receiver side for signal1*/
+void com_notification_1(void)
+{
+    uint8 x = 30;
+    x = x+30;
+}
+
 boolean seatsensorright =1;
 boolean seatsensorleft =1;
 uint32 Regulator =2;

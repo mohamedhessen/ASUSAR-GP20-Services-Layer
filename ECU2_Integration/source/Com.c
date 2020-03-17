@@ -114,7 +114,7 @@ static void Com_RxProcessSignals(PduIdType ComRxPduId)
 void Com_MainFunctionRx(void)
 {
     const ComIPdu_type *IPdu = NULL;
-     ComSignal_type *signal = NULL;
+    ComSignal_type *signal = NULL;
     Com_Asu_Signal_type * Asu_Signal = NULL;
     Com_Asu_IPdu_type *Asu_IPdu = NULL;
     uint16 signalID;
@@ -149,8 +149,8 @@ void Com_MainFunctionRx(void)
             /* unlock the buffer */
             UNLOCKBUFFER(&Asu_IPdu->PduBufferState)
 
-                                                                            /* copy the deferred buffer to the actual pdu buffer */
-                                                                            Com_UnPackSignalsFromPdu(pduId);
+                                                                                    /* copy the deferred buffer to the actual pdu buffer */
+                                                                                    Com_UnPackSignalsFromPdu(pduId);
 
             /* loop on the signal in this ipdu */
             for (signalID = 0; (IPdu->ComIPduSignalRef != NULL) && (IPdu->ComIPduSignalRef[signalID] != NULL); signalID++)
@@ -163,7 +163,10 @@ void Com_MainFunctionRx(void)
                     switch(signal->ComDataInvalidAction)
                     {
                     case NOTIFY:
-                        signal->ComInvalidNotification;
+                        if (signal->ComInvalidNotification != NULL)
+                        {
+                            signal->ComInvalidNotification();
+                        }
                         break;
 
                     case REPLACE:
@@ -574,7 +577,7 @@ uint8 Com_SendSignalGroup(Com_SignalGroupIdType SignalGroupId)
         uint8 * SignalData=(uint8 *)Data;
         if (i == 0)
         {
-          *SignalGroupBufferBytes=*SignalData;
+            *SignalGroupBufferBytes=*SignalData;
         }
         else
         {

@@ -31,11 +31,13 @@ uint8 InvalidValueBuffer[3] ={0x07};
 /*buffer to save initial value*/
 uint8 InitialValue[3] = {0};
 
-/*this dummy function to check just we call it*/
-void com_notification(void)
-{
+/*this function is to be written in RTE
+ * assuming this function assigned to signal0 */
+extern void com_notification(void);
 
-}
+/*this function is to be written in RTE
+ * assuming this function assigned to signal1 */
+extern void com_notification_1(void);
 
 const ComSignal_type ComSignal[] =
 {
@@ -65,7 +67,7 @@ const ComSignal_type ComSignal[] =
   	.isInvaildSignalChecked = TRUE,
   	.ComSignalInitValue =InitialValue,
   	.ComDataInvalidAction = NOTIFY ,// REPLACE
-  	.ComInvalidNotification = &com_notification
+  	.ComInvalidNotification = &com_notification_1
  },
  {	//signal2
   	.ComBitPosition= 2,
