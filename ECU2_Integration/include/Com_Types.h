@@ -267,9 +267,11 @@ typedef struct
 
     void * const ComSignalGroupDataPtr;
 
-    uint16 GroupSignals[10];
+    uint16 GroupSignals[10];//not in sws
 
-    uint8 number_GroupSignals;
+    uint8 number_GroupSignals;//not in sws
+    const uint16 ComIPduHandleId; // Not in SWS
+
 } ComSignalGroup_type;
 
 typedef struct
