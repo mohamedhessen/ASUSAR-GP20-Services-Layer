@@ -565,7 +565,7 @@ uint8 Com_SendSignalGroup(Com_SignalGroupIdType SignalGroupId)
     /*points to current signal group*/
     const ComSignalGroup_type * SignalGroup = GET_SignalGroup(SignalGroupId);
     /*points to array containing ids of all signals in this group*/
-    uint16 GroupSignals[10] = SignalGroup->GroupSignals;
+    uint16 GroupSignals[10] =SignalGroup->GroupSignals;
     /*number of signals that are in this group*/
     uint8 number_SignalGroup = SignalGroup->number_GroupSignals;
     /*points to data in signalgroup buffer to which data will be copied*/
@@ -579,13 +579,13 @@ uint8 Com_SendSignalGroup(Com_SignalGroupIdType SignalGroupId)
     /*iterator*/
     uint8 i = 0;
     /*position of signal in the group buffer*/
-    BitOffsetInByte=0;
+    uint8 BitOffsetInByte;
+     BitOffsetInByte=0;
     uint8 x;
     for (i = 0; i < number_SignalGroup; i++)
     {
         /*pointer to current signal to be copied*/
-        const ComGroupSignal_type * GroupSignal = GET_GroupSignal(
-                GroupSignal[i]);
+        const ComGroupSignal_type * GroupSignal = GET_GroupSignal(GroupSignals[i]);
         /*size of current signal*/
         uint8 SignalLength = GroupSignal->ComBitSize;
         /*pointer to data signal*/
@@ -597,7 +597,7 @@ uint8 Com_SendSignalGroup(Com_SignalGroupIdType SignalGroupId)
         /*flag if signal length is less than byte*/
         boolean IsLessThanOneByte =FALSE ;
 
-        signalLength_loop = Asu_Ceil(SignalLength);
+       uint8 signalLength_loop = Asu_Ceil(SignalLength);
 
         uint8 data;
 
@@ -609,7 +609,7 @@ uint8 Com_SendSignalGroup(Com_SignalGroupIdType SignalGroupId)
                    signalMask = 255;
                    if (IsLessThanOneByte)
                        break;
-                   if( i == 0)
+                   if( j == 0)
                    {
                        if( ( ( SignalLength ) + (BitOffsetInByte) ) <= 8)
                        {
@@ -657,7 +657,7 @@ uint8 Com_SendSignalGroup(Com_SignalGroupIdType SignalGroupId)
                        data = data >> (8 - BitOffsetInByte);
                        *SignalGroupBufferBytes = (* SignalGroupBufferBytes) | data;
 
-                       dataBytes++;
+                       SignalData++;
 
                        BufferMask = 255;
                        signalMask = 255;
@@ -675,7 +675,7 @@ uint8 Com_SendSignalGroup(Com_SignalGroupIdType SignalGroupId)
        BitOffsetInByte=(SignalLength%8)+1;
        }
 
-    }
-    *SignalGroupBuffer=*SignalGroupBufferBytes;
+
+
     return E_OK;
 }

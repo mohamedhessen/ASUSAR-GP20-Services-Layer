@@ -238,9 +238,9 @@ typedef struct
     /* Signal definitions */
     const ComSignal_type *ComSignal;
     /*Signal Group definitions*/
-    const ComSignalGroup_type * ComSignalGroup;
+    const ComSignalGroup_type *ComSignalGroup;
     /*Group Signal definitions*/
-    const ComGroupSignal_type * ComGroupSignal;
+    const ComGroupSignal_type *ComGroupSignal;
 
 } ComConfig_type;
 
