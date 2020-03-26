@@ -608,7 +608,11 @@ uint8 Com_SendSignalGroup(Com_SignalGroupIdType SignalGroupId)
                    BufferMask = 255;
                    signalMask = 255;
                    if (IsLessThanOneByte)
+                   {
+                       SignalGroupBufferBytes ++;
                        break;
+                   }
+
                    if( j == 0)
                    {
                        if( ( ( SignalLength ) + (BitOffsetInByte) ) <= 8)
@@ -634,7 +638,7 @@ uint8 Com_SendSignalGroup(Com_SignalGroupIdType SignalGroupId)
                        SignalGroupBufferBytes ++;
                        ComBitSize_copy = ComBitSize_copy - (8-BitOffsetInByte) ;
                    }
-                   else if( ComBitSize_copy<=8 )  //i==signalLength
+                   else if( ComBitSize_copy<=8 )  /*i==signalLength*/
                    {
 
                        BufferMask = BufferMask << BitOffsetInByte;
@@ -672,7 +676,7 @@ uint8 Com_SendSignalGroup(Com_SignalGroupIdType SignalGroupId)
                        ComBitSize_copy = ComBitSize_copy - 8 ;
                    }
                }
-       BitOffsetInByte=(SignalLength%8)+1;
+       BitOffsetInByte+=(SignalLength%8)+1;
        }
 
 
