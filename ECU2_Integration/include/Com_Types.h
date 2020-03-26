@@ -226,29 +226,6 @@ typedef struct {
 } ComIPdu_type;
 
 
-/* contains the configuration parameters and sub containers of the AUTOSAR COM module */
-typedef struct
-{
-
-    const ComTimeBase_type ComTimeBase;
-
-    /* IPDU definitions */
-    const ComIPdu_type * ComIPdu;
-
-    /* Signal definitions */
-    const ComSignal_type *ComSignal;
-    /*Signal Group definitions*/
-    const ComSignalGroup_type *ComSignalGroup;
-    /*Group Signal definitions*/
-    const ComGroupSignal_type *ComGroupSignal;
-
-} ComConfig_type;
-
-typedef struct {
-	boolean ComRetryFailedTransmitRequests ;
-} ComGeneral_type;
-
-
 typedef struct
 {
     /* The numerical value used as the ID.
@@ -294,4 +271,28 @@ typedef struct
     void * const ComSignalDataPtr;
 
 } ComGroupSignal_type;
+
+/* contains the configuration parameters and sub containers of the AUTOSAR COM module */
+typedef struct
+{
+
+    const ComTimeBase_type ComTimeBase;
+
+    /* IPDU definitions */
+    const ComIPdu_type * ComIPdu;
+
+    /* Signal definitions */
+    const ComSignal_type *ComSignal;
+    /*Signal Group definitions*/
+    const ComSignalGroup_type *ComSignalGroup;
+    /*Group Signal definitions*/
+    const ComGroupSignal_type *ComGroupSignal;
+
+} ComConfig_type;
+
+typedef struct {
+	boolean ComRetryFailedTransmitRequests ;
+} ComGeneral_type;
+
+
 #endif
