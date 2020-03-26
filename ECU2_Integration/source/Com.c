@@ -565,7 +565,8 @@ uint8 Com_SendSignalGroup(Com_SignalGroupIdType SignalGroupId)
     /*points to current signal group*/
     const ComSignalGroup_type * SignalGroup = GET_SignalGroup(SignalGroupId);
     /*points to array containing ids of all signals in this group*/
-    uint16 GroupSignals[10] =SignalGroup->GroupSignals;
+    uint16 *GroupSignals ;
+    GroupSignals=SignalGroup->GroupSignals;
     /*number of signals that are in this group*/
     uint8 number_SignalGroup = SignalGroup->number_GroupSignals;
     /*points to data in signalgroup buffer to which data will be copied*/
@@ -582,27 +583,35 @@ uint8 Com_SendSignalGroup(Com_SignalGroupIdType SignalGroupId)
     uint8 BitOffsetInByte;
      BitOffsetInByte=0;
     uint8 x;
+    /*pointer to current signal to be copied*/
+    const ComGroupSignal_type * GroupSignal;
+    /*size of current signal*/
+    uint8 SignalLength ;
+    /*pointer to data signal*/
+    uint8 * SignalData;
+    void *  Data ;
+    /*remaining bits to be copied*/
+    uint8_t ComBitSize_copy;
+    /*flag if signal length is less than byte*/
+    boolean IsLessThanOneByte;
+    uint8 signalLength_loop;
+    uint8 data;
+    uint8 j;
+
     for (i = 0; i < number_SignalGroup; i++)
     {
-        /*pointer to current signal to be copied*/
-        const ComGroupSignal_type * GroupSignal = GET_GroupSignal(GroupSignals[i]);
-        /*size of current signal*/
-        uint8 SignalLength = GroupSignal->ComBitSize;
-        /*pointer to data signal*/
-        void * const Data = GroupSignal->ComSignalDataPtr;
+
+        GroupSignal = GET_GroupSignal(GroupSignals[i]);
+        SignalLength= GroupSignal->ComBitSize;
+        Data = GroupSignal->ComSignalDataPtr;
         /*casting of pointer to data signal*/
-        uint8 * SignalData=(uint8 *)Data;
-        /*remaining bits to be copied*/
-        uint8_t ComBitSize_copy =SignalLength ;
-        /*flag if signal length is less than byte*/
-        boolean IsLessThanOneByte =FALSE ;
+         SignalData=(uint8 *)Data;
+        ComBitSize_copy =SignalLength ;
+         IsLessThanOneByte =FALSE ;
+        signalLength_loop = Asu_Ceil(SignalLength);
 
-       uint8 signalLength_loop = Asu_Ceil(SignalLength);
-
-        uint8 data;
 
         /*inner loop iterator*/
-        uint8 j=0;
        for(j=0;j<=signalLength_loop;j++)
        {
                    BufferMask = 255;
