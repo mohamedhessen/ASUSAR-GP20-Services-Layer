@@ -562,11 +562,20 @@ uint8 Com_InvalidateSignal(Com_SignalIdType SignalId)
 uint8 Com_SendSignalGroup(Com_SignalGroupIdType SignalGroupId)
 {
     /*loop over each groupsignal belonging to that signalgroupid*/
+    /*points to current signal group*/
     const ComSignalGroup_type * SignalGroup = GET_SignalGroup(SignalGroupId);
+    /*points to array containing ids of all signals in this group*/
     uint16 GroupSignals[10] = SignalGroup->GroupSignals;
+    /*number of signals that are in this group*/
     uint8 number_SignalGroup = SignalGroup->number_GroupSignals;
+    /*points to data in signalgroup buffer to which data will be copied*/
     void * const SignalGroupBuffer = SignalGroup->ComSignalGroupDataPtr;
+    /*casting pointer to data buffer*/
     uint8 * SignalGroupBufferBytes=(uint8 *)SignalGroupBuffer;
+    /*buffer mask*/
+    uint8 bufferMask;
+    /*signal mask*/
+    uint8 signalMask;
     uint8 i = 0;
     for (i = 0; i < number_SignalGroup; i++)
     {
