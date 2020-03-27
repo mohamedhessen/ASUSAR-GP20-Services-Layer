@@ -244,10 +244,10 @@ typedef struct
 
     void * const ComSignalGroupDataPtr;
 
-    uint16 GroupSignals[10];//not in sws
+    uint16 GroupSignals[10];/*not in sws*/
 
-    uint8 number_GroupSignals;//not in sws
-    const uint16 ComIPduHandleId; // Not in SWS
+    uint8 number_GroupSignals;/*not in sws*/
+    const uint16 ComIPduHandleId; /*Not in SWS*/
 
 } ComSignalGroup_type;
 
@@ -269,6 +269,8 @@ typedef struct
      *  If the I-PDU is triggered, depends also on the transmission mode of the corresponding I-PDU.*/
     const ComTransferProperty_type ComTransferProperty;
     void * const ComSignalDataPtr;
+    const uint16 ComIPduHandleId; /*Not in SWS*/
+
 
 } ComGroupSignal_type;
 

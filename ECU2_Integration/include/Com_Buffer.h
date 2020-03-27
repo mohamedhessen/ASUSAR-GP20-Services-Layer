@@ -30,6 +30,8 @@ void Com_WriteSignalDataToSignalBuffer (const uint16 signalId, const void * sign
 
 void Com_ReadSignalDataFromSignalBuffer (const uint16 signalId,  void * signalData);
 
+void Com_WriteSignalGrouptoPduBuffer(const Com_SignalGroupIdType SignalGroupId);
+
 //void inline unlockBuffer(PduIdType id)
 //{
 //	Com_Asu_IPdu_type *Asu_IPdu = GET_AsuIPdu(id);
