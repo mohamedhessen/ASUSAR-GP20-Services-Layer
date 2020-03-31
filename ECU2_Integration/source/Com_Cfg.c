@@ -21,6 +21,7 @@ uint8 ComSignalBuffer_1 [1];
 uint8 ComSignalBuffer_2 [1];
 uint8 ComSignalBuffer_3 [1];
 uint8 ComSignalBuffer_4 [1];
+uint8 ComSignalgroupBuffer_1 [1];
 //uint8 ComSignalBuffer_4 [2];
 //uint8 ComSignalBuffer_5 [1];
 //uint8 ComSignalBuffer_6 [4];
@@ -39,47 +40,92 @@ extern void com_notification(void);
  * assuming this function assigned to signal1 */
 extern void com_notification_1(void);
 
-const ComSignal_type ComSignal[] =
+
+ComGroupSignal_type comgroupsignal[]=
 {
- {	//signal0
-  	.ComBitPosition= 0,
-  	.ComUpdateBitPosition= 8 ,
-  	.ComHandleId= 0 ,
-  	.ComBitSize= 3,
-  	.ComSignalType = BOOLEAN,
-  	.ComTransferProperty = TRIGGERED_ON_CHANGE,
-  	.ComIPduHandleId=0,
-  	.ComNotification=NULL,
-  	.ComSignalDataPtr = ComSignalBuffer_1
+ {
+ //signal0
+  .ComBitPosition= 0,
+  .ComHandleId= 0 ,
+  .ComBitSize= 8,
+  .ComSignalType = BOOLEAN,
+  .ComTransferProperty = TRIGGERED_ON_CHANGE,
+  .ComIPduHandleId=0
  },
- {	//signal1
-  	.ComBitPosition= 9,
-  	.ComUpdateBitPosition= 17,
-  	.ComHandleId= 1 ,
-  	.ComBitSize= 8,
-  	.ComSignalType = BOOLEAN,
-  	.ComTransferProperty = TRIGGERED_ON_CHANGE,
-  	.ComIPduHandleId=0,
-  	.ComNotification=NULL,
-  	.ComSignalDataPtr = ComSignalBuffer_2,
-  	.ComSignalDataInvalidValue=InvalidValueBuffer,
-  	.isInvaildSignalUsed=TRUE,
-  	.isInvaildSignalChecked = TRUE,
-  	.ComSignalInitValue =InitialValue,
-  	.ComDataInvalidAction = NOTIFY ,// REPLACE
-  	.ComInvalidNotification = &com_notification_1
+ {
+  //signal1
+   .ComBitPosition= 9,
+   .ComHandleId= 1 ,
+   .ComBitSize= 8,
+   .ComSignalType = BOOLEAN,
+   .ComTransferProperty = TRIGGERED_ON_CHANGE,
+   .ComIPduHandleId=0
  },
- {	//signal2
-  	.ComBitPosition= 2,
-  	.ComUpdateBitPosition= 10 ,
-  	.ComHandleId= 2 ,
-  	.ComBitSize= 8,
-  	.ComSignalType = UINT8,
-  	.ComTransferProperty = TRIGGERED_ON_CHANGE,
-  	.ComIPduHandleId=1,
-  	.ComNotification=NULL,
-  	.ComSignalDataPtr = ComSignalBuffer_3,
-  	.isUpdateBitUsed=TRUE
+ {
+  //signal2
+   .ComBitPosition= 16,
+   .ComHandleId= 2 ,
+   .ComBitSize= 8,
+   .ComSignalType = BOOLEAN,
+   .ComTransferProperty = TRIGGERED_ON_CHANGE,
+   .ComIPduHandleId=0
+ }
+};
+
+ComSignalGroup_type comsignalgroup[]=
+                                   {
+                                    {
+                                    .ComHandleId=0,
+                                    .ComUpdateBitPosition=25,
+                                    .ComTransferProperty= TRIGGERED_ON_CHANGE,
+                                    .ComSignalGroupDataPtr=ComSignalgroupBuffer_1,
+                                   // .GroupSignals[]={0,1,2},
+                                    .number_GroupSignals=3,
+                                    .ComIPduHandleId=0
+                                    }
+                                    };
+
+ ComSignal_type ComSignal[] =
+{
+ {  //signal0
+    .ComBitPosition= 0,
+    .ComUpdateBitPosition= 8 ,
+    .ComHandleId= 0 ,
+    .ComBitSize= 3,
+    .ComSignalType = BOOLEAN,
+    .ComTransferProperty = TRIGGERED_ON_CHANGE,
+    .ComIPduHandleId=0,
+    .ComNotification=NULL,
+    .ComSignalDataPtr = ComSignalBuffer_1
+ },
+ {  //signal1
+    .ComBitPosition= 9,
+    .ComUpdateBitPosition= 17,
+    .ComHandleId= 1 ,
+    .ComBitSize= 8,
+    .ComSignalType = BOOLEAN,
+    .ComTransferProperty = TRIGGERED_ON_CHANGE,
+    .ComIPduHandleId=0,
+    .ComNotification=NULL,
+    .ComSignalDataPtr = ComSignalBuffer_2,
+    .ComSignalDataInvalidValue=InvalidValueBuffer,
+    .isInvaildSignalUsed=TRUE,
+    .isInvaildSignalChecked = TRUE,
+    .ComSignalInitValue =InitialValue,
+    .ComDataInvalidAction =NOTIFY , //   REPLACE
+    .ComInvalidNotification =&com_notification_1
+ },
+ {  //signal2
+    .ComBitPosition= 2,
+    .ComUpdateBitPosition= 10 ,
+    .ComHandleId= 2 ,
+    .ComBitSize= 8,
+    .ComSignalType = UINT8,
+    .ComTransferProperty = TRIGGERED_ON_CHANGE,
+    .ComIPduHandleId=1,
+    .ComNotification=NULL,
+    .ComSignalDataPtr = ComSignalBuffer_3,
+    .isUpdateBitUsed=TRUE
  },
  {   //signal3
      .ComBitPosition= 11,
@@ -94,9 +140,8 @@ const ComSignal_type ComSignal[] =
      .isUpdateBitUsed=TRUE,
      .ComSignalDataInvalidValue=InvalidValueBuffer,
      .isInvaildSignalUsed=TRUE,
-     .isInvaildSignalChecked = TRUE,
-     .ComSignalInitValue =InitialValue,
-     .ComDataInvalidAction = REPLACE
+     .isInvaildSignalChecked = FALSE,
+     .ComSignalInitValue =InitialValue
  },
  /* {   //signal0
         .ComBitPosition= 0,
@@ -130,7 +175,7 @@ const ComSignal_type ComSignal[] =
         .ComNotification=NULL,
         .ComSignalDataPtr = ComSignalBuffer_6
     },
-    {	//signal3
+    {   //signal3
         .ComBitPosition= 0,
         .ComUpdateBitPosition= 16 ,
         .ComHandleId= 6 ,
@@ -138,11 +183,11 @@ const ComSignal_type ComSignal[] =
         .ComSignalType = UINT16,
         .ComTransferProperty = TRIGGERED,
         .ComIPduHandleId=2,
-		.ComNotification=NULL,
-		.ComSignalDataPtr = ComSignalBuffer_6
+        .ComNotification=NULL,
+        .ComSignalDataPtr = ComSignalBuffer_6
 
     },
-    {	//signal4
+    {   //signal4
         .ComBitPosition= 17,
         .ComUpdateBitPosition= 33 ,
         .ComHandleId= 4 ,
@@ -150,8 +195,8 @@ const ComSignal_type ComSignal[] =
         .ComSignalType = UINT16,
         .ComTransferProperty = TRIGGERED_ON_CHANGE_WITHOUT_REPETITION,
         .ComIPduHandleId=1,
-		.ComNotification=NULL,
-		.ComSignalDataPtr = ComSignalBuffer_5
+        .ComNotification=NULL,
+        .ComSignalDataPtr = ComSignalBuffer_5
     },
     {   //signal5
         .ComBitPosition= 0,
@@ -161,8 +206,8 @@ const ComSignal_type ComSignal[] =
         .ComSignalType = UINT64,
         .ComTransferProperty = TRIGGERED_ON_CHANGE_WITHOUT_REPETITION,
         .ComIPduHandleId=2,
-		.ComNotification=NULL,
-		.ComSignalDataPtr = ComSignalBuffer_6
+        .ComNotification=NULL,
+        .ComSignalDataPtr = ComSignalBuffer_6
     },*/
 
 };
@@ -176,11 +221,18 @@ const ComSignal_type * const ComIPduSignalRefs_Can_Message_1[] = {
 };
 
 const ComSignal_type * const ComIPduSignalRefs_Can_Message_2[] = {
-                                                                  &ComSignal[ passengeronright ], //
+                                                                   &ComSignal[ passengeronright ], //
                                                                   &ComSignal[ passengeronleft ],//
+                                                                 // &comsignalgroup[0],
                                                                   // &ComSignal[ CanDB_Signal_29_12_BE_Tester],
                                                                   // &ComSignal[ CanDB_Signal_1_4_LE ],
                                                                   NULL
+};
+
+const ComSignalGroup_type * const Can_Message_0[]=
+{
+ &comsignalgroup[0],
+ NULL
 };
 //const ComSignal_type * const ComIPduSignalRefs_Can_Message_3[] = {
 //    &ComSignal[ CanDB_Signal_1_4_LE ],
@@ -275,7 +327,7 @@ const ComIPdu_type ComIPdu[] =
       },
       { // CanDB_Message_3
             .ComIPduDirection = SEND ,
-			.ComIPduSize=8,
+            .ComIPduSize=8,
             .ComIPduHandleId = 3 ,
             .ComIPduSignalRef =ComIPduSignalRefs_Can_Message_3,
             .ComIPduDataPtr=ComIPduBuffer_3,

@@ -201,31 +201,6 @@ typedef struct {
 } ComSignal_type;
 
 
-typedef struct {
-	/* size of the Pdu in bytes */
-	uint8 ComIPduSize; /* violation of the sws container */
-
-    /* sent or received */
-    ComIPduDirection_type ComIPduDirection;
-    /* The numerical value used as the ID of this I-PDU */
-    uint16 ComIPduHandleId ;
-    /* Container of transmission related parameters. */
-    const ComTxIPdu_type ComTxIPdu;
-
-    ComIPduSignalProcessing_type ComIPduSignalProcessing;
-
-    /* Reference to the actual pdu data storage */
-    void *const ComIPduDataPtr;     /* violation of the sws container */
-
-    ComIPduType_type ComIPduType;
-
-    /* References to all signals and signal groups contained in this IPDU.
-      It probably makes little sense not to define at least one signal or signal group for each IPDU.
-    */
-    const ComSignal_type * const *ComIPduSignalRef;
-} ComIPdu_type;
-
-
 typedef struct
 {
     /* The numerical value used as the ID.
@@ -250,6 +225,33 @@ typedef struct
     const uint16 ComIPduHandleId; /*Not in SWS*/
 
 } ComSignalGroup_type;
+typedef struct {
+	/* size of the Pdu in bytes */
+	uint8 ComIPduSize; /* violation of the sws container */
+
+    /* sent or received */
+    ComIPduDirection_type ComIPduDirection;
+    /* The numerical value used as the ID of this I-PDU */
+    uint16 ComIPduHandleId ;
+    /* Container of transmission related parameters. */
+    const ComTxIPdu_type ComTxIPdu;
+
+    ComIPduSignalProcessing_type ComIPduSignalProcessing;
+
+    /* Reference to the actual pdu data storage */
+    void *const ComIPduDataPtr;     /* violation of the sws container */
+
+    ComIPduType_type ComIPduType;
+
+    /* References to all signals  contained in this IPDU.
+      It probably makes little sense not to define at least one signal or signal group for each IPDU.
+    */
+    const ComSignal_type * const *ComIPduSignalRef;
+    /*References to all signal groups contained in this I-Pdu*/
+    const ComSignalGroup_type * const *ComIPduSignalGroupRef;
+} ComIPdu_type;
+
+
 
 typedef struct
 {

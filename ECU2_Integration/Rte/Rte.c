@@ -43,7 +43,18 @@ Std_ReturnType Rte_Write_LeftLevel_Left_Level_Heater (UnsignedInteger_8* data)
 
 		return Com_SendSignal( heatleft , data ) ;
 	}
-
+Std_ReturnType Rte_Write_firstSignal(Boolean * data)
+{
+    return Com_SendSignal(firstSignal , data);
+ }
+Std_ReturnType Rte_Write_secondSignal(Boolean * data)
+{
+    return Com_SendSignal(secondSignal , data);
+ }
+Std_ReturnType Rte_Write_thirdSignal(Boolean * data)
+{
+    return Com_SendSignal(thirdSignal , data);
+ }
 /* this is an autosar violatiob because we donthave DIO stack
    if we have DIO stack this API should connected to the DIO stack
  */

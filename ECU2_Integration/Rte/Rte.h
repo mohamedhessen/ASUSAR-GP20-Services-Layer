@@ -15,6 +15,10 @@ Std_ReturnType Rte_Write_RightLevel_Right_Level_Interface (UnsignedInteger_8* da
 
 Std_ReturnType Rte_Write_LeftLevel_Left_Level_Heater (UnsignedInteger_8* data);
 
+Std_ReturnType Rte_Write_firstSignal(Boolean * data);
 
+Std_ReturnType Rte_Write_secondSignal(Boolean * data);
+
+Std_ReturnType Rte_Write_thirdSignal(Boolean * data);
 
 #endif

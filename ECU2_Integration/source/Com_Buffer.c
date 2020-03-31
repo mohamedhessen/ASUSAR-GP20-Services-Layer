@@ -608,6 +608,17 @@ void Com_WriteSignalGrouptoPduBuffer(const Com_SignalGroupIdType SignalGroupId)
 
 
 }
+void Com_PackGroupSignalsToPdu(uint16 ComIPuId)
+{
+    uint8 groupSignalID = 0;
+    const ComIPdu_type *IPdu = GET_IPdu(ComIPuId);
+    for ( groupSignalID = 0; (IPdu->ComIPduSignalGroupRef[groupSignalID] != NULL); groupSignalID++)
+    {
+
+        Com_SendSignalGroup(IPdu->ComIPduSignalGroupRef[groupSignalID]->ComHandleId);
+        Com_WriteSignalGrouptoPduBuffer(IPdu->ComIPduSignalGroupRef[groupSignalID]->ComHandleId);
+    }
+}
 
 //void inline unlockBuffer(PduIdType id)
 //{

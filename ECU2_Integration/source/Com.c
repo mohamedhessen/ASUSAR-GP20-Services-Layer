@@ -413,6 +413,8 @@ Std_ReturnType Com_TriggerIPDUSend( PduIdType PduId )
     uint8 signalID;
 
     Com_PackSignalsToPdu(PduId);
+    Com_PackGroupSignalsToPdu(PduId);
+
     PduInfoPackage.SduDataPtr = (uint8 *)IPdu->ComIPduDataPtr;
     PduInfoPackage.SduLength = IPdu->ComIPduSize;
     uint8 i;
