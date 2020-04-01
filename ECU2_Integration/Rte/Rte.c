@@ -43,15 +43,15 @@ Std_ReturnType Rte_Write_LeftLevel_Left_Level_Heater (UnsignedInteger_8* data)
 
 		return Com_SendSignal( heatleft , data ) ;
 	}
-Std_ReturnType Rte_Write_firstSignal(Boolean * data)
+Std_ReturnType Rte_Write_firstSignal(uint32 * data)
 {
     return Com_SendSignal(firstSignal , data);
  }
-Std_ReturnType Rte_Write_secondSignal(Boolean * data)
+Std_ReturnType Rte_Write_secondSignal(uint32 * data)
 {
     return Com_SendSignal(secondSignal , data);
  }
-Std_ReturnType Rte_Write_thirdSignal(Boolean * data)
+Std_ReturnType Rte_Write_thirdSignal(uint32 * data)
 {
     return Com_SendSignal(thirdSignal , data);
  }
