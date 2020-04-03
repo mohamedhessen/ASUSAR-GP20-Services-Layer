@@ -28,6 +28,8 @@ void Com_ReadSignalDataFromPduBuffer(const uint16 signalId, void *signalData);
 
 void Com_WriteSignalDataToSignalBuffer (const uint16 signalId, const void * signalData);
 
+void Com_WritegroupSignalDataToSignalBuffer (const uint16 signalId, const void * signalData);
+
 void Com_ReadSignalDataFromSignalBuffer (const uint16 signalId,  void * signalData);
 
 void Com_WriteSignalGrouptoPduBuffer(const Com_SignalGroupIdType SignalGroupId);

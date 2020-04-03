@@ -126,25 +126,35 @@ void Com_WriteSignalDataToPduBuffer(const uint16 signalId, const void *signalDat
     signalLength = Asu_Ceil(Signal->ComBitSize);
     pduBeforChange = pduBufferBytes;
     pduBufferBytes += pduStartByte;
-    uint8 x;
+    /*flag used to get last byte on signaldata
+     *
+     * IsStartFromZerpPosition used when offsetonbyte is =0
+     * */
+    uint8 x,flag=0,IsStartFromZerpPosition=0;
     uint8_t ComBitSize_copy =Signal->ComBitSize ;
-    boolean IsLessThanOneByte =FALSE ;
+    boolean IsLessThanOneByte =FALSE,equalOneByte=FALSE ;
     for(i = 0; i<=signalLength; i++)
     {
         // *pduBufferBytes =0xff;
         pduMask = 255;
         signalMask = 255;
         if (IsLessThanOneByte)
-            break;
-        if( i == 0)
         {
-            if( ( ( Signal->ComBitSize ) + (BitOffsetInByte) ) <= 8)
+            if(!equalOneByte)
+                pduBufferBytes --;
+            break;
+        }
+        if( i == 0 || flag ||IsStartFromZerpPosition)
+        {
+            if(   ( ( Signal->ComBitSize ) + (BitOffsetInByte) ) <= 8  || flag || IsStartFromZerpPosition)
             {
-                pduMask=power(2,Signal->ComBitSize)-1;
+                pduMask=power(2,ComBitSize_copy)-1;
                 pduMask=pduMask<<BitOffsetInByte;
                 pduMask =~ pduMask;
-                signalMask=power(2,Signal->ComBitSize)-1;
+                signalMask=power(2,ComBitSize_copy)-1;
                 IsLessThanOneByte =TRUE ;
+                if( ( ( Signal->ComBitSize ) + (BitOffsetInByte) ) == 8)
+                    equalOneByte=TRUE;
             }
             else
             {
@@ -159,10 +169,18 @@ void Com_WriteSignalDataToPduBuffer(const uint16 signalId, const void *signalDat
             *pduBufferBytes = (* pduBufferBytes) | data;
             x= *pduBufferBytes;
             pduBufferBytes ++;
+            if (flag)
+                break;
             ComBitSize_copy = ComBitSize_copy - (8-BitOffsetInByte) ;
+
         }
         else if( ComBitSize_copy<=8 )  //i==signalLength
         {
+            if(0==BitOffsetInByte)
+                {
+                IsStartFromZerpPosition=1;
+                continue ;
+                }
 
             pduMask = pduMask << BitOffsetInByte;
             signalMask = signalMask << (8 - BitOffsetInByte);
@@ -173,7 +191,15 @@ void Com_WriteSignalDataToPduBuffer(const uint16 signalId, const void *signalDat
             data = data >> (8 - BitOffsetInByte);
             *pduBufferBytes = (* pduBufferBytes) | data;
             x= *pduBufferBytes;
-            break;
+            if(ComBitSize_copy==0)
+                break;
+            else
+            {
+                flag=1;
+                dataBytes++;
+            }
+            ComBitSize_copy = ComBitSize_copy - BitOffsetInByte ;
+
         }
         else
         {
@@ -239,7 +265,7 @@ void Com_ReadSignalDataFromPduBuffer(const uint16 signalId, void *signalData)
             pduMask = pduMask << BitOffsetInByte;
             data = (* pduBufferBytes) & pduMask;
             data = data >> BitOffsetInByte;
-            *dataBytes = *dataBytes | data;
+ *dataBytes = *dataBytes | data;
             x= *dataBytes;
             pduBufferBytes ++;
         }
@@ -248,7 +274,7 @@ void Com_ReadSignalDataFromPduBuffer(const uint16 signalId, void *signalData)
             pduMask = pduMask >> (8-BitOffsetInByte);
             data = (* pduBufferBytes) & pduMask;
             data = data << (8-BitOffsetInByte);
-            *dataBytes = (* dataBytes) | data;
+ *dataBytes = (* dataBytes) | data;
             x= *dataBytes;
         }
         else
@@ -256,7 +282,7 @@ void Com_ReadSignalDataFromPduBuffer(const uint16 signalId, void *signalData)
             pduMask = pduMask >> (8-BitOffsetInByte);
             data = (* pduBufferBytes) & pduMask;
             data = data << (8-BitOffsetInByte);
-            *dataBytes = (* dataBytes) | data;
+ *dataBytes = (* dataBytes) | data;
 
             dataBytes++;
 
@@ -264,7 +290,7 @@ void Com_ReadSignalDataFromPduBuffer(const uint16 signalId, void *signalData)
             pduMask = pduMask << BitOffsetInByte;
             data = (* pduBufferBytes) & pduMask;
             data = data >> BitOffsetInByte;
-            *dataBytes = (* pduBufferBytes) | data;
+ *dataBytes = (* pduBufferBytes) | data;
             x= *dataBytes;
             pduBufferBytes ++;
 
@@ -272,7 +298,7 @@ void Com_ReadSignalDataFromPduBuffer(const uint16 signalId, void *signalData)
     }
 }
 
-*/
+ */
 
 void Com_ReadSignalDataFromPduBuffer(const uint16 signalId, void *signalData)
 {
@@ -287,7 +313,7 @@ void Com_ReadSignalDataFromPduBuffer(const uint16 signalId, void *signalData)
     const uint8 *pduBufferBytes = NULL;
     uint8 * signalDataBytes = NULL;
 
-     ComSignal_type * Signal = GET_Signal(signalId);
+    ComSignal_type * Signal = GET_Signal(signalId);
     const ComIPdu_type *IPdu = GET_IPdu(Signal->ComIPduHandleId);
     const void * pduBuffer = IPdu->ComIPduDataPtr;
     bitPosition = Signal->ComBitPosition;
@@ -372,6 +398,13 @@ void Com_ReadSignalDataFromPduBuffer(const uint16 signalId, void *signalData)
 
 
 
+void Com_WritegroupSignalDataToSignalBuffer (const uint16 signalId, const void * signalData)
+{
+    const ComGroupSignal_type * groupSignal =  GET_GroupSignal(signalId);
+    memcpy(groupSignal->ComSignalDataPtr, signalData, Asu_Ceil(groupSignal->ComBitSize));
+    uint32_t x= *((uint32*)(groupSignal->ComSignalDataPtr));
+}
+
 void Com_WriteSignalDataToSignalBuffer (const uint16 signalId, const void * signalData)
 {
     const ComSignal_type * Signal =  GET_Signal(signalId);
@@ -386,221 +419,236 @@ void Com_ReadSignalDataFromSignalBuffer (const uint16 signalId,  void * signalDa
     memcpy(signalData, Signal->ComSignalDataPtr, Signal->ComBitSize/8);
 }
 
+
+
 void Com_WriteSignalGrouptoPduBuffer(const Com_SignalGroupIdType SignalGroupId)
 {
     /*points to current signal group*/
-       const ComSignalGroup_type * SignalGroup = GET_SignalGroup(SignalGroupId);
-       /*points to array containing ids of all signals in this group*/
-         uint16 *GroupSignals ;
-         GroupSignals=SignalGroup->GroupSignals;
-       /*number of signals that are in this group*/
-        uint8 number_SignalGroup = SignalGroup->number_GroupSignals;
-        /*points to data in signalgroup buffer from which data will be copied*/
-         void * const SignalGroupBuffer = SignalGroup->ComSignalGroupDataPtr;
-         /*casting pointer to data buffer*/
-        uint8 * SignalGroupBufferBytes=(uint8 *)SignalGroupBuffer;
-        /*buffer mask*/
-           uint8 BufferMask;
-           /*signal mask*/
-           uint8 signalMask;
-           /*iterator*/
-           uint8 i = 0;
-           /*position of signal in the group buffer*/
-           uint8 BitOffsetInByte;
-            BitOffsetInByte=0;
-           uint8 x;
-           /*pointer to current signal to be copied*/
-           const ComGroupSignal_type * GroupSignal;
-           /*size of current signal*/
-           uint8 SignalLength ;
-           /*pointer to data signal*/
-           void * SignalData;
-           void *  Data ;
-           /*remaining bits to be copied*/
-           uint8_t ComBitSize_copy;
-           /*flag if signal length is less than byte*/
-           boolean IsLessThanOneByte;
-           uint8 signalLength_loop;
-           uint8 data;
-           uint8 j;
-           //void *signalData;
-           uint8 *dataBytes = (uint8 *) SignalData;
+    const ComSignalGroup_type * SignalGroup = GET_SignalGroup(SignalGroupId);
+    /*points to array containing ids of all signals in this group*/
+    uint16 *GroupSignals ;
+    GroupSignals=SignalGroup->GroupSignals;
+    /*number of signals that are in this group*/
+    uint8 number_SignalGroup = SignalGroup->number_GroupSignals;
+    /*points to data in signalgroup buffer from which data will be copied*/
+    void * const SignalGroupBuffer = SignalGroup->ComSignalGroupDataPtr;
+    /*casting pointer to data buffer*/
+    uint8 * SignalGroupBufferBytes=(uint8 *)SignalGroupBuffer;
+    uint8 sf=*SignalGroupBufferBytes;
+    /*buffer mask*/
+    uint8 BufferMask;
+    /*signal mask*/
+    uint8 signalMask;
+    /*iterator*/
+    uint8 i = 0,in[]={0};
+    /*position of signal in the group buffer*/
+    uint8 BitOffsetInByte;
+    BitOffsetInByte=0;
+    uint8 x;
+    /*pointer to current signal to be copied*/
+    const ComGroupSignal_type * GroupSignal;
+    /*size of current signal*/
+    uint8 SignalLength ;
+    /*pointer to data signal*/
+    void * SignalData;
+    void *  Data ;
+    /*remaining bits to be copied*/
+    uint8_t ComBitSize_copy;
+    /*flag if signal length is less than byte*/
+    boolean IsLessThanOneByte,equalonebyte=FALSE;
+    uint8 signalLength_loop;
+    uint8 data;
+    uint8 j;
+    //void *signalData;
+    uint8 *dataBytes ;
 
-           /*parameter for writing signal to pdu buffer*/
+    /*parameter for writing signal to pdu buffer*/
 
-             // Get PDU
-          const ComIPdu_type *IPdu;
-           void *  pduBuffer;
-           uint32 bitPosition;
-           uint8 BitOffsetInByteSend ;
-            uint8 pduStartByte;
-           uint8 *pduBufferBytes=NULL;
-           uint8 *pduBeforChange=NULL;
-           uint8 xSend;
-           uint8_t ComBitSize_copySend ;
-           boolean IsLessThanOneByteSend =FALSE ;
-           uint8 pduMask;
-           uint8 *dataBytesSend = NULL;
-           uint8 k;
-           uint8 dataSend;
-           for (i = 0; i < number_SignalGroup; i++)
-           {
+    // Get PDU
+    const ComIPdu_type *IPdu;
+    void *  pduBuffer;
+    uint32 bitPosition;
+    uint8 BitOffsetInByteSend ;
+    uint8 pduStartByte;
+    uint8 *pduBufferBytes=NULL;
+    uint8 *pduBeforChange=NULL;
+    uint8 xSend;
+    uint8_t ComBitSize_copySend ;
+    boolean IsLessThanOneByteSend =FALSE ;
+    uint8 pduMask;
+    uint8 *dataBytesSend = NULL;
+    uint8 k,ww;
+    uint8 dataSend;
+    for (i = 0; i < number_SignalGroup; i++)
+    {
 
-               GroupSignal = GET_GroupSignal(GroupSignals[i]);
-               SignalLength= GroupSignal->ComBitSize;
-               Data = GroupSignal->ComSignalDataPtr;
-               /*casting of pointer to data signal*/
-                SignalData=(uint8 *)Data;
-               ComBitSize_copy =SignalLength ;
-                IsLessThanOneByte =FALSE ;
-               signalLength_loop = Asu_Ceil(SignalLength);
+        IsLessThanOneByteSend=FALSE;
+        GroupSignal = GET_GroupSignal(GroupSignals[i]);
+        SignalLength= GroupSignal->ComBitSize;
+        Data = GroupSignal->ComSignalDataPtr;
+        /*casting of pointer to data signal*/
+        SignalData=(uint8 *)Data;
+        if(i==0)
+            dataBytes = in;
+        ww=*dataBytes;
+        ComBitSize_copy =SignalLength ;
+        IsLessThanOneByte=IsLessThanOneByte =FALSE ;
+        signalLength_loop = Asu_Ceil(SignalLength);
 
-               IPdu = GET_IPdu(GroupSignal->ComIPduHandleId);
-               pduBuffer = IPdu->ComIPduDataPtr;
-               bitPosition = GroupSignal->ComBitPosition;
-               BitOffsetInByteSend= bitPosition%8;
-               pduStartByte = bitPosition / 8;
-               pduBufferBytes = (uint8 *)pduBuffer;
-               pduBeforChange = pduBufferBytes;
-               pduBufferBytes += pduStartByte;
-               uint8_t ComBitSize_copy =GroupSignal->ComBitSize ;
+        IPdu = GET_IPdu(GroupSignal->ComIPduHandleId);
+        pduBuffer = IPdu->ComIPduDataPtr;
+        bitPosition = GroupSignal->ComBitPosition;
+        BitOffsetInByteSend= bitPosition%8;
+        pduStartByte = bitPosition / 8;
+        pduBufferBytes = (uint8 *)pduBuffer;
+        pduBeforChange = pduBufferBytes;
+        pduBufferBytes += pduStartByte;
+        uint8_t ComBitSize_copy =GroupSignal->ComBitSize ;
+        ComBitSize_copySend =GroupSignal->ComBitSize;
+        /*inner loop iterator*/
+        for(j=0;j<=signalLength_loop;j++)
+        {
+            BufferMask = 255;
+            signalMask = 255;
+            if (IsLessThanOneByte)
+            {
+                if(! equalonebyte)
+                    SignalGroupBufferBytes --;
+                break;
+            }
 
-               /*inner loop iterator*/
-              for(j=0;j<=signalLength_loop;j++)
-              {
-                          BufferMask = 255;
-                          signalMask = 255;
-                          if (IsLessThanOneByte)
-                          {
-                              SignalGroupBufferBytes ++;
-                              break;
-                          }
-
-                          if( j == 0)
-                          {
-                              if( ( ( SignalLength ) + (BitOffsetInByte) ) <= 8)
-                              {
-                                  BufferMask=power(2,SignalLength)-1;
-                                  BufferMask=BufferMask<<BitOffsetInByte;
-                                  IsLessThanOneByte =TRUE ;
-                              }
-                              else
-                              {
-                                  BufferMask = BufferMask<<BitOffsetInByte;
-                              }
-                              data = (* SignalGroupBufferBytes) & BufferMask;
-                              data = data >> BitOffsetInByte;
-                              *dataBytes = *dataBytes | data;
-                              x= *dataBytes;
-                              SignalGroupBufferBytes ++;
-                              ComBitSize_copy = ComBitSize_copy - (8-BitOffsetInByte) ;
+            if( j == 0)
+            {
+                if( ( ( SignalLength ) + (BitOffsetInByte) ) <= 8)
+                {
+                    BufferMask=power(2,SignalLength)-1;
+                    BufferMask=BufferMask<<BitOffsetInByte;
+                    IsLessThanOneByte =TRUE ;
+                    if( ( ( SignalLength ) + (BitOffsetInByte) ) == 8)
+                        equalonebyte=TRUE;
+                }
+                else
+                {
+                    BufferMask = BufferMask<<BitOffsetInByte;
+                }
+                data = (* SignalGroupBufferBytes) & BufferMask;
+                data = data >> BitOffsetInByte;
+                *dataBytes = *dataBytes | data;
+                x= *dataBytes;
+                SignalGroupBufferBytes ++;
+                ComBitSize_copy = ComBitSize_copy - (8-BitOffsetInByte) ;
 
 
-                          }
-                          else if( ComBitSize_copy<=8 )  /*i==signalLength*/
-                          {
-                              BufferMask = BufferMask >> (8-BitOffsetInByte);
-                              data = (* SignalGroupBufferBytes) & BufferMask;
-                              data = data << (8-BitOffsetInByte);
-                              *dataBytes = (* dataBytes) | data;
-                              x= *dataBytes;
-                                   break;
-                              break;
-                          }
-                          else
-                          {
-                              BufferMask = BufferMask >> (8-BitOffsetInByte);
-                              data = (* SignalGroupBufferBytes) & BufferMask;
-                              data = data << (8-BitOffsetInByte);
-                              *dataBytes = (* dataBytes) | data;
+            }
+            else if( ComBitSize_copy<=8 )  /*i==signalLength*/
+            {
+                BufferMask = BufferMask >> (8-BitOffsetInByte);
+                data = (* SignalGroupBufferBytes) & BufferMask;
+                data = data << (8-BitOffsetInByte);
+                *dataBytes = (* dataBytes) | data;
+                x= *dataBytes;
+                break;
+                break;
+            }
+            else
+            {
+                BufferMask = BufferMask >> (8-BitOffsetInByte);
+                data = (* SignalGroupBufferBytes) & BufferMask;
+                data = data << (8-BitOffsetInByte);
+                *dataBytes = (* dataBytes) | data;
 
-                               dataBytes++;
+                dataBytes++;
 
-                               BufferMask = 255;
-                               BufferMask = BufferMask << BitOffsetInByte;
-                               data = (* SignalGroupBufferBytes) & BufferMask;
-                               data = data >> BitOffsetInByte;
-                               *dataBytes = (* SignalGroupBufferBytes) | data;
-                               x= *dataBytes;
-                               SignalGroupBufferBytes ++;
-                               ComBitSize_copy = ComBitSize_copy - 8 ;
-                          }
-                      }
-              BitOffsetInByte+=(SignalLength%8)+1;
+                BufferMask = 255;
+                BufferMask = BufferMask << BitOffsetInByte;
+                data = (* SignalGroupBufferBytes) & BufferMask;
+                data = data >> BitOffsetInByte;
+                x= *dataBytes;
+                *dataBytes = (* SignalGroupBufferBytes) | data;
+                x= *dataBytes;
+                SignalGroupBufferBytes ++;
+                ComBitSize_copy = ComBitSize_copy - 8 ;
+            }
+        }
+        BitOffsetInByte+=(SignalLength%8);
 
-              /*write copied signal to pdu buffer*/
+        /*write copied signal to pdu buffer*/
 
-                  for(k = 0; k<=signalLength_loop; k++)
-                  {
-                      // *pduBufferBytes =0xff;
-                      pduMask = 255;
-                      signalMask = 255;
-                      if (IsLessThanOneByteSend)
-                          break;
-                      if( k == 0)
-                      {
-                          if( ( ( bitPosition ) + (BitOffsetInByteSend) ) <= 8)
-                          {
-                              pduMask=power(2,SignalLength)-1;
-                              pduMask=pduMask<<BitOffsetInByteSend;
-                              pduMask =~ pduMask;
-                              signalMask=power(2,SignalLength)-1;
-                              IsLessThanOneByteSend =TRUE ;
-                          }
-                          else
-                          {
-                              pduMask = pduMask >> (8 - BitOffsetInByteSend);
-                              signalMask = signalMask >> BitOffsetInByteSend;
-                          }
-                          xSend=*pduBufferBytes;
-                          *pduBufferBytes = (* pduBufferBytes) & pduMask;
-                          xSend=*pduBufferBytes;
-                          dataSend = (x) & signalMask;
-                          dataSend = dataSend << BitOffsetInByteSend;
-                          *pduBufferBytes = (* pduBufferBytes) | dataSend;
-                          xSend= *pduBufferBytes;
-                          pduBufferBytes ++;
-                          ComBitSize_copySend = ComBitSize_copySend - (8-BitOffsetInByteSend) ;
-                      }
-                      else if( ComBitSize_copySend<=8 )  //i==signalLength
-                      {
+        BitOffsetInByteSend= (GroupSignal->ComBitPosition)%8;
+        for(k = 0; k<=signalLength_loop; k++)
+        {
+            // *pduBufferBytes =0xff;
+            pduMask = 255;
+            signalMask = 255;
+            if (IsLessThanOneByteSend)
+                break;
+            if( k == 0)
+            {
+                if( ( ( SignalLength ) + (BitOffsetInByteSend) ) <= 8)
+                {
+                    pduMask=power(2,SignalLength)-1;
+                    pduMask=pduMask<<BitOffsetInByteSend;
+                    pduMask =~ pduMask;
+                    signalMask=power(2,SignalLength)-1;
+                    IsLessThanOneByteSend =TRUE ;
+                }
+                else
+                {
+                    pduMask = pduMask >> (8 - BitOffsetInByteSend);
+                    signalMask = signalMask >> BitOffsetInByteSend;
+                }
+                xSend=*pduBufferBytes;
+                *pduBufferBytes = (* pduBufferBytes) & pduMask;
+                xSend=*pduBufferBytes;
+                dataSend = (x) & signalMask;
+                dataSend = dataSend << BitOffsetInByteSend;
+                *pduBufferBytes = (* pduBufferBytes) | dataSend;
+                xSend= *pduBufferBytes;
+                pduBufferBytes ++;
+                ComBitSize_copySend = ComBitSize_copySend - (8-BitOffsetInByteSend) ;
+            }
+            else if( ComBitSize_copySend<=8 )  //i==signalLength
+            {
 
-                          pduMask = pduMask << BitOffsetInByteSend;
-                          signalMask = signalMask << (8 - BitOffsetInByteSend);
-                          xSend=*pduBufferBytes;
-                          *pduBufferBytes = (* pduBufferBytes) & pduMask;
-                          xSend=*pduBufferBytes;
-                          dataSend = (x) & signalMask;
-                          dataSend = dataSend >> (8 - BitOffsetInByteSend);
-                          *pduBufferBytes = (* pduBufferBytes) | dataSend;
-                          xSend= *pduBufferBytes;
-                          break;
-                      }
-                      else
-                      {
-                          pduMask = pduMask << BitOffsetInByteSend;
-                          signalMask = signalMask << (8 - BitOffsetInByteSend);
-                          *pduBufferBytes = (* pduBufferBytes) & pduMask;
-                          dataSend = (x) & signalMask;
-                          dataSend = dataSend >> (8 - BitOffsetInByteSend);
-                          *pduBufferBytes = (* pduBufferBytes) | dataSend;
+                pduMask = pduMask << BitOffsetInByteSend;
+                signalMask = signalMask << (8 - BitOffsetInByteSend);
+                xSend=*pduBufferBytes;
+                *pduBufferBytes = (* pduBufferBytes) & pduMask;
+                xSend=*pduBufferBytes;
+                dataSend = (x) & signalMask;
+                dataSend = dataSend >> (8 - BitOffsetInByteSend);
+                *pduBufferBytes = (* pduBufferBytes) | dataSend;
+                xSend= *pduBufferBytes;
+                break;
+            }
+            else
+            {
+                pduMask = pduMask << BitOffsetInByteSend;
+                signalMask = signalMask << (8 - BitOffsetInByteSend);
+                *pduBufferBytes = (* pduBufferBytes) & pduMask;
+                dataSend = (x) & signalMask;
+                dataSend = dataSend >> (8 - BitOffsetInByteSend);
+                *pduBufferBytes = (* pduBufferBytes) | dataSend;
 
-                          x++;
+                x++;
 
-                          pduMask = 255;
-                          signalMask = 255;
-                          pduMask = pduMask >> (8 - BitOffsetInByteSend);
-                          signalMask = signalMask >> BitOffsetInByteSend;
-                          *pduBufferBytes = (* pduBufferBytes) & pduMask;
-                          dataSend = (x) & signalMask;
-                          dataSend = dataSend << BitOffsetInByteSend;
-                          *pduBufferBytes = (* pduBufferBytes) | dataSend;
-                          xSend= *pduBufferBytes;
-                          pduBufferBytes ++;
-                          ComBitSize_copySend = ComBitSize_copySend - 8 ;
-                      }
-                  }
-              }
+                pduMask = 255;
+                signalMask = 255;
+                pduMask = pduMask >> (8 - BitOffsetInByteSend);
+                signalMask = signalMask >> BitOffsetInByteSend;
+                *pduBufferBytes = (* pduBufferBytes) & pduMask;
+                dataSend = (x) & signalMask;
+                dataSend = dataSend << BitOffsetInByteSend;
+                *pduBufferBytes = (* pduBufferBytes) | dataSend;
+                xSend= *pduBufferBytes;
+                pduBufferBytes ++;
+                ComBitSize_copySend = ComBitSize_copySend - 8 ;
+            }
+        }
+        uint8 out[]={0};
+        dataBytes = out;
+        k=0;
+    }
 
 
 
@@ -608,13 +656,14 @@ void Com_WriteSignalGrouptoPduBuffer(const Com_SignalGroupIdType SignalGroupId)
 
 
 }
+
 void Com_PackGroupSignalsToPdu(uint16 ComIPuId)
 {
     uint8 groupSignalID = 0;
     const ComIPdu_type *IPdu = GET_IPdu(ComIPuId);
     for ( groupSignalID = 0; (IPdu->ComIPduSignalGroupRef[groupSignalID] != NULL); groupSignalID++)
     {
-
+        uint32 aa=IPdu->ComIPduSignalGroupRef[groupSignalID]->ComHandleId;
         Com_SendSignalGroup(IPdu->ComIPduSignalGroupRef[groupSignalID]->ComHandleId);
         Com_WriteSignalGrouptoPduBuffer(IPdu->ComIPduSignalGroupRef[groupSignalID]->ComHandleId);
     }

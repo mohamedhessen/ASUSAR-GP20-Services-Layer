@@ -9,7 +9,12 @@ boolean validateSignalID (Com_SignalIdType SignalId)
 		return TRUE;
 	return FALSE;
 }
-
+boolean validateGroupSignalIDv2 (Com_SignalGroupIdType SignalId)
+{
+    if(SignalId<COM_NUM_OF_SIGNAL)
+        return TRUE;
+    return FALSE;
+}
 
 uint64 power(uint8 x,uint8 y)
 {

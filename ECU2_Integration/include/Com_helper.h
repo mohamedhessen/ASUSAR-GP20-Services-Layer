@@ -45,6 +45,7 @@
     (&(ComConfig->ComGroupSignal[GroupSignalId]))
 
 boolean validateSignalID (Com_SignalIdType SignalId);
+boolean validateGroupSignalIDv2 (Com_SignalGroupIdType SignalId);
 
 #define timerDec(timer) \
 	if (timer > 0) { \

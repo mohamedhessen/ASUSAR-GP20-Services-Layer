@@ -47,6 +47,7 @@ void Com_MainFunctionTx(void);
 
 /* Updates the signal object identified by SignalId with the signal referenced by the SignalDataPtr parameter */
 uint8 Com_SendSignal( Com_SignalIdType SignalId, const void* SignalDataPtr );
+uint8 Com_SendSignalv2( Com_SignalGroupIdType SignalId, const void* SignalDataPtr );
 
 /* Copies the data of the signal identified by SignalId to the location specified by SignalDataPtr */
 uint8 Com_ReceiveSignal( Com_SignalIdType SignalId, void* SignalDataPtr );

@@ -20,9 +20,9 @@ typedef float Float ;
 #define passengeronright  1
 #define heatleft  2
 #define heatright  3
-#define firstSignal 1
-#define secondSignal 2
-#define thirdSignal 3
+#define firstSignal 0
+#define secondSignal 1
+#define thirdSignal 2
 
 #define RTE_E_OK     (Std_ReturnType)0
 #define RTE_E_NOT_OK (Std_ReturnType)1

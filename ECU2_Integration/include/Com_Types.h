@@ -197,6 +197,7 @@ typedef struct {
 
     /*flag to indicate that the invalid value is received */
     boolean isInvaildSignalChecked ;
+    const boolean IsGroupSignal ;
 
 } ComSignal_type;
 
@@ -219,10 +220,11 @@ typedef struct
 
     void * const ComSignalGroupDataPtr;
 
-    uint16 GroupSignals[10];/*not in sws*/
+    uint16 *GroupSignals;/*not in sws*/
 
     uint8 number_GroupSignals;/*not in sws*/
     const uint16 ComIPduHandleId; /*Not in SWS*/
+
 
 } ComSignalGroup_type;
 typedef struct {
@@ -272,7 +274,7 @@ typedef struct
     const ComTransferProperty_type ComTransferProperty;
     void * const ComSignalDataPtr;
     const uint16 ComIPduHandleId; /*Not in SWS*/
-
+    const boolean IsGroupSignal ;
 
 } ComGroupSignal_type;
 

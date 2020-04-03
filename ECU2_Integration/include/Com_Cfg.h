@@ -16,8 +16,8 @@
 
 
 /* signal definition */
-#define passengeronleft 3
-#define passengeronright 2
+#define passengeronleft 2
+#define passengeronright 3
 #define heatleft 2
 #define heatright 3
 //#define CanDB_Signal_29_12_BE_Tester 3

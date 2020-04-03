@@ -33,7 +33,7 @@ Std_ReturnType Rte_Read_RightSeatStatus_PassengerOnRightSeat (Boolean* data)
 
 Std_ReturnType Rte_Write_RightLevel_Right_Level_Interface (UnsignedInteger_8* data)
 	{
-        if( (*data) > 5 )
+        if( (*data) > 1 )
 		return Com_SendSignal( heatright , data ) ;
         return Com_InvalidateSignal(heatright);
 	}
@@ -45,15 +45,15 @@ Std_ReturnType Rte_Write_LeftLevel_Left_Level_Heater (UnsignedInteger_8* data)
 	}
 Std_ReturnType Rte_Write_firstSignal(uint32 * data)
 {
-    return Com_SendSignal(firstSignal , data);
+    return Com_SendSignalv2(firstSignal , data);
  }
 Std_ReturnType Rte_Write_secondSignal(uint32 * data)
 {
-    return Com_SendSignal(secondSignal , data);
+    return Com_SendSignalv2(secondSignal , data);
  }
 Std_ReturnType Rte_Write_thirdSignal(uint32 * data)
 {
-    return Com_SendSignal(thirdSignal , data);
+    return Com_SendSignalv2(thirdSignal , data);
  }
 /* this is an autosar violatiob because we donthave DIO stack
    if we have DIO stack this API should connected to the DIO stack

@@ -279,11 +279,13 @@ uint8 Com_SendSignal( Com_SignalIdType SignalId, const void* SignalDataPtr )
     /* Get signal of "SignalId" */
     const ComSignal_type *Signal = GET_Signal(SignalId);
 
+
     /*Get IPdu of this signal */
     const ComIPdu_type *IPdu = GET_IPdu(Signal->ComIPduHandleId);
 
     /* Get IPDU_Asu of signal ipduHandleId */
     Com_Asu_IPdu_type *Asu_IPdu = GET_AsuIPdu(Signal->ComIPduHandleId);
+    uint32 xd=(uint32 *)SignalDataPtr;
 
     /* update the Signal buffer with the signal data */
     Com_WriteSignalDataToSignalBuffer(Signal->ComHandleId, SignalDataPtr);
@@ -334,6 +336,69 @@ uint8 Com_SendSignal( Com_SignalIdType SignalId, const void* SignalDataPtr )
     return E_OK;
 
 }
+
+uint8 Com_SendSignalv2( Com_SignalGroupIdType SignalId, const void* SignalDataPtr )
+{
+    /* validate signalID */
+    if(!validateGroupSignalIDv2(SignalId) )
+        return E_NOT_OK;
+
+    /* Get signal of "SignalId" */
+    const ComGroupSignal_type *groupSignal = GET_GroupSignal(SignalId);
+    /*Get IPdu of this signal */
+    const ComIPdu_type *IPdu = GET_IPdu(groupSignal->ComIPduHandleId);
+
+    /* Get IPDU_Asu of signal ipduHandleId */
+    Com_Asu_IPdu_type *Asu_IPdu = GET_AsuIPdu(groupSignal->ComIPduHandleId);
+    uint32 xd=(uint32 *)SignalDataPtr;
+    Com_WritegroupSignalDataToSignalBuffer(groupSignal->ComHandleId, SignalDataPtr);
+
+    /* update the Signal buffer with the signal data */
+
+    switch(groupSignal->ComTransferProperty)
+    {
+    case TRIGGERED_WITHOUT_REPETITION:
+        Asu_IPdu->Com_Asu_TxIPduTimers.ComTxIPduNumberOfRepetitionsLeft = 1;
+        break;
+
+    case TRIGGERED:
+        Asu_IPdu->Com_Asu_TxIPduTimers.ComTxIPduNumberOfRepetitionsLeft = \
+        (IPdu->ComTxIPdu.ComTxModeFalse.ComTxMode.ComTxModeNumberOfRepetitions) + 1;
+        break;
+
+    case TRIGGERED_ON_CHANGE:
+        if (Asu_IPdu->Com_Asu_Pdu_changed)
+        {
+            Asu_IPdu->Com_Asu_TxIPduTimers.ComTxIPduNumberOfRepetitionsLeft = \
+                    (IPdu->ComTxIPdu.ComTxModeFalse.ComTxMode.ComTxModeNumberOfRepetitions) + 1;
+            Asu_IPdu->Com_Asu_Pdu_changed = FALSE;
+        }
+        break;
+
+    case TRIGGERED_ON_CHANGE_WITHOUT_REPETITION:
+        if (Asu_IPdu->Com_Asu_Pdu_changed)
+        {
+            Asu_IPdu->Com_Asu_TxIPduTimers.ComTxIPduNumberOfRepetitionsLeft = 1;
+            Asu_IPdu->Com_Asu_Pdu_changed = FALSE;
+        }
+    }
+
+
+    uint8 x;
+    uint8 i;
+    for ( i =0; i<8; i++)
+    {
+        x = *(uint8 *)((uint8 *)IPdu->ComIPduDataPtr + i);
+    }
+
+    Asu_IPdu->Com_Asu_First_Repetition = TRUE;
+
+
+    return E_OK;
+
+}
+
+
 
 /* Copies the data of the signal identified by SignalId to the location specified by SignalDataPtr */
 uint8 Com_ReceiveSignal( Com_SignalIdType SignalId, void* SignalDataPtr )
@@ -412,7 +477,7 @@ Std_ReturnType Com_TriggerIPDUSend( PduIdType PduId )
     PduInfoType PduInfoPackage;
     uint8 signalID;
 
-    Com_PackSignalsToPdu(PduId);
+    //Com_PackSignalsToPdu(PduId);
     Com_PackGroupSignalsToPdu(PduId);
 
     PduInfoPackage.SduDataPtr = (uint8 *)IPdu->ComIPduDataPtr;
@@ -553,9 +618,9 @@ uint8 Com_InvalidateSignal(Com_SignalIdType SignalId)
 
 
     if(TRUE==Signal->isInvaildSignalUsed)
-        Com_SendSignal(  SignalId, Signal->ComSignalDataInvalidValue);
+       return  Com_SendSignal(  SignalId, Signal->ComSignalDataInvalidValue);
     else
-        Com_SendSignal(  SignalId, Signal->ComSignalDataPtr);
+       return  Com_SendSignal(  SignalId, Signal->ComSignalDataPtr);
 }
 
 
@@ -595,7 +660,7 @@ uint8 Com_SendSignalGroup(Com_SignalGroupIdType SignalGroupId)
     /*remaining bits to be copied*/
     uint8_t ComBitSize_copy;
     /*flag if signal length is less than byte*/
-    boolean IsLessThanOneByte;
+    boolean IsLessThanOneByte,isonebyte=FALSE;
     uint8 signalLength_loop;
     uint8 data;
     uint8 j;
@@ -620,7 +685,7 @@ uint8 Com_SendSignalGroup(Com_SignalGroupIdType SignalGroupId)
                    signalMask = 255;
                    if (IsLessThanOneByte)
                    {
-                       SignalGroupBufferBytes ++;
+                      if( ! isonebyte) SignalGroupBufferBytes --;
                        break;
                    }
 
@@ -633,6 +698,9 @@ uint8 Com_SendSignalGroup(Com_SignalGroupIdType SignalGroupId)
                            BufferMask =~ BufferMask;
                            signalMask=power(2,SignalLength)-1;
                            IsLessThanOneByte =TRUE ;
+                           if( ( ( SignalLength ) + (BitOffsetInByte) ) == 8)
+                               isonebyte=TRUE;
+
                        }
                        else
                        {
@@ -687,7 +755,7 @@ uint8 Com_SendSignalGroup(Com_SignalGroupIdType SignalGroupId)
                        ComBitSize_copy = ComBitSize_copy - 8 ;
                    }
                }
-       BitOffsetInByte+=(SignalLength%8)+1;
+       BitOffsetInByte+=(SignalLength%8);
        }
 
 

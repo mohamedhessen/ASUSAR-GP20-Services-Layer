@@ -23,8 +23,10 @@ void com_notification_1(void)
 boolean seatsensorright =1;
 boolean seatsensorleft =1;
 uint32 Regulator =2 ,Regulator1=3, Regulator2=4;
+//boolean firstSignal=1;
+//boolean secondSignal=0;
+//boolean thirdSignal=1;
 uint8 OFF = 1;
-
 void HeatingControllerRunnable(	)
 	{
       //  Rte_Read_RightSeatStatus_PassengerOnRightSeat(&seatsensorright);
@@ -41,7 +43,7 @@ void HeatingControllerRunnable(	)
         }
         if(seatsensorleft == TRUE)
         {
-            Rte_Write_LeftLevel_Left_Level_Heater(&Regulator);
+           // Rte_Write_LeftLevel_Left_Level_Heater(&Regulator);
             Rte_Write_firstSignal(&Regulator);
             Rte_Write_secondSignal(&Regulator2);
             Rte_Write_thirdSignal(&Regulator1);
