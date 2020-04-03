@@ -44,8 +44,13 @@
 #define  GET_GroupSignal(GroupSignalId)\
     (&(ComConfig->ComGroupSignal[GroupSignalId]))
 
+#define GET_SignalGeneral(SignalId)\
+   (&(ComConfig->SignalAndGroupSignal[SignalId]))
+
+
 boolean validateSignalID (Com_SignalIdType SignalId);
 boolean validateGroupSignalIDv2 (Com_SignalGroupIdType SignalId);
+boolean validateSignalGeneral(Com_SignalGeneral SignalId);
 
 #define timerDec(timer) \
 	if (timer > 0) { \

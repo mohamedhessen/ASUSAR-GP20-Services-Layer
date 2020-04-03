@@ -270,22 +270,23 @@ void Com_MainFunctionTx(void)
 }
 
 /* Updates the signal object identified by SignalId with the signal referenced by the SignalDataPtr parameter */
-uint8 Com_SendSignal( Com_SignalIdType SignalId, const void* SignalDataPtr )
+uint8 SendSignal( Com_SignalIdType SignalId, const void* SignalDataPtr )
 {
+
     /* validate signalID */
-    if(!validateSignalID(SignalId) )
-        return E_NOT_OK;
+   /* if(!validateSignalID(SignalId))
+        return E_NOT_OK;*/
+
 
     /* Get signal of "SignalId" */
-    const ComSignal_type *Signal = GET_Signal(SignalId);
 
+    const ComSignal_type *Signal = GET_Signal(SignalId);
 
     /*Get IPdu of this signal */
     const ComIPdu_type *IPdu = GET_IPdu(Signal->ComIPduHandleId);
 
     /* Get IPDU_Asu of signal ipduHandleId */
     Com_Asu_IPdu_type *Asu_IPdu = GET_AsuIPdu(Signal->ComIPduHandleId);
-    uint32 xd=(uint32 *)SignalDataPtr;
 
     /* update the Signal buffer with the signal data */
     Com_WriteSignalDataToSignalBuffer(Signal->ComHandleId, SignalDataPtr);
@@ -337,66 +338,85 @@ uint8 Com_SendSignal( Com_SignalIdType SignalId, const void* SignalDataPtr )
 
 }
 
-uint8 Com_SendSignalv2( Com_SignalGroupIdType SignalId, const void* SignalDataPtr )
+uint8 SendGroupSignal( Com_SignalGroupIdType SignalId, const void* SignalDataPtr )
 {
-    /* validate signalID */
-    if(!validateGroupSignalIDv2(SignalId) )
-        return E_NOT_OK;
+   /* validate signalID */
+  /* if(!validateGroupSignalIDv2(SignalId) )
+       return E_NOT_OK;*/
 
-    /* Get signal of "SignalId" */
-    const ComGroupSignal_type *groupSignal = GET_GroupSignal(SignalId);
-    /*Get IPdu of this signal */
-    const ComIPdu_type *IPdu = GET_IPdu(groupSignal->ComIPduHandleId);
+   /* Get signal of "SignalId" */
+   const ComGroupSignal_type *groupSignal = GET_GroupSignal(SignalId);
+   /*Get IPdu of this signal */
+   const ComIPdu_type *IPdu = GET_IPdu(groupSignal->ComIPduHandleId);
 
-    /* Get IPDU_Asu of signal ipduHandleId */
-    Com_Asu_IPdu_type *Asu_IPdu = GET_AsuIPdu(groupSignal->ComIPduHandleId);
-    uint32 xd=(uint32 *)SignalDataPtr;
-    Com_WritegroupSignalDataToSignalBuffer(groupSignal->ComHandleId, SignalDataPtr);
+   /* Get IPDU_Asu of signal ipduHandleId */
+   Com_Asu_IPdu_type *Asu_IPdu = GET_AsuIPdu(groupSignal->ComIPduHandleId);
+   uint32 xd=(uint32 *)SignalDataPtr;
+   Com_WritegroupSignalDataToSignalBuffer(groupSignal->ComHandleId, SignalDataPtr);
 
-    /* update the Signal buffer with the signal data */
+   /* update the Signal buffer with the signal data */
 
-    switch(groupSignal->ComTransferProperty)
-    {
-    case TRIGGERED_WITHOUT_REPETITION:
-        Asu_IPdu->Com_Asu_TxIPduTimers.ComTxIPduNumberOfRepetitionsLeft = 1;
-        break;
+   switch(groupSignal->ComTransferProperty)
+   {
+   case TRIGGERED_WITHOUT_REPETITION:
+       Asu_IPdu->Com_Asu_TxIPduTimers.ComTxIPduNumberOfRepetitionsLeft = 1;
+       break;
 
-    case TRIGGERED:
-        Asu_IPdu->Com_Asu_TxIPduTimers.ComTxIPduNumberOfRepetitionsLeft = \
-        (IPdu->ComTxIPdu.ComTxModeFalse.ComTxMode.ComTxModeNumberOfRepetitions) + 1;
-        break;
+   case TRIGGERED:
+       Asu_IPdu->Com_Asu_TxIPduTimers.ComTxIPduNumberOfRepetitionsLeft = \
+       (IPdu->ComTxIPdu.ComTxModeFalse.ComTxMode.ComTxModeNumberOfRepetitions) + 1;
+       break;
 
-    case TRIGGERED_ON_CHANGE:
-        if (Asu_IPdu->Com_Asu_Pdu_changed)
-        {
-            Asu_IPdu->Com_Asu_TxIPduTimers.ComTxIPduNumberOfRepetitionsLeft = \
-                    (IPdu->ComTxIPdu.ComTxModeFalse.ComTxMode.ComTxModeNumberOfRepetitions) + 1;
-            Asu_IPdu->Com_Asu_Pdu_changed = FALSE;
-        }
-        break;
+   case TRIGGERED_ON_CHANGE:
+       if (Asu_IPdu->Com_Asu_Pdu_changed)
+       {
+           Asu_IPdu->Com_Asu_TxIPduTimers.ComTxIPduNumberOfRepetitionsLeft = \
+                   (IPdu->ComTxIPdu.ComTxModeFalse.ComTxMode.ComTxModeNumberOfRepetitions) + 1;
+           Asu_IPdu->Com_Asu_Pdu_changed = FALSE;
+       }
+       break;
 
-    case TRIGGERED_ON_CHANGE_WITHOUT_REPETITION:
-        if (Asu_IPdu->Com_Asu_Pdu_changed)
-        {
-            Asu_IPdu->Com_Asu_TxIPduTimers.ComTxIPduNumberOfRepetitionsLeft = 1;
-            Asu_IPdu->Com_Asu_Pdu_changed = FALSE;
-        }
-    }
-
-
-    uint8 x;
-    uint8 i;
-    for ( i =0; i<8; i++)
-    {
-        x = *(uint8 *)((uint8 *)IPdu->ComIPduDataPtr + i);
-    }
-
-    Asu_IPdu->Com_Asu_First_Repetition = TRUE;
+   case TRIGGERED_ON_CHANGE_WITHOUT_REPETITION:
+       if (Asu_IPdu->Com_Asu_Pdu_changed)
+       {
+           Asu_IPdu->Com_Asu_TxIPduTimers.ComTxIPduNumberOfRepetitionsLeft = 1;
+           Asu_IPdu->Com_Asu_Pdu_changed = FALSE;
+       }
+   }
 
 
-    return E_OK;
+   uint8 x;
+   uint8 i;
+   for ( i =0; i<8; i++)
+   {
+       x = *(uint8 *)((uint8 *)IPdu->ComIPduDataPtr + i);
+   }
+
+   Asu_IPdu->Com_Asu_First_Repetition = TRUE;
+
+
+   return E_OK;
 
 }
+uint8 Com_SendSignal(Com_SignalGeneral SignalId,const void *SignalDataPtr)
+{
+    if(!validateSignalGeneral(SignalId))
+        return E_NOT_OK;
+   const SignalAndGroupSignal_type* SignalGeneral=GET_SignalGeneral(SignalId);
+   if(SignalGeneral->Type==Signal)
+   {
+       const ComSignal_type *Signal = GET_Signal(SignalGeneral->Id);
+       SendSignal(Signal->ComHandleId,SignalDataPtr);
+   }
+   else if(SignalGeneral->Type==Group)
+   {
+       const ComGroupSignal_type *groupSignal = GET_GroupSignal(SignalGeneral->Id);
+       SendGroupSignal(groupSignal->ComHandleId,SignalDataPtr);
+   }
+return E_OK;
+ }
+
+
 
 
 

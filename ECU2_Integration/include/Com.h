@@ -62,6 +62,9 @@ Std_ReturnType Com_TriggerIPDUSend( PduIdType PduId );
 //process signals if the signal processing mode is IMMEDIATE -> notify the signal callback , else -> mark signal as updated
 static void Com_RxProcessSignals(PduIdType ComRxPduId);
 
+uint8 SendSignal( Com_SignalIdType SignalId, const void* SignalDataPtr );
+uint8 SendGroupSignal( Com_SignalGroupIdType SignalId, const void* SignalDataPtr );
+uint8 Com_SendSignal(Com_SignalGeneral SignalId,const void *SignalDataPtr);
 /*The service Com_SendSignalGroup copies the content of the associated shadow buffer to the associated I-PDU.*/
 uint8 Com_SendSignalGroup(Com_SignalGroupIdType SignalGroupId);
 

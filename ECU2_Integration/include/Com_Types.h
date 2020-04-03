@@ -19,6 +19,8 @@
 /* Signal object identifier */
 typedef uint16 Com_SignalIdType;
 typedef uint16 Com_SignalGroupIdType;
+typedef uint16 Com_SignalGeneral;
+
 /* Available Transmission modes for I-PDU */
 typedef enum {
 	DIRECT,
@@ -66,6 +68,12 @@ typedef enum
     REPLACE
 }ComDataInvalidAction_type;
 
+
+/**/
+typedef enum{
+   Signal,
+   Group
+}SignalType;
 /* Configuration structure for Tx-mode for I-PDUs. */
 typedef struct
 {
@@ -278,6 +286,13 @@ typedef struct
 
 } ComGroupSignal_type;
 
+
+typedef struct{
+ const SignalType Type;
+ uint16 Id;
+}SignalAndGroupSignal_type;
+
+
 /* contains the configuration parameters and sub containers of the AUTOSAR COM module */
 typedef struct
 {
@@ -293,6 +308,7 @@ typedef struct
     const ComSignalGroup_type *ComSignalGroup;
     /*Group Signal definitions*/
     const ComGroupSignal_type *ComGroupSignal;
+    const SignalAndGroupSignal_type *SignalAndGroupSignal;
 
 } ComConfig_type;
 

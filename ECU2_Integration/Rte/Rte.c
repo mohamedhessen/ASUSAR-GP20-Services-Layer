@@ -45,15 +45,15 @@ Std_ReturnType Rte_Write_LeftLevel_Left_Level_Heater (UnsignedInteger_8* data)
 	}
 Std_ReturnType Rte_Write_firstSignal(uint32 * data)
 {
-    return Com_SendSignalv2(firstSignal , data);
+   // return Com_SendSignalv2(firstSignal , data);
  }
 Std_ReturnType Rte_Write_secondSignal(uint32 * data)
 {
-    return Com_SendSignalv2(secondSignal , data);
+//    return Com_SendSignalv2(secondSignal , data);
  }
 Std_ReturnType Rte_Write_thirdSignal(uint32 * data)
 {
-    return Com_SendSignalv2(thirdSignal , data);
+  //  return Com_SendSignalv2(thirdSignal , data);
  }
 /* this is an autosar violatiob because we donthave DIO stack
    if we have DIO stack this API should connected to the DIO stack

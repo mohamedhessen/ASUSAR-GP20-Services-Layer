@@ -48,7 +48,7 @@ extern void com_notification_1(void);
 ComGroupSignal_type comgroupsignal[]=
 {
  {
- //signal0
+  //signal0
   .ComBitPosition= 0,
   .ComHandleId= 0 ,
   .ComBitSize= 8,
@@ -60,42 +60,42 @@ ComGroupSignal_type comgroupsignal[]=
  },
  {
   //signal1
-   .ComBitPosition= 9,
-   .ComHandleId= 1 ,
-   .ComBitSize= 8,
-   .ComSignalDataPtr = ComSignalBuffer_13,
-   .ComSignalType = UINT32,
-   .ComTransferProperty = TRIGGERED_ON_CHANGE,
-   .ComIPduHandleId=1,
-   .IsGroupSignal=TRUE,
+  .ComBitPosition= 9,
+  .ComHandleId= 1 ,
+  .ComBitSize= 8,
+  .ComSignalDataPtr = ComSignalBuffer_13,
+  .ComSignalType = UINT32,
+  .ComTransferProperty = TRIGGERED_ON_CHANGE,
+  .ComIPduHandleId=1,
+  .IsGroupSignal=TRUE,
  },
  {
   //signal2
-   .ComBitPosition= 18,
-   .ComHandleId= 2 ,
-   .ComBitSize= 8,
-   .ComSignalDataPtr = ComSignalBuffer_14,
-   .ComSignalType = UINT32,
-   .ComTransferProperty = TRIGGERED_ON_CHANGE,
-   .ComIPduHandleId=1,
-   .IsGroupSignal=TRUE,
+  .ComBitPosition= 18,
+  .ComHandleId= 2 ,
+  .ComBitSize= 8,
+  .ComSignalDataPtr = ComSignalBuffer_14,
+  .ComSignalType = UINT32,
+  .ComTransferProperty = TRIGGERED_ON_CHANGE,
+  .ComIPduHandleId=1,
+  .IsGroupSignal=TRUE,
  }
 };
 
 ComSignalGroup_type comsignalgroup[]=
-                                   {
-                                    {
-                                    .ComHandleId=0,
-                                    .ComUpdateBitPosition=25,
-                                    .ComTransferProperty= TRIGGERED_ON_CHANGE,
-                                    .ComSignalGroupDataPtr=ComSignalgroupBuffer_1,
-                                    .GroupSignals=GroupSignal,
-                                    .number_GroupSignals=3,
-                                    .ComIPduHandleId=1
-                                    }
-                                    };
+{
+ {
+  .ComHandleId=0,
+  .ComUpdateBitPosition=25,
+  .ComTransferProperty= TRIGGERED_ON_CHANGE,
+  .ComSignalGroupDataPtr=ComSignalgroupBuffer_1,
+  .GroupSignals=GroupSignal,
+  .number_GroupSignals=3,
+  .ComIPduHandleId=1
+ }
+};
 
- const ComSignal_type ComSignal[] =
+const ComSignal_type ComSignal[] =
 {
  {  //signal0
     .ComBitPosition= 0,
@@ -223,16 +223,47 @@ ComSignalGroup_type comsignalgroup[]=
 
 };
 
+
+const SignalAndGroupSignal_type SignalAndGroupSignalArray[]={
+                                                             {.Type=Signal,
+                                                              .Id=0
+                                                             },
+                                                             {
+                                                              .Type=Signal,
+                                                              .Id=1
+                                                             },
+                                                             {
+                                                              .Type=Signal,
+                                                              .Id=2
+                                                             },
+                                                             {
+                                                              .Type=Signal,
+                                                              .Id=3
+                                                             },
+                                                             {
+                                                              .Type=Group,
+                                                              .Id=0
+                                                             },
+                                                             {
+                                                              .Type=Group,
+                                                              .Id=1
+                                                             },
+                                                             {
+                                                              .Type=Group,
+                                                              .Id=2
+                                                             }
+};
+
 /* IPdu signal lists. */
 const ComSignal_type * const ComIPduSignalRefs_Can_Message_1[] = {
-                                                                     &ComSignal[ passengeronright ], //
-                                                                      &ComSignal[ passengeronleft ],//
+                                                                  &ComSignal[ passengeronright ], //
+                                                                  &ComSignal[ passengeronleft ],//
                                                                   //&ComSignal[ seatstatusright ],
                                                                   NULL
 };
 
 const ComSignal_type * const ComIPduSignalRefs_Can_Message_2[] = {
-                                                                //   &ComSignal[ passengeronright ], //
+                                                                  //   &ComSignal[ passengeronright ], //
                                                                   // &ComSignal[ passengeronleft ],//
                                                                   &comsignalgroup[0],
                                                                   // &ComSignal[ CanDB_Signal_29_12_BE_Tester],
@@ -242,7 +273,7 @@ const ComSignal_type * const ComIPduSignalRefs_Can_Message_2[] = {
 const ComSignal_type * const ComIPduSignalRefs_Can_Message_0[]={
                                                                 &ComSignal[ 0 ],//
                                                                 &ComSignal[ 1 ]
-                                                                };
+};
 const ComSignalGroup_type * const Can_Message_0[]=
 {
  &comsignalgroup[0],
@@ -378,7 +409,9 @@ const ComConfig_type ComConfiguration =
  .ComIPdu = ComIPdu,
  .ComSignal = ComSignal,
  .ComSignalGroup=comsignalgroup,
- .ComGroupSignal=comgroupsignal
+ .ComGroupSignal=comgroupsignal,
+ .SignalAndGroupSignal=SignalAndGroupSignalArray
+
 };
 
 
